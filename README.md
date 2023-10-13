@@ -1,32 +1,34 @@
-# frontend-sample-app
-Basic Frontend Development Environment to start an app with Webpack
+# Prototipo Minimamente Viable de EcoIntelligence
+*Información relevante*
 
-This repo includes `Webpack` to start an environment to build frontend views using `React`.
+## Integrantes:
+- Pablo Estobar: 201973615-9
+- Joel Domínguez: 201973500-4
+- Sebastián Naranjo: 201973614-0
 
-### Requirements
+## Requisitos de software
 - Node >= 16.13.1
 - npm >= 8.1.2
 
-### Quick start
+### Instalación de dependencias y ejecución
 
-Install dependences
+Instalar Node https://nodejs.org/en/download
+
+Instalar npm en la carpeta del proyecto
 
 ```
 npm install
 ```
 
-Launch environment
+Ejecutar el entorno
 
 ```
 npm run dev
 ```
 
-Now you can open http://localhost:5050
+Finalmente abrir el prototipo http://localhost:5050
 
-### Packages included
+### Paquetes utilizados
 - [Webpack](https://webpack.js.org/)
 - [React Router](https://reactrouter.com/en/main)
 - [Material UI](https://mui.com/material-ui/getting-started/usage/)
-
-### About stylesheets
-- Sample stylesheets were written using the [BEM](https://getbem.com/) structure
