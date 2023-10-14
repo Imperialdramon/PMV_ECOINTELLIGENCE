@@ -7,20 +7,21 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
-import LogoUSM from '../assets/usm.png'
 import LogoPag from '../assets/Logo.png';
 
-const pages = ['Mapa', 'Algo por defecto', 'Sobre nosotros'];
+
+
 
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
-
+  {/* Paginas para el navbar, van con el nombre y el link, en name y href respectivamente */}
+  const pages = [
+    {"name":"Mapa","href":"/mapa"},
+    {"name":"Algo","href":"/"}
+  ];
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -44,7 +45,7 @@ function NavBar() {
             variant="h6"
             noWrap
             component="a"
-            href="#app-bar-with-responsive-menu"
+            href="/"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -88,8 +89,15 @@ function NavBar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem key={page.name} onClick={handleCloseNavMenu}>
+                  <Button 
+                    textalign="center" 
+                    href={page.href}
+                    variant="text"
+                  >
+                  {page.name}
+                  </Button>
+
                 </MenuItem>
               ))}
             </Menu>
@@ -115,11 +123,12 @@ function NavBar() {
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
-                key={page}
+                key={page.name}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
+                href={page.href}
               >
-                {page}
+                {page.name}
               </Button>
             ))}
           </Box>
