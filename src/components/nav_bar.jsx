@@ -20,7 +20,9 @@ function NavBar() {
   {/* Paginas para el navbar, van con el nombre y el link, en name y href respectivamente */}
   const pages = [
     {"name":"Mapa","href":"/mapa"},
-    {"name":"Algo","href":"/"}
+    {"name":"Algo","href":"/"},
+    {"name":"Información","href":"/informacion"}, // Temporal, para probar el tema de la info
+    {"name":"Interna?","href":"/internal"} // Temporal, para probar el tema de una pag
   ];
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);

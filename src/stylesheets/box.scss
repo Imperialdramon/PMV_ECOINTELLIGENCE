@@ -1,0 +1,17 @@
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.box img {
+    max-width: 100%;
+    height: auto;
+}
