@@ -19,10 +19,13 @@ function NavBar() {
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   {/* Paginas para el navbar, van con el nombre y el link, en name y href respectivamente */}
   const pages = [
-    {"name":"Mapa","href":"/mapa"},
-    {"name":"Algo","href":"/"},
-    {"name":"Información","href":"/informacion"}, // Temporal, para probar el tema de la info
-    {"name":"Interna?","href":"/internal"} // Temporal, para probar el tema de una pag
+    {"name":"Sobre Nosotros","href":"/sobre_nosotros"},
+    {"name":"Información sobre el Reciclaje","href":"/informacion"}, 
+    {"name":"Mapa Interactivo","href":"/mapa"},
+    {"name":"Noticias","href":"/noticias"},
+    {"name":"Preguntas Frecuentes","href":"/preguntas_frecuentes"},
+
+
   ];
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -58,7 +61,7 @@ function NavBar() {
               textDecoration: 'none',
             }}
           >
-            <img src={LogoPag} height={100} width = {300} alt='logo pagina' /><br />
+            <img src={LogoPag} height={100} width = {350} alt='logo pagina' /><br />
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
