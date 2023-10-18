@@ -59,7 +59,7 @@ function NavBar() {
               textDecoration: 'none',
             }}
           >
-            <img src={LogoPag} height={100} width = {300} alt='logo pagina' /><br />
+            <img src={LogoPag} height={100} width = {350} alt='logo pagina' /><br />
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>

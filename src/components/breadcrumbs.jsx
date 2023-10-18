@@ -11,11 +11,16 @@ export const Bread_crumbs = () => {
         '/sobre_nosotros': 'Sobre Nosotros',
         '/informacion':'Información sobre el Reciclaje',
         '/informacion/papel_y_carton': 'Papel y Cartón',
-
+        '/informacion/vidrio': 'Vidrio',
+        '/informacion/lata': 'Lata',
+        '/informacion/plastico': 'Plástico',
+        '/informacion/material_organico': 'Material Orgánico',
+        '/informacion/varios': 'Varios',
         '/mapa':'Mapa Interactivo',
         '/grafos': 'Prueba Gráficos',
 
         '/noticias': 'Noticias',
+        
         '/preguntas_frecuentes': 'Preguntas Frecuentes'
     }
     return (
