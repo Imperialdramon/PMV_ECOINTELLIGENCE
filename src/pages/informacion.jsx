@@ -1,23 +1,14 @@
 import React from 'react';
 import NavBar from '../components/nav_bar'
 import { Bread_crumbs } from '../components/breadcrumbs';
-import Box from '../components/box';
-import '../stylesheets/box.scss';
+import ImgMediaCard from '../components/card_image';
 import LogoUSM from '../assets/usm.png'
 import { Container } from '@mui/system';
-import { styled } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
-import Paper from '@mui/material/Paper';
 import Footer from '../components/footer';
 import '../stylesheets/page/page__container.scss';
+import Separador from '../components/separator';
 
-const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-}));
 
 export const Informacion = () => {
     return (
@@ -27,64 +18,71 @@ export const Informacion = () => {
             <div className="content-wrap">
                 <h3>Texto genérico</h3>
                 <Container maxWidth="false" sx={{display:'flex', justifycontent:'center'}}>
-                    <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+                    <Grid container alignItems="center" rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                         <Grid item xs={4}>
-                            <Item>
-                                <Box
-                                    imagen={LogoUSM}
-                                    titulo="Texto del recuadro 1"
-                                    cuerpo="A"
-                                />
-                            </Item>
+                            <ImgMediaCard
+                                src_imagen={LogoUSM}
+                                alto="200"
+                                titulo="Papeles y Cartones"
+                                texto="Ejemplo"
+                                color="rgb(51, 218, 255)"
+                                enlace="#"
+                            />
                         </Grid>
                         <Grid item xs={4}>
-                        <Item>
-                            <Box
-                                    imagen={LogoUSM}
-                                    titulo="Texto del recuadro 1"
-                                    cuerpo="A"
-                                />
-                            </Item>
+                            <ImgMediaCard
+                                src_imagen={LogoUSM}
+                                alto="200"
+                                titulo="Vidrios"
+                                texto="Ejemplo"
+                                color="rgb(88, 255, 51)"
+                                enlace="#"
+                            />
                         </Grid>
                         <Grid item xs={4}>
-                        <Item>
-                            <Box
-                                    imagen={LogoUSM}
-                                    titulo="Texto del recuadro 1"
-                                    cuerpo="A"
-                                />
-                            </Item>
+                            <ImgMediaCard
+                                src_imagen={LogoUSM}
+                                alto="200"
+                                titulo="Latas"
+                                texto="Ejemplo"
+                                color="rgb(248, 60, 60)"
+                                enlace="#"
+                            />
                         </Grid>
                         <Grid item xs={4}>
-                        <Item>
-                            <Box
-                                    imagen={LogoUSM}
-                                    titulo="Texto del recuadro 1"
-                                    cuerpo="A"
-                                />
-                            </Item>
+                            <ImgMediaCard
+                                src_imagen={LogoUSM}
+                                alto="200"
+                                titulo="Plásticos"
+                                texto="Ejemplo"
+                                color="rgb(246, 255, 53)"
+                                enlace="#"
+                            />
                         </Grid>
                         <Grid item xs={4}>
-                        <Item>
-                            <Box
-                                    imagen={LogoUSM}
-                                    titulo="Texto del recuadro 1"
-                                    cuerpo="A"
-                                />
-                            </Item>
+                            <ImgMediaCard
+                                src_imagen={LogoUSM}
+                                alto="200"
+                                titulo="Materiales Orgánicos"
+                                texto="Ejemplo"
+                                color="rgb(255, 182, 0)"
+                                enlace="#"
+                            />
                         </Grid>
                         <Grid item xs={4}>
-                        <Item>
-                            <Box
-                                    imagen={LogoUSM}
-                                    titulo="Texto del recuadro 1"
-                                    cuerpo="A"
-                                />
-                            </Item>
+                            <ImgMediaCard
+                                src_imagen={LogoUSM}
+                                alto="200"
+                                titulo="Varios"
+                                texto="Ejemplo"
+                                color="rgb(182, 182, 182)"
+                                enlace="#"
+                            />
                         </Grid>
                     </Grid>
                 </Container>
             </div>
+            <Separador altura="20px" />
             <Footer/>
         </div>
     );
