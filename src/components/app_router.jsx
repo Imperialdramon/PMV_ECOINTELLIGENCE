@@ -16,7 +16,6 @@ import Grafos from '../pages/prueba_grafos'
 import Noticias from '../pages/noticias'
 import Preguntas_Frecuentes from '../pages/preguntas_frecuentes'
 
-
 const AppRouter = () => {
   return (
     <BrowserRouter>
