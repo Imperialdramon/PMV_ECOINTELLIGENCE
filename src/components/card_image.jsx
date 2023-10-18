@@ -6,7 +6,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-function ImgMediaCard({ src_imagen, alto, titulo, texto, color,enlace}) {
+function ImgMediaCard({ src_imagen, alto, alto_max, titulo, texto, color,enlace}) {
     const handleButtonClick = () => {
         window.location.href = enlace; // Dirección de envío del enlace
     };
@@ -21,7 +21,7 @@ function ImgMediaCard({ src_imagen, alto, titulo, texto, color,enlace}) {
             component="img"
             alt="usm"
             height={alto}
-            style={{ maxWidth: '100%', maxHeight: '140px', objectFit: 'contain' }}
+            style={{ maxWidth: '100%', maxHeight: {alto_max}, objectFit: 'contain' }}
             image={src_imagen}
         />
         <CardContent>

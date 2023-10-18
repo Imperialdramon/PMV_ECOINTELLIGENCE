@@ -23,16 +23,18 @@ export const Informacion = () => {
                             <ImgMediaCard
                                 src_imagen={LogoUSM}
                                 alto="200"
+                                alto_max={'200px'}
                                 titulo="Papeles y Cartones"
                                 texto="Ejemplo"
                                 color="rgb(51, 218, 255)"
-                                enlace="#"
+                                enlace="/informacion/papel_y_carton"
                             />
                         </Grid>
                         <Grid item xs={4}>
                             <ImgMediaCard
                                 src_imagen={LogoUSM}
                                 alto="200"
+                                alto_max={'200px'}
                                 titulo="Vidrios"
                                 texto="Ejemplo"
                                 color="rgb(88, 255, 51)"
@@ -43,6 +45,7 @@ export const Informacion = () => {
                             <ImgMediaCard
                                 src_imagen={LogoUSM}
                                 alto="200"
+                                alto_max={'200px'}
                                 titulo="Latas"
                                 texto="Ejemplo"
                                 color="rgb(248, 60, 60)"
@@ -53,6 +56,7 @@ export const Informacion = () => {
                             <ImgMediaCard
                                 src_imagen={LogoUSM}
                                 alto="200"
+                                alto_max={'200px'}
                                 titulo="Plásticos"
                                 texto="Ejemplo"
                                 color="rgb(246, 255, 53)"
@@ -63,6 +67,7 @@ export const Informacion = () => {
                             <ImgMediaCard
                                 src_imagen={LogoUSM}
                                 alto="200"
+                                alto_max={'200px'}
                                 titulo="Materiales Orgánicos"
                                 texto="Ejemplo"
                                 color="rgb(255, 182, 0)"
@@ -73,6 +78,7 @@ export const Informacion = () => {
                             <ImgMediaCard
                                 src_imagen={LogoUSM}
                                 alto="200"
+                                alto_max={'200px'}
                                 titulo="Varios"
                                 texto="Ejemplo"
                                 color="rgb(182, 182, 182)"
