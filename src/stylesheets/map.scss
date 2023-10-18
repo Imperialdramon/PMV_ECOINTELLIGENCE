@@ -1,0 +1,26 @@
+div#map {
+    height: 100vh;
+    width: 100%;
+}
+.marker {
+    padding: 0.5rem;
+    background: white;
+    transition: all 0.3s ease-out;
+    position: relative;
+    border-radius: 100px;
+    border-style: solid;
+    border-color: white;
+}
+.marker img {
+    width: 3vh;
+    height: 3vh;
+}
+.marker.red {
+    background: rgb(254, 59, 29);
+}
+.marker.orange{
+    background: rgb(255, 159, 28);
+}
+.marker.green{
+    background: rgb(100, 241, 47);
+}

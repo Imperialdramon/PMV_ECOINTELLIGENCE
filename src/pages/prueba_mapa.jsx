@@ -1,12 +1,22 @@
-import React from 'react'
+import { Container } from '@mui/material';
+import { Wrapper } from '@googlemaps/react-wrapper';
+import React from 'react';
 import { useEffect,useState,useRef } from 'react';
-import NavBar from '../components/nav_bar'
-import { Bread_crumbs } from '../components/breadcrumbs';
-import { Container, Drawer, Button, Box} from '@mui/material';
-import BarChart from '../components/BarChart';
 import { createRoot } from 'react-dom/client';
 import Reciclaje from '../assets/reciclaje.png';
-import { Wrapper } from '@googlemaps/react-wrapper';
+
+
+export const PMapa = () => {
+    return (
+        <Wrapper
+            apiKey='AIzaSyBH7WLmJP1eX-pBZBILTvwXNBYayz2vjuA'
+            version='beta'
+            libraries={["marker"]}
+        >
+            <Map/>
+        </Wrapper>
+    )
+}
 
 const markersData = {
     A:{
@@ -33,25 +43,6 @@ const mapOptions = {
     disableDefaultUI: true
 }
 
-const bar = [10, 20, 50, 20, 15, 40];
-
-export const Mapa = () => {
-    return (
-        <>
-            <NavBar />
-            <Bread_crumbs />
-            <Container maxWidth={false} disableGutters>
-                <Wrapper
-                    apiKey='AIzaSyBH7WLmJP1eX-pBZBILTvwXNBYayz2vjuA'
-                    version='beta'
-                    libraries={["marker"]}
-                >
-                    <Map/>
-                </Wrapper>
-            </Container>
-        </>
-    )
-};
 function Map(){
     const [map,setMap] = useState();
     const ref = useRef();
@@ -60,19 +51,14 @@ function Map(){
     },[])
     return (
         <>
-            <div ref={ref} id='map'/>
+            <div ref={ref} id='mapo'/>
             {map && <Indicadores map={map}/>}
         </>
     )
 }
 
 function Indicadores({map}){
-    const [openDrawer,setOpenDrawer] = useState(false);
     const [data,setData] = useState(markersData);
-    const [databar,setDataBar] = useState(bar);
-    const toggleDrawer = () => {
-        setOpenDrawer(!openDrawer);
-    }
     return (
         <>
             {Object.entries(data).map(([key,marker])=>(
@@ -80,34 +66,17 @@ function Indicadores({map}){
                     key={key}
                     map={map} 
                     position={marker.position}
-                    onClick={() => {
-                        setDataBar(marker.data);
-                        toggleDrawer();
-                    }}
                     >
                     <div className={`marker ${marker.state.toLowerCase()}`}>
                         <img src={Reciclaje} alt="marker"/>
                     </div>
                 </Marker>
             ))};
-            <Drawer
-                    anchor='bottom'
-                    open={openDrawer}
-                    onClose={toggleDrawer}
-                >
-                    <Container maxWidth={false} sx={{display:'flex',justifyContent:'center'}}>
-                        <Box
-                            sx={{width:600,display:'flex',justifyContent:'center'}}
-                        >
-                            <BarChart data={databar}/>
-                        </Box>
-                    </Container>
-            </Drawer>
         </>
     )
 }
 
-function Marker({ map, position, children, onClick}){
+function Marker({ map, position, children}){
     const markerRef = useRef();
     const rootRef = useRef();
     useEffect(() => {
@@ -120,15 +89,12 @@ function Marker({ map, position, children, onClick}){
                 content: container,
             });
         }
-        return () => (markerRef.current.map = null);
     }, []);
     
     useEffect(()=>{
         rootRef.current.render(children);
         markerRef.current.position = position;
         markerRef.current.map = map;
-        const listener = markerRef.current.addListener("click", onClick);
-        return () => listener.remove();
     },[map,position,children])
 }
-export default Mapa
+export default PMapa;
