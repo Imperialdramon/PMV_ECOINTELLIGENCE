@@ -2,13 +2,19 @@ import React from 'react';
 import NavBar from '../components/nav_bar'
 import { Bread_crumbs } from '../components/breadcrumbs';
 import ImgMediaCard from '../components/card_image';
-import LogoUSM from '../assets/usm.png'
 import { Container } from '@mui/system';
 import Grid from '@mui/material/Grid';
 import Footer from '../components/footer';
 import '../stylesheets/page/page__container.scss';
 import Separador from '../components/separator';
 
+// Imágenes
+import Papel from '../assets/papel_carton.jpg'
+import Vidrio from '../assets/vidrios.jpg'
+import Latas from '../assets/latas.jpg'
+import Plasticos from '../assets/plasticos.jpg'
+import Organicos from '../assets/organicos.jpg'
+import Varios from '../assets/varios.jpg'
 
 export const Informacion = () => {
     return (
@@ -23,7 +29,7 @@ export const Informacion = () => {
                     <Grid container alignItems="center" rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                         <Grid item xs={4}>
                             <ImgMediaCard
-                                src_imagen={LogoUSM}
+                                src_imagen={Papel}
                                 alto="200"
                                 alto_max={'200px'}
                                 titulo="Papel y Cartón"
@@ -34,7 +40,7 @@ export const Informacion = () => {
                         </Grid>
                         <Grid item xs={4}>
                             <ImgMediaCard
-                                src_imagen={LogoUSM}
+                                src_imagen={Vidrio}
                                 alto="200"
                                 alto_max={'200px'}
                                 titulo="Vidrio"
@@ -45,7 +51,7 @@ export const Informacion = () => {
                         </Grid>
                         <Grid item xs={4}>
                             <ImgMediaCard
-                                src_imagen={LogoUSM}
+                                src_imagen={Latas}
                                 alto="200"
                                 alto_max={'200px'}
                                 titulo="Lata"
@@ -56,7 +62,7 @@ export const Informacion = () => {
                         </Grid>
                         <Grid item xs={4}>
                             <ImgMediaCard
-                                src_imagen={LogoUSM}
+                                src_imagen={Plasticos}
                                 alto="200"
                                 alto_max={'200px'}
                                 titulo="Plástico"
@@ -67,7 +73,7 @@ export const Informacion = () => {
                         </Grid>
                         <Grid item xs={4}>
                             <ImgMediaCard
-                                src_imagen={LogoUSM}
+                                src_imagen={Organicos}
                                 alto="200"
                                 alto_max={'200px'}
                                 titulo="Material Orgánico"
@@ -78,7 +84,7 @@ export const Informacion = () => {
                         </Grid>
                         <Grid item xs={4}>
                             <ImgMediaCard
-                                src_imagen={LogoUSM}
+                                src_imagen={Varios}
                                 alto="200"
                                 alto_max={'200px'}
                                 titulo="Varios"
