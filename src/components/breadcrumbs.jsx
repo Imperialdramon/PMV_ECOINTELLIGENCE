@@ -20,7 +20,12 @@ export const Bread_crumbs = () => {
         '/grafos': 'Prueba Gráficos',
 
         '/noticias': 'Noticias',
-        
+        '/noticias/new_01': 'Comienza retiro de residuos reciclables desde 750 mil domicilios capitalinos',
+        '/noticias/new_02': 'Grupo Red protagoniza campaña de reciclaje del Gobierno de Chile',
+        '/noticias/new_03': 'Proyectos de sustentabilidad recibieron premio para su ejecución',
+        '/noticias/new_04': 'Universidad de concepción reciclara las mascarillas',
+        '/noticias/new_05': 'Premios Cero Basura reconoció proyectos de sustentabilidad',
+        '/noticias/new_06': 'Gobierno anuncia proyecto para evitar que residuos orgánicos terminen en los rellenos',
         '/preguntas_frecuentes': 'Preguntas Frecuentes'
     }
     return (
