@@ -13,7 +13,9 @@ function ImgMediaCard({ src_imagen, alto, alto_max, titulo, texto, color,enlace}
     }
     const cardStyles = {
         backgroundColor: color, // Color del fondo de la carta
-        boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+        border: 10,
+        borderRadius: 10,
+        boxShadow: '0 5px 4px rgba(0,0,0,0.1)',
         maxWidth: 600, // Ancho máximo de la carta
         m: 1,
     }
@@ -24,8 +26,9 @@ function ImgMediaCard({ src_imagen, alto, alto_max, titulo, texto, color,enlace}
             component="img"
             alt="usm"
             height={alto}
-            style={{ maxWidth: '100%', maxHeight: {alto_max}, objectFit: 'contain' }}
+            style={{ maxWidth: '100%', maxHeight: {alto_max}, objectFit: 'contain'}}
             image={src_imagen}
+            
         />
         <CardContent>
             <Typography gutterBottom variant="h5" component="div">
