@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react'
 import NavBar from '../components/nav_bar'
-import { Bread_crumbs } from '../components/breadcrumbs';
-import ImgMediaCard from '../components/card_image';
-import { Container } from '@mui/system';
-import Grid from '@mui/material/Grid';
-import Footer from '../components/footer';
-import '../stylesheets/page/page__container.scss';
-import Separador from '../components/separator';
+import { Bread_crumbs } from '../components/breadcrumbs'
+import ImgMediaCard from '../components/card_image'
+import { Container } from '@mui/system'
+import Grid from '@mui/material/Grid'
+import Footer from '../components/footer'
+import '../stylesheets/page/page__container.scss'
+import Separador from '../components/separator'
 
 // Imágenes
 import Papel from '../assets/papel_carton.jpg'
@@ -97,9 +97,10 @@ export const Informacion = () => {
                 </Container>
             </div>
             <Separador altura="20px" />
+
             <Footer/>
         </div>
-    );
-};
+    )
+}
 
-export default Informacion;
+export default Informacion

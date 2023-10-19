@@ -7,6 +7,9 @@ import BarChart from '../components/BarChart';
 import { createRoot } from 'react-dom/client';
 import Reciclaje from '../assets/reciclaje.png';
 import { Wrapper } from '@googlemaps/react-wrapper';
+import Footer from '../components/footer';
+import '../stylesheets/page/page__container.scss';
+import Separador from '../components/separator';
 
 const markersData = {
     A:{
@@ -37,24 +40,30 @@ const bar = [10, 20, 50, 20, 15, 40];
 
 export const Mapa = () => {
     return (
-        <>
+        <div className='page__container'>
             <NavBar />
             <Bread_crumbs />
-            <Container maxWidth={false} disableGutters>
-                <Wrapper
-                    apiKey='AIzaSyBH7WLmJP1eX-pBZBILTvwXNBYayz2vjuA'
-                    version='beta'
-                    libraries={["marker"]}
-                >
-                    <Map/>
-                </Wrapper>
-            </Container>
-        </>
+            <div className="content-wrap">
+                <Box sx={{ width: 0.6, m: 1, margin: '0 auto',}}>
+                    <Wrapper
+                        apiKey='AIzaSyBH7WLmJP1eX-pBZBILTvwXNBYayz2vjuA'
+                        version='beta'
+                        libraries={["marker"]}
+                        >
+                        <Map/>
+                    </Wrapper>
+                </Box>
+
+            </div>
+            <Separador altura="20px" />
+            <Footer/>
+        </div>
     )
-};
+}
+
 function Map(){
-    const [map,setMap] = useState();
-    const ref = useRef();
+    const [map,setMap] = useState()
+    const ref = useRef()
     useEffect(()=>{
         setMap(new window.google.maps.Map(ref.current,mapOptions))
     },[])
@@ -67,11 +76,11 @@ function Map(){
 }
 
 function Indicadores({map}){
-    const [openDrawer,setOpenDrawer] = useState(false);
-    const [data,setData] = useState(markersData);
-    const [databar,setDataBar] = useState(bar);
+    const [openDrawer,setOpenDrawer] = useState(false)
+    const [data,setData] = useState(markersData)
+    const [databar,setDataBar] = useState(bar)
     const toggleDrawer = () => {
-        setOpenDrawer(!openDrawer);
+        setOpenDrawer(!openDrawer)
     }
     return (
         <>
@@ -81,15 +90,15 @@ function Indicadores({map}){
                     map={map} 
                     position={marker.position}
                     onClick={() => {
-                        setDataBar(marker.data);
-                        toggleDrawer();
+                        setDataBar(marker.data)
+                        toggleDrawer()
                     }}
                     >
                     <div className={`marker ${marker.state.toLowerCase()}`}>
                         <img src={Reciclaje} alt="marker"/>
                     </div>
                 </Marker>
-            ))};
+            ))}
             <Drawer
                     anchor='bottom'
                     open={openDrawer}
@@ -108,27 +117,27 @@ function Indicadores({map}){
 }
 
 function Marker({ map, position, children, onClick}){
-    const markerRef = useRef();
-    const rootRef = useRef();
+    const markerRef = useRef()
+    const rootRef = useRef()
     useEffect(() => {
         if (!rootRef.current) {
-            const container = document.createElement("div");
-            rootRef.current = createRoot(container);
+            const container = document.createElement("div")
+            rootRef.current = createRoot(container)
             
             markerRef.current = new google.maps.marker.AdvancedMarkerElement({
                 position,
                 content: container,
-            });
+            })
         }
-        return () => (markerRef.current.map = null);
-    }, []);
+        return () => (markerRef.current.map = null)
+    }, [])
     
     useEffect(()=>{
-        rootRef.current.render(children);
-        markerRef.current.position = position;
-        markerRef.current.map = map;
+        rootRef.current.render(children)
+        markerRef.current.position = position
+        markerRef.current.map = map
         const listener = markerRef.current.addListener("click", onClick);
-        return () => listener.remove();
+        return () => listener.remove()
     },[map,position,children])
 }
 export default Mapa

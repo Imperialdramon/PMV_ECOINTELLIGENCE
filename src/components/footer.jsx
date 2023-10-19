@@ -1,10 +1,19 @@
-import React from "react";
-import "../stylesheets/footer.scss";
-import Grid from '@mui/material/Grid';
+import React from "react"
+import Grid from '@mui/material/Grid'
+import Box from '@mui/material/Box'
 
 function Footer() {
     return (
-        <div className="main-footer">
+        <>
+        <Box
+            component="footer"
+            sx={{
+                py: 3,
+                px: 2,
+                mt: 'auto',
+                backgroundColor: "rgb(37, 226, 34)",
+            }}
+            >
             <Grid container spacing={2}>
                 <Grid xs={4} container direction="column" justifyContent="center" alignItems="center">
                     <h3>EcoIntelligence 1</h3>
@@ -31,14 +40,15 @@ function Footer() {
                     </ui>
                 </Grid>
             </Grid>
-            <Grid xs={12} container direction="column" justifyContent="center" alignItems="center">
+            <Grid  container direction="column" justifyContent="center" alignItems="center">
                 <p className="col-sm">
                     &copy;{new Date().getFullYear()} EcoIntelligence | All rights reserved | Terms Of Service | Privacy
                 </p>
             </Grid>
+        </Box>
             
-            </div>
-    );
+        </>
+    )
 }
 
-export default Footer;
+export default Footer
