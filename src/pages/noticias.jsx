@@ -1,27 +1,27 @@
-import React from 'react';
+import React from 'react'
 import NavBar from '../components/nav_bar'
-import { Bread_crumbs } from '../components/breadcrumbs';
-import Footer from '../components/footer';
-import '../stylesheets/page/page__container.scss';
-import Separador from '../components/separator';
+import { Bread_crumbs } from '../components/breadcrumbs'
+import Footer from '../components/footer'
+import '../stylesheets/page/page__container.scss'
+import Separador from '../components/separator'
 import { Container } from '@mui/system'
 import Grid from '@mui/material/Grid'
 
 //export from cards
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
+import Card from '@mui/material/Card'
+import CardContent from '@mui/material/CardContent'
+import CardMedia from '@mui/material/CardMedia'
+import Typography from '@mui/material/Typography'
+import { CardActionArea } from '@mui/material'
 
 
 // photo's
-import new_01 from '../assets/news_01.jpg';
-import new_02 from '../assets/news_02.jpg';
-import new_03 from '../assets/news_03.jpg';
-import new_04 from '../assets/news_04.jpg';
-import new_05 from '../assets/news_05.jpg';
-import new_06 from '../assets/news_06.jpg';
+import new_01 from '../assets/news_01.jpg'
+import new_02 from '../assets/news_02.jpg'
+import new_03 from '../assets/news_03.jpg'
+import new_04 from '../assets/news_04.jpg'
+import new_05 from '../assets/news_05.jpg'
+import new_06 from '../assets/news_06.jpg'
 
 
 // Exporta ImgMediaCard como un componente independiente
@@ -122,7 +122,9 @@ export const Noticias = () => {
 
 
       </div>
+      <Separador altura="20px" />
+      <Footer/>
     </div>
-  );
-};
+  )
+}
 export default Noticias
