@@ -2,7 +2,7 @@ import React from 'react'
 import { useEffect,useState,useRef } from 'react';
 import NavBar from '../components/nav_bar'
 import { Bread_crumbs } from '../components/breadcrumbs';
-import { Container, Drawer, Button, Box} from '@mui/material';
+import { Container, Drawer, Button, Box, Grid, Stack, Typography} from '@mui/material';
 import BarChart from '../components/BarChart';
 import { createRoot } from 'react-dom/client';
 import Reciclaje from '../assets/reciclaje.png';
@@ -43,8 +43,8 @@ export const Mapa = () => {
         <div className='page__container'>
             <NavBar />
             <Bread_crumbs />
-            <div className="content-wrap">
-                <Box sx={{ width: 0.6, m: 1, margin: '0 auto',}}>
+            <Grid container>
+                <Grid item xs={8}>
                     <Wrapper
                         apiKey='AIzaSyBH7WLmJP1eX-pBZBILTvwXNBYayz2vjuA'
                         version='beta'
@@ -52,9 +52,33 @@ export const Mapa = () => {
                         >
                         <Map/>
                     </Wrapper>
-                </Box>
-
-            </div>
+                </Grid>
+                <Grid item xs={4} sx={{background:'#ABEBC6',borderLeft:1}} textAlign={'center'}>
+                    <Stack spacing={2}>
+                        <Typography variant='h3'>Mapa Iteractivo</Typography>
+                        <Typography variant='h5'>Color de los marcadores</Typography>
+                        <Stack direction='row' justifyContent='center' alignItems="center" spacing={2}>
+                            <div className={'marker red'}><img src={Reciclaje} alt="marker"/></div>
+                            <Typography>Contenedores llenos</Typography>
+                        </Stack>
+                        <Stack direction='row' justifyContent='center' alignItems="center" spacing={2}>
+                            <div className={'marker orange'}><img src={Reciclaje} alt="marker"/></div>
+                            <Typography>uno o más contenedores llenos</Typography>
+                        </Stack>
+                        <Stack direction='row' justifyContent='center' alignItems="center" spacing={2}>
+                            <div className={'marker green'}><img src={Reciclaje} alt="marker"/></div>
+                            <Typography>Ningun contenedor lleno</Typography>
+                        </Stack>
+                        <Container>
+                            <Typography variant='h5'>¿Como se utiliza el mapa?</Typography>
+                            <Typography>Se puede mover por el mapa mediante el desplazamiento, alejar o acercar</Typography>
+                            <Typography>Hacer click en alguno de los marcadores en el mapa para obtener la información detallada de los contenedores</Typography>
+                            <Typography>Pasar por encima el mouse para observar detalladamente los porcentajes de cada contenedor en la barra correspondiente</Typography>
+                            <Typography>Hacer click afuera para salir del desplegable de información</Typography>
+                        </Container>
+                    </Stack>
+                </Grid>
+            </Grid>
             <Separador altura="20px" />
             <Footer/>
         </div>
@@ -103,6 +127,7 @@ function Indicadores({map}){
                     anchor='bottom'
                     open={openDrawer}
                     onClose={toggleDrawer}
+                    PaperProps={{ square: false, sx:{borderTopLeftRadius:30,borderTopRightRadius:30}}}
                 >
                     <Container maxWidth={false} sx={{display:'flex',justifyContent:'center'}}>
                         <Box
