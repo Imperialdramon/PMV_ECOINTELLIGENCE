@@ -25,31 +25,37 @@ import News_06 from '../pages/Noticias/new_06';
 
 import Preguntas_Frecuentes from '../pages/preguntas_frecuentes'
 
+//tema
+import paleta_main from '../components/theme';
+import { ThemeProvider } from '@mui/material';
+
 const AppRouter = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<HomePage />} />
-        <Route path='/sobre_nosotros' element={<Sobre_Nosotros/>} />
-        <Route path='/informacion' element={<Informacion/>} />
-        <Route path='/informacion/papel_y_carton' element={<Papel_Carton/>} />
-        <Route path='/informacion/vidrio' element={<Vidrio/>} />
-        <Route path='/informacion/lata' element={<Lata/>} />
-        <Route path='/informacion/plastico' element={<Plastico/>} />
-        <Route path='/informacion/material_organico' element={<Material_Organico/>} />
-        <Route path='/informacion/varios' element={<Varios/>} />
-        <Route path='/mapa' element={<Mapa/>} />
-        <Route path='/grafos' element={<Grafos/>} />
-        <Route path='/noticias' element={<Noticias/>} />
-        <Route path='/noticias/new_01' element={<News_01 />} />
-        <Route path='/noticias/new_02' element={<News_02 />} />
-        <Route path='/noticias/new_03' element={<News_03 />} />
-        <Route path='/noticias/new_04' element={<News_04 />} />
-        <Route path='/noticias/new_05' element={<News_05 />} />
-        <Route path='/noticias/new_06' element={<News_06 />} />
-        <Route path='/preguntas_frecuentes' element={<Preguntas_Frecuentes/>} />
-      </Routes>
-    </BrowserRouter>
+    <ThemeProvider theme={paleta_main}>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<HomePage />} />
+          <Route path='/sobre_nosotros' element={<Sobre_Nosotros/>} />
+          <Route path='/informacion' element={<Informacion/>} />
+          <Route path='/informacion/papel_y_carton' element={<Papel_Carton/>} />
+          <Route path='/informacion/vidrio' element={<Vidrio/>} />
+          <Route path='/informacion/lata' element={<Lata/>} />
+          <Route path='/informacion/plastico' element={<Plastico/>} />
+          <Route path='/informacion/material_organico' element={<Material_Organico/>} />
+          <Route path='/informacion/varios' element={<Varios/>} />
+          <Route path='/mapa' element={<Mapa/>} />
+          <Route path='/grafos' element={<Grafos/>} />
+          <Route path='/noticias' element={<Noticias/>} />
+          <Route path='/noticias/new_01' element={<News_01 />} />
+          <Route path='/noticias/new_02' element={<News_02 />} />
+          <Route path='/noticias/new_03' element={<News_03 />} />
+          <Route path='/noticias/new_04' element={<News_04 />} />
+          <Route path='/noticias/new_05' element={<News_05 />} />
+          <Route path='/noticias/new_06' element={<News_06 />} />
+          <Route path='/preguntas_frecuentes' element={<Preguntas_Frecuentes/>} />
+        </Routes>
+      </BrowserRouter>
+    </ThemeProvider>
   )
 }
 

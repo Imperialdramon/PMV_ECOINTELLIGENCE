@@ -13,7 +13,6 @@ import LogoPag from '../assets/Logo.png';
 
 
 
-
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -64,7 +63,9 @@ function NavBar() {
             <img src={LogoPag} height={100} width = {350} alt='logo pagina' /><br />
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box 
+            sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
+          >
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -98,7 +99,7 @@ function NavBar() {
                   <Button 
                     textalign="center" 
                     href={page.href}
-                    variant="text"
+                    color='inherit'
                   >
                   {page.name}
                   </Button>
@@ -123,15 +124,16 @@ function NavBar() {
               textDecoration: 'none',
             }}
           >
-
+            
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
                 key={page.name}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2, display: 'block' }}
                 href={page.href}
+                color='inherit'
               >
                 {page.name}
               </Button>

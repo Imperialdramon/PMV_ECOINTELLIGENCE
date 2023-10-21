@@ -1,6 +1,6 @@
 import React from 'react'
 import { Breadcrumbs, Typography } from '@mui/material'
-import { Container } from '@mui/material'
+import { Box } from '@mui/material'
 import {Link} from '@mui/material'
 import { useLocation } from 'react-router-dom'
 
@@ -30,8 +30,8 @@ export const Bread_crumbs = () => {
     }
     return (
         <>
-            <Container maxWidth={false} className='BreadCrumb-Bar'>
-                <Breadcrumbs separator=">" aria-label="breadcrumb" color="white">
+            <Box className='BreadCrumb-Bar' sx={{display:'flex',marginX:'2rem',marginY:'0.5rem',alignItems: 'center'}} >
+                <Breadcrumbs separator=">" aria-label="breadcrumb">
                     <Link underline="hover" color="inherit" href="/" className='bread-link'>
                         Inicio
                     </Link>
@@ -39,7 +39,7 @@ export const Bread_crumbs = () => {
                         const last = index === pathnames.length - 1;
                         const to = `/${pathnames.slice(0, index + 1).join('/')}`;
                         return last ? (
-                            <Typography>
+                            <Typography sx={{fontWeight:'bold'}}>
                                 {diccionario[to]}
                             </Typography>
                         ) : (
@@ -49,7 +49,7 @@ export const Bread_crumbs = () => {
                         )
                     })}
                 </Breadcrumbs>
-            </Container> 
+            </Box> 
         </>
     )
 };
