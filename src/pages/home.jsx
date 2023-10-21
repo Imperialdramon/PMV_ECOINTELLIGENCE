@@ -5,6 +5,7 @@ import Footer from '../components/footer';
 import '../stylesheets/page/page__container.scss';
 import Separador from '../components/separator';
 
+
 export const HomePage = () => {
   return (
     <div className='page__container'>

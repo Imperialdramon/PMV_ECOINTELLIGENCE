@@ -11,6 +11,21 @@ import Footer from '../components/footer';
 import '../stylesheets/page/page__container.scss';
 import Separador from '../components/separator';
 
+var head = document.getElementsByTagName('head')[0];
+
+// Save the original method
+var insertBefore = head.insertBefore;
+
+// Replace it!
+head.insertBefore = function (newElement, referenceElement) {
+
+    if (newElement.href && newElement.href.indexOf('https://fonts.googleapis.com/css?family=Roboto') === 0) {
+        return;
+    }
+
+    insertBefore.call(head, newElement, referenceElement);
+};
+
 const markersData = {
     A:{
         position:{lat:-33.49092, lng:-70.61872},

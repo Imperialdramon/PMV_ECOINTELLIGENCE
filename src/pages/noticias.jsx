@@ -30,7 +30,7 @@ export function Template({image, texto, titulo, enlace}) {
         window.location.href = enlace 
     }
     return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345}}>
         <CardActionArea onClick={handleButtonClick}>
 
         <CardMedia
@@ -39,7 +39,7 @@ export function Template({image, texto, titulo, enlace}) {
             height="140"
             image={image} 
             />
-        <CardContent>
+        <CardContent sx={{flexGrow:1}}>
             <Typography gutterBottom variant="h5" component="div">
             <b>{titulo}</b>
             </Typography>
@@ -61,7 +61,7 @@ export const Noticias = () => {
         <h1 style={{ textAlign: 'center' }}> Últimas Noticias </h1>
         <Separador altura="20px"/>
         <Container maxWidth= "false" sx={{display:'flex', justifyContent:'center'}}>
-            <Grid container alignItems="center" rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>            
+            <Grid container alignItems="stretch" rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>            
                 <Grid item xs ={4}>
                     <Template
                         image={new_01}
