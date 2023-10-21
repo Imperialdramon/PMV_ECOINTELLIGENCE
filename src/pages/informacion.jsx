@@ -8,14 +8,6 @@ import Footer from '../components/footer'
 import '../stylesheets/page/page__container.scss'
 import Separador from '../components/separator'
 
-// Imágenes
-import Papel from '../assets/papel_carton.jpg'
-import Vidrio from '../assets/vidrios.jpg'
-import Latas from '../assets/latas.jpg'
-import Plasticos from '../assets/plasticos.jpg'
-import Organicos from '../assets/organicos.jpg'
-import Varios from '../assets/varios.jpg'
-
 export const Informacion = () => {
     return (
         <div className='page__container'>
