@@ -29,67 +29,49 @@ export const Informacion = () => {
                     <Grid container alignItems="center" rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                         <Grid item xs={4}>
                             <ImgMediaCard
-                                src_imagen={Papel}
-                                alto="200"
-                                alto_max={'200px'}
                                 titulo="Papel y Cartón"
-                                texto="Ejemplo"
                                 color="rgb(51, 218, 255)"
+                                color_border="rgb(0, 0, 0)"
                                 enlace="/informacion/papel_y_carton"
                             />
                         </Grid>
                         <Grid item xs={4}>
                             <ImgMediaCard
-                                src_imagen={Vidrio}
-                                alto="200"
-                                alto_max={'200px'}
                                 titulo="Vidrio"
-                                texto="Ejemplo"
+                                color_border="rgb(0, 0, 0)"
                                 color="rgb(88, 255, 51)"
                                 enlace='/informacion/vidrio'
                             />
                         </Grid>
                         <Grid item xs={4}>
                             <ImgMediaCard
-                                src_imagen={Latas}
-                                alto="200"
-                                alto_max={'200px'}
                                 titulo="Lata"
-                                texto="Ejemplo"
                                 color="rgb(248, 60, 60)"
+                                color_border="rgb(0, 0, 0)"
                                 enlace='/informacion/lata'
                             />
                         </Grid>
                         <Grid item xs={4}>
                             <ImgMediaCard
-                                src_imagen={Plasticos}
-                                alto="200"
-                                alto_max={'200px'}
                                 titulo="Plástico"
-                                texto="Ejemplo"
-                                color="rgb(246, 255, 53)"
+                                color="rgb(246, 255, 53)" 
+                                color_border="rgb(0, 0, 0)"
                                 enlace='/informacion/plastico'
                             />
                         </Grid>
                         <Grid item xs={4}>
                             <ImgMediaCard
-                                src_imagen={Organicos}
-                                alto="200"
-                                alto_max={'200px'}
                                 titulo="Material Orgánico"
-                                texto="Ejemplo"
                                 color="rgb(255, 182, 0)"
+                                color_border="rgb(0, 0, 0)"
                                 enlace='/informacion/material_organico'
                             />
                         </Grid>
                         <Grid item xs={4}>
                             <ImgMediaCard
-                                src_imagen={Varios}
-                                alto="200"
-                                alto_max={'200px'}
                                 titulo="Varios"
-                                texto="Ejemplo"
                                 color="rgb(182, 182, 182)"
+                                color_border="rgb(0, 0, 0)"
                                 enlace='/informacion/varios'
                             />
                         </Grid>

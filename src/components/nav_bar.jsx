@@ -19,7 +19,7 @@ function NavBar() {
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   {/* Paginas para el navbar, van con el nombre y el link, en name y href respectivamente */}
   const pages = [
-    {"name":"Sobre Nosotros","href":"/sobre_nosotros"},
+    /*{"name":"Sobre Nosotros","href":"/sobre_nosotros"},*/ // No es necesario tener esto para la entrega
     {"name":"Información sobre el Reciclaje","href":"/informacion"}, 
     {"name":"Mapa Interactivo","href":"/mapa"},
     {"name":"Noticias","href":"/noticias"},
