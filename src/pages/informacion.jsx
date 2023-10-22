@@ -37,7 +37,7 @@ export const Informacion = () => {
                 </Container>
                 <Separador altura="20px" />
                 <Container maxWidth="false" sx={{display:'flex', justifycontent:'center'}}>
-                    <Grid container alignItems="center" rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+                    <Grid container alignItems="stretch" direction="row" rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                         <Grid item xs={4}>
                             <ImgMediaCard
                                 titulo="Papel y Cartón"
@@ -49,41 +49,41 @@ export const Informacion = () => {
                         <Grid item xs={4}>
                             <ImgMediaCard
                                 titulo="Vidrio"
-                                color_border="rgb(0, 0, 0)"
                                 color="rgb(88, 255, 51)"
                                 enlace='/informacion/vidrio'
+                                img={img_basurero_glass}
                             />
                         </Grid>
                         <Grid item xs={4}>
                             <ImgMediaCard
                                 titulo="Lata"
                                 color="rgb(248, 60, 60)"
-                                color_border="rgb(0, 0, 0)"
                                 enlace='/informacion/lata'
+                                img={img_basurero_lata}
                             />
                         </Grid>
                         <Grid item xs={4}>
                             <ImgMediaCard
                                 titulo="Plástico"
                                 color="rgb(246, 255, 53)" 
-                                color_border="rgb(0, 0, 0)"
                                 enlace='/informacion/plastico'
+                                img={img_basurero_plastic}
                             />
                         </Grid>
                         <Grid item xs={4}>
                             <ImgMediaCard
                                 titulo="Material Orgánico"
                                 color="rgb(255, 182, 0)"
-                                color_border="rgb(0, 0, 0)"
                                 enlace='/informacion/material_organico'
+                                img={img_basurero_organic}
                             />
                         </Grid>
                         <Grid item xs={4}>
                             <ImgMediaCard
                                 titulo="Varios"
                                 color="rgb(182, 182, 182)"
-                                color_border="rgb(0, 0, 0)"
                                 enlace='/informacion/varios'
+                                img={img_basurero_others}
                             />
                         </Grid>
                     </Grid>
