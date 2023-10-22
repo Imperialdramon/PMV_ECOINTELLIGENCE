@@ -2,7 +2,7 @@ import React from 'react'
 import { useEffect,useState,useRef } from 'react';
 import NavBar from '../components/nav_bar'
 import { Bread_crumbs } from '../components/breadcrumbs';
-import { Container, Drawer, Button, Box, Grid, Stack, Typography} from '@mui/material';
+import { Container, Drawer, Box, Grid, Stack, Typography} from '@mui/material';
 import BarChart from '../components/BarChart';
 import { createRoot } from 'react-dom/client';
 import Reciclaje from '../assets/reciclaje.png';
@@ -58,42 +58,51 @@ export const Mapa = () => {
         <div className='page__container'>
             <NavBar />
             <Bread_crumbs />
-            <Grid container>
-                <Grid item xs={8}>
-                    <Wrapper
-                        apiKey='AIzaSyBH7WLmJP1eX-pBZBILTvwXNBYayz2vjuA'
-                        version='beta'
-                        libraries={["marker"]}
-                        >
-                        <Map/>
-                    </Wrapper>
+            <Typography variant='h3' align='center' sx={{fontWeight:'bold'}}>
+                Mapa Interactivo
+            </Typography>
+            <Separador altura="20px" />
+            <Container maxWidth={false} sx={{display:'flex', width:"95%"}}>
+                <Grid container sx={{height:"110%"}}>
+                    <Grid item xs={7} sx={{height:"110%", border:1}}>
+                        <Wrapper
+                            apiKey='AIzaSyBH7WLmJP1eX-pBZBILTvwXNBYayz2vjuA'
+                            version='beta'
+                            libraries={["marker"]}
+                            >
+                            <Map/>
+                        </Wrapper>
+                    </Grid>
+                    <Grid item xs={5} padding={5} sx={{background:'#ABEBC6'}} textAlign={'center'} justifyContent={"center"} alignContent={"center"}>
+                        <Stack spacing={3}>
+                            
+                            <Typography variant='h4' sx={{fontWeight:'bold'}}>Colores de los marcadores</Typography>
+                            <Stack direction='row' justifyContent='justify' alignItems="center" spacing={2}>
+                                <div className={'marker red'}><img src={Reciclaje} alt="marker"/></div>
+                                <Typography variant='subtitle1'>Indica que todos los contenedores están llenos</Typography>
+                            </Stack>
+                            <Stack direction='row' justifyContent='justify' alignItems="center" spacing={2}>
+                                <div className={'marker orange'}><img src={Reciclaje} alt="marker"/></div>
+                                <Typography variant='subtitle1'>Indica que uno o más contenedores están llenos</Typography>
+                            </Stack>
+                            <Stack direction='row' justifyContent='justify' alignItems="center" spacing={2}>
+                                <div className={'marker green'}><img src={Reciclaje} alt="marker"/></div>
+                                <Typography variant='subtitle1'>Indica que ningún contenedor está lleno</Typography>
+                            </Stack>
+                            <Container justifyContent='center'>
+                                <Typography variant='h4' sx={{fontWeight:'bold'}}>¿Como se utiliza el Mapa Interactivo?</Typography>
+                                <Typography lineHeight={1.2} align='justify' variant='subtitle1'>Se puede mover por el mapa mediante el desplazamiento, alejar o acercar</Typography>
+                                
+                                <Typography lineHeight={1.2} align='justify' variant='subtitle1'>Hacer click en alguno de los marcadores en el mapa para obtener la información detallada de los contenedores</Typography>
+                                
+                                <Typography lineHeight={1.2} align='justify' variant='subtitle1'>Pasar por encima el mouse para observar detalladamente los porcentajes de cada contenedor en la barra correspondiente</Typography>
+                                
+                                <Typography lineHeight={1.2} align='justify' variant='subtitle1'>Hacer click afuera para salir del desplegable de información</Typography>
+                            </Container>
+                        </Stack>
+                    </Grid>
                 </Grid>
-                <Grid item xs={4} sx={{background:'#ABEBC6',borderLeft:1}} textAlign={'center'}>
-                    <Stack spacing={2}>
-                        <Typography variant='h3'>Mapa Iteractivo</Typography>
-                        <Typography variant='h5'>Color de los marcadores</Typography>
-                        <Stack direction='row' justifyContent='center' alignItems="center" spacing={2}>
-                            <div className={'marker red'}><img src={Reciclaje} alt="marker"/></div>
-                            <Typography>Contenedores llenos</Typography>
-                        </Stack>
-                        <Stack direction='row' justifyContent='center' alignItems="center" spacing={2}>
-                            <div className={'marker orange'}><img src={Reciclaje} alt="marker"/></div>
-                            <Typography>uno o más contenedores llenos</Typography>
-                        </Stack>
-                        <Stack direction='row' justifyContent='center' alignItems="center" spacing={2}>
-                            <div className={'marker green'}><img src={Reciclaje} alt="marker"/></div>
-                            <Typography>Ningun contenedor lleno</Typography>
-                        </Stack>
-                        <Container>
-                            <Typography variant='h5'>¿Como se utiliza el mapa?</Typography>
-                            <Typography>Se puede mover por el mapa mediante el desplazamiento, alejar o acercar</Typography>
-                            <Typography>Hacer click en alguno de los marcadores en el mapa para obtener la información detallada de los contenedores</Typography>
-                            <Typography>Pasar por encima el mouse para observar detalladamente los porcentajes de cada contenedor en la barra correspondiente</Typography>
-                            <Typography>Hacer click afuera para salir del desplegable de información</Typography>
-                        </Container>
-                    </Stack>
-                </Grid>
-            </Grid>
+            </Container>
             <Separador altura="20px" />
             <Footer/>
         </div>
@@ -146,7 +155,7 @@ function Indicadores({map}){
                 >
                     <Container maxWidth={false} sx={{display:'flex',justifyContent:'center'}}>
                         <Box
-                            sx={{width:600,display:'flex',justifyContent:'center'}}
+                            sx={{maxWidth:'80%',display:'flex',justifyContent:'center'}}
                         >
                             <BarChart data={databar}/>
                         </Box>
