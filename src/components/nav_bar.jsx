@@ -23,8 +23,6 @@ function NavBar() {
     {"name":"Mapa Interactivo","href":"/mapa"},
     {"name":"Noticias","href":"/noticias"},
     {"name":"Preguntas Frecuentes","href":"/preguntas_frecuentes"},
-
-
   ];
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
