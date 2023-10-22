@@ -45,26 +45,28 @@ function Template({image, alto, texto, texto2, titulo, noticia, enlace}) {
         setOpen(false);
     }
 
+    const resto = (100 - parseInt(alto)).toString() + "%"
+    const alto_str = alto + "%"
+
     return(
         <div>
             <Card sx={{height: '50vmin'}}>
-                <CardActionArea onClick={handleClickOpen} sx={{height: '50vmin'}}>
+                <CardActionArea onClick={handleClickOpen} sx={{height: '50vmin', position:"static"}}>
                     <CardMedia
                         component="img"
-                        height={alto}
+                        height={alto_str}
                         image={image}
                         sx={{
                             position: 'sticky', // Hace que la imagen sea fija en la parte superior
                             top: 0, // Posición en la parte superior
                         }}
                         />
-                    <CardContent sx={{flexGrow:1}}>
-                        <Typography gutterBottom variant="h6" component="div" align='justify'>
+                    <CardContent sx={{flexGrow:1, height:{resto}, alignContent:"center", overflow:"hidden"}}>
+                        <Typography variant="h6" component="div" align='justify'>
                             <b>
-                                {titulo}
+                                {titulo + resto}
                             </b>
                         </Typography>
-                        <br />
                         <Typography variant="body2" color="text.secondary" align='justify'>
                             {texto}
                             <br />
@@ -116,7 +118,7 @@ export const Noticias = () => {
                         <Grid item xs ={4}>
                             <Template
                                 image={new_01}
-                                alto="30%"
+                                alto="50"
                                 titulo="Comienza retiro de residuos reciclables desde 750 mil domicilios capitalinos"
                                 texto="La medida se enmarca en la Ley de Reciclaje y se traducirá, concretamente, en la circulación de camiones -parecidos a los de la basura- por la ciudad."
                                 texto2="Cartón, latas y plásticos serán recolectados en 24 comunas de la Región Metropolitana."
@@ -127,7 +129,7 @@ export const Noticias = () => {
                         <Grid item xs={4}>
                             <Template
                                 image={new_02}
-                                alto="30%"
+                                alto="50"
                                 titulo="Grupo Red protagoniza campaña de reciclaje del Gobierno de Chile"
                                 texto="Luego de haber recreado un clásico spot por la conducción responsable junto a Guido Vecchiola, el Gobierno de Chile escogió a otra figura popular para una campaña pública. Esta vez fue el Grupo Red, un conjunto argentino de cumbia y sound que vivió su fama a fines de los 90 y que ahora protaniza la campaña comunicacional de la Ley de Responsabilidad Extendida del Productor (REP) o Ley del Reciclaje."
                                 enlace="https://cooperativa.cl/noticias/entretencion/musica/grupo-red-protagoniza-campana-de-reciclaje-del-gobierno-de-chile/2023-09-14/085625.html"
@@ -137,7 +139,7 @@ export const Noticias = () => {
                         <Grid item xs={4}>
                             <Template
                                 image={new_03}
-                                alto="30%"
+                                alto="50"
                                 titulo="Proyectos de sustentabilidad recibieron premio para su ejecución"
                                 texto="Innovaciones de Santiago, Antofagasta, Punta Arenas y Temuco tendrán aporte financiero."
                                 enlace="https://cooperativa.cl/noticias/sociedad/medioambiente/reciclaje/proyectos-de-sustentabilidad-recibieron-premio-para-su-ejecucion/2021-11-30/175134.html"
@@ -148,7 +150,7 @@ export const Noticias = () => {
                         <Grid item xs={4}>
                             <Template
                                 image={new_04}
-                                alto="30%"
+                                alto="50"
                                 titulo="Universidad de Concepción reciclará las mascarillas"
                                 texto="
                                 A fines del año pasado, Softys, empresa de productos de higiene y cuidado personal, puso en marcha en conjunto con la Unidad de Desarrollo Tecnológico (UDT) de la Universidad de Concepción, un programa piloto para reciclaje de mascarillas en Concepción.
@@ -161,7 +163,7 @@ export const Noticias = () => {
                         <Grid item xs={4}>
                             <Template
                                 image={new_05}
-                                alto="30%"
+                                alto="50"
                                 titulo="Premios Cero Basura reconoció proyectos de sustentabilidad"
                                 texto="La función de copiar y pegar nuestros contenidos, es actualmente exclusiva de los suscriptores a DF Digital Premium, si estás suscrito, inicia sesión con tu mail y clave. Además, el suscriptor sólo puede hacer uso personal del contenido de DF y queda expresamente prohibido modificar, publicar, transmitir, distribuir, exhibir, comunicar al público o reproducir el contenido en todo o en parte, ni participar en su transmisión, representación o venta, o explotarlos en forma alguna que no esté expresamente exceptuado por la ley aplicable y convenios internacionales vigentes sobre propiedad intelectual."
                                 enlace="https://www.df.cl/df-lab/sostenibilidad/premios-cero-basura-destaca-iniciativas-de-empresas-en-gestion-de-residuos"
@@ -172,7 +174,7 @@ export const Noticias = () => {
                         <Grid item xs={4}>
                             <Template
                                 image={new_06}
-                                alto="30%"
+                                alto="50"
                                 titulo="Gobierno anuncia proyecto para evitar que residuos orgánicos terminen en los rellenos"
                                 texto="El proyecto busca instaurar obligaciones en la gestión de reciclaje para Gobiernos regionales y municipios, e impulsar la separación de desechos orgánicos en viviendas." 
                                 texto2="Su implementación será de forma gradual, partiendo con restos de poda y residuos de ferias libres."
