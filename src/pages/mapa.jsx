@@ -2,7 +2,7 @@ import React from 'react'
 import { useEffect,useState,useRef } from 'react';
 import NavBar from '../components/nav_bar'
 import { Bread_crumbs } from '../components/breadcrumbs';
-import { Container, Drawer, Box, Grid, Stack, Typography} from '@mui/material';
+import { Container, Drawer, Box, Grid, Stack, Typography, Button, Divider} from '@mui/material';
 import BarChart from '../components/BarChart';
 import { createRoot } from 'react-dom/client';
 import Reciclaje from '../assets/reciclaje.png';
@@ -10,6 +10,7 @@ import { Wrapper } from '@googlemaps/react-wrapper';
 import Footer from '../components/footer';
 import '../stylesheets/page/page__container.scss';
 import Separador from '../components/separator';
+import { Info } from '@mui/icons-material';
 
 var head = document.getElementsByTagName('head')[0];
 
@@ -54,6 +55,10 @@ const mapOptions = {
 const bar = [10, 20, 50, 20, 15, 40];
 
 export const Mapa = () => {
+    const [ayuda,setAyuda] = useState(false);
+    const toggleAyuda = ()=>{
+        setAyuda(!ayuda);
+    }
     return (
         <div className='page__container'>
             <NavBar />
@@ -63,20 +68,31 @@ export const Mapa = () => {
             </Typography>
             <Separador altura="20px" />
             <Container maxWidth={false} sx={{display:'flex', width:"95%"}}>
-                <Grid container sx={{height:"110%"}}>
-                    <Grid item xs={7} sx={{height:"110%", border:1}}>
-                        <Wrapper
-                            apiKey='AIzaSyBH7WLmJP1eX-pBZBILTvwXNBYayz2vjuA'
-                            version='beta'
-                            libraries={["marker"]}
-                            >
-                            <Map/>
-                        </Wrapper>
-                    </Grid>
-                    <Grid item xs={5} padding={5} sx={{background:'#ABEBC6'}} textAlign={'center'} justifyContent={"center"} alignContent={"center"}>
-                        <Stack spacing={3}>
-                            
-                            <Typography variant='h4' sx={{fontWeight:'bold'}}>Colores de los marcadores</Typography>
+                <Stack width="100%" alignItems="flex-start" spacing={2}>
+                    <Button
+                        variant='contained'
+                        color='secondary'
+                        onClick={toggleAyuda}
+                        startIcon={<Info />}
+                    > <Typography fontWeight="bold"> Información del Mapa</Typography>
+                    </Button>
+                    <Wrapper
+                        apiKey='AIzaSyBH7WLmJP1eX-pBZBILTvwXNBYayz2vjuA'
+                        version='beta'
+                        libraries={["marker"]}
+                        >
+                        <Map />
+                    </Wrapper>
+                </Stack>
+                <Drawer
+                    anchor='right'
+                    open={ayuda}
+                    onClose={toggleAyuda}
+                    PaperProps={{sx:{backgroundColor:"preguntas.main",color:"preguntas.contrastText"}}}
+                >
+                    <Container sx={{width:"75vh",paddingTop:"2rem"}}>
+                        <Stack spacing={1}>
+                            <Typography variant="h4" sx={{fontWeight:'bold'}}>Colores de los marcadores</Typography>
                             <Stack direction='row' justifyContent='justify' alignItems="center" spacing={2}>
                                 <div className={'marker red'}><img src={Reciclaje} alt="marker"/></div>
                                 <Typography variant='subtitle1'>Indica que todos los contenedores están llenos</Typography>
@@ -89,19 +105,19 @@ export const Mapa = () => {
                                 <div className={'marker green'}><img src={Reciclaje} alt="marker"/></div>
                                 <Typography variant='subtitle1'>Indica que ningún contenedor está lleno</Typography>
                             </Stack>
-                            <Container justifyContent='center'>
+                            <Stack spacing={2}>
                                 <Typography variant='h4' sx={{fontWeight:'bold'}}>¿Como se utiliza el Mapa Interactivo?</Typography>
                                 <Typography lineHeight={1.2} align='justify' variant='subtitle1'>Se puede mover por el mapa mediante el desplazamiento, alejar o acercar</Typography>
-                                
+                                <Divider></Divider>
                                 <Typography lineHeight={1.2} align='justify' variant='subtitle1'>Hacer click en alguno de los marcadores en el mapa para obtener la información detallada de los contenedores</Typography>
-                                
+                                <Divider></Divider>
                                 <Typography lineHeight={1.2} align='justify' variant='subtitle1'>Pasar por encima el mouse para observar detalladamente los porcentajes de cada contenedor en la barra correspondiente</Typography>
-                                
+                                <Divider></Divider>
                                 <Typography lineHeight={1.2} align='justify' variant='subtitle1'>Hacer click afuera para salir del desplegable de información</Typography>
-                            </Container>
+                            </Stack>
                         </Stack>
-                    </Grid>
-                </Grid>
+                    </Container>
+                </Drawer>
             </Container>
             <Separador altura="20px" />
             <Footer/>

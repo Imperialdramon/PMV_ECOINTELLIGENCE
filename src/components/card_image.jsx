@@ -18,7 +18,7 @@ function ImgMediaCard({ titulo, color, color_border, enlace, img }) {
         m: 1,
     }
     return (
-    <Card sx={cardStyles}>
+    <Card sx={cardStyles} display="flex">
         <CardActionArea onClick={handleButtonClick}>
             <Grid container justifyContent="center" alignItems="center">
                 <CardContent>

@@ -21,9 +21,6 @@ export const paleta_main = createTheme({
           main:'#EBF9E4',
           contrastText: '#7EA56A'
         },
-        menuPaper: {
-          backgroundColor: "#EBF9E4"
-        }
     },
 });
 
