@@ -9,8 +9,7 @@ import { Container } from '@mui/system'
 import Paper from '@mui/material/Paper'
 import Grid from '@mui/material/Grid'
 import '../../stylesheets/listas.scss'
-import Imagen from "../../assets/papel_carton.jpg"
-
+import img_basurero from '../../assets/recycle_paper.png'
 
 const containerStyles = {
     display: 'flex',
@@ -43,25 +42,25 @@ export const Papel_Carton = () => {
             <NavBar />
             <Bread_crumbs />
             <div className="content-wrap">
-
                 <Typography align='center' variant='h3'>
                     Papel y Cartón
                 </Typography>
                 <Separador altura="20px" />
-                <Container maxWidth="false" sx={{display:'flex', justifycontent:'center', width: "90%"}}>
+                <Container maxWidth="false" sx={{display:'flex', justifycontent:'center', width: "95%"}}>
                     <Grid container alignItems="center" rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                         <Grid item xs={3}>
                             <div style={containerStyles}>
                                 <img
-                                    src={Imagen} // Reemplaza con la ruta de tu imagen
+                                    src={img_basurero} // Reemplaza con la ruta de tu imagen
                                     width="60%" // Ancho deseado en píxeles
                                     height="10%" // Alto deseado en píxeles
                                 />
                             </div>
+                        
                         </Grid>
                         
                         <Grid item xs={9}>
-                            <Paper elevation={0} sx={{padding:"10px", margin:"5px"}}>
+                            <Paper elevation={2} sx={{padding:"10px", margin:"5px"}}>
                                 <Typography align='center' variant='h5' sx={{fontWeight:'bold'}}>
                                     ¿Qué tipo de material se encuentra en esta categoría?
                                 </Typography>
@@ -83,25 +82,34 @@ export const Papel_Carton = () => {
                                 </Grid>
                             </Paper>
                         </Grid>
-                        <Separador altura="20px" />
-                        <Grid item xs={6}>
-                            <Paper elevation={0}sx={{padding:"10px", margin:"5px"}}>
+
+                        <Grid item xs={9}>
+                            <Paper elevation={2}sx={{padding:"10px", margin:"5px"}}>
                                 <Typography align='center' variant='h5' sx={{fontWeight:'bold'}}>
                                     ¿Como se deben preparar los materiales para ser reciclados?
                                 </Typography>
-                                <Typography align='justify' variant='subtitle1'>
-                                    a
+                                <br/>
+                                <Typography align='justify' variant='body1'>
+                                    Para reciclar papeles y cartones, es fundamental que estén limpios y secos, ya que la humedad y la contaminación de alimentos pueden dificultar el proceso de reciclaje.
+                                    También, es importante eliminar elementos no reciclables que tengan contacto con los papeles o cartones, como plástico y metal. Las cajas de cartón deben estar plegadas o aplastadas para ahorrar espacio en el contenedor de reciclaje y permitir el ingreso de más materiales.
                                 </Typography>
                             </Paper>
                         </Grid>
 
-                        <Grid item xs={6}>
-                            <Paper elevation={0}sx={{padding:"10px", margin:"5px"}}>
+                        <Grid item xs={3}>
+                        </Grid>
+
+                        <Grid item xs={3}>
+                        </Grid>
+
+                        <Grid item xs={9}>
+                            <Paper elevation={2}sx={{padding:"10px", margin:"5px"}}>
                                 <Typography align='center' variant='h5' sx={{fontWeight:'bold'}}>
                                     ¿Por qué es importante reciclar este tipo de materiales?
                                 </Typography>
-                                <Typography align='justify' variant='subtitle1'>
-                                    a
+                                <br/>
+                                <Typography align='justify' variant='body1'>
+                                    Reciclar papeles y cartones es esencial para conservar recursos forestales al reducir la tala de árboles, ahorrar energía al disminuir las emisiones de gases de efecto invernadero en la producción de papel, prolongar la vida útil de vertederos al reducir la cantidad de desechos, y preservar el agua al minimizar el consumo en el proceso de fabricación. Además, fomenta la generación de empleos en la industria del reciclaje y promueve un ciclo cerrado de productos de papel, contribuyendo a la sostenibilidad económica y ambiental.
                                 </Typography>
                             </Paper>
                         </Grid>
@@ -111,11 +119,7 @@ export const Papel_Carton = () => {
             <Separador altura="20px" />
             <Footer/>
         </div>
-
-    );
-};
+    )
+}
 
 export default Papel_Carton
-/*
-                        
-                        */
