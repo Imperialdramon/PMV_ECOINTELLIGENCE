@@ -39,17 +39,11 @@ export const Informacion = () => {
                 <Container maxWidth="false" sx={{display:'flex', justifycontent:'center'}}>
                     <Grid container alignItems="center" rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                         <Grid item xs={4}>
-                            <div style={containerStyles}>
-                                <img
-                                    src={img_basurero_paper} // Reemplaza con la ruta de tu imagen
-                                    width="60%" // Ancho deseado en píxeles
-                                    height="10%" // Alto deseado en píxeles
-                                />
-                            </div>
                             <ImgMediaCard
                                 titulo="Papel y Cartón"
                                 color="rgba(91, 163, 229, 0.5)"
                                 enlace="/informacion/papel_y_carton"
+                                img={img_basurero_paper}
                             />
                         </Grid>
                         <Grid item xs={4}>

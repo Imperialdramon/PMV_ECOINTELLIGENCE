@@ -1,10 +1,10 @@
 import * as React from 'react'
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
-import { CardActionArea } from '@mui/material'
+import { Box, CardActionArea, CardMedia, Stack, Grid } from '@mui/material'
 import Typography from '@mui/material/Typography'
 
-function ImgMediaCard({ titulo, color, color_border, enlace }) {
+function ImgMediaCard({ titulo, color, color_border, enlace, img }) {
     const borde = '2px solid ' + color_border
     const handleButtonClick = () => {
         window.location.href = enlace // Dirección de envío del enlace
@@ -20,11 +20,19 @@ function ImgMediaCard({ titulo, color, color_border, enlace }) {
     return (
     <Card sx={cardStyles}>
         <CardActionArea onClick={handleButtonClick}>
+            <Grid container >
             <CardContent>
-                <Typography gutterBottom variant="h5" component="div" align='center'>
-                    {titulo}
-                </Typography>
+                    <Typography gutterBottom variant="h5" component="div" align='center'>
+                        {titulo}
+                    </Typography>
             </CardContent>
+            <CardMedia 
+                component="img" 
+                image={img} 
+                alt="containter"
+                sx={{ width: 100 }}
+                />
+            </Grid>
         </CardActionArea>
     </Card>
     )
