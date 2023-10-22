@@ -67,7 +67,7 @@ export const Mapa = () => {
                 Mapa Interactivo
             </Typography>
             <Separador altura="20px" />
-            <Container maxWidth={false} sx={{display:'flex', width:"95%"}}>
+            <Container maxWidth={false} sx={{display:'flex'}}>
                 <Stack width="100%" alignItems="flex-start" spacing={2}>
                     <Button
                         variant='contained'
@@ -169,9 +169,10 @@ function Indicadores({map}){
                     onClose={toggleDrawer}
                     PaperProps={{ square: false, sx:{borderTopLeftRadius:30,borderTopRightRadius:30}}}
                 >
-                    <Container maxWidth={false} sx={{display:'flex',justifyContent:'center'}}>
+                    <Container maxWidth={false} sx={{display:'flex',justifyContent:'center',alignItems:"center"}} disableGutters>
                         <Box
-                            sx={{maxWidth:'80%',display:'flex',justifyContent:'center'}}
+                            justifyContent="center"
+                            sx={{maxWidth:'80%',display:'flex', width:"75vh"}}
                         >
                             <BarChart data={databar}/>
                         </Box>
