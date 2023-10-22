@@ -28,10 +28,12 @@ import Preguntas_Frecuentes from '../pages/preguntas_frecuentes'
 //tema
 import paleta_main from '../components/theme';
 import { ThemeProvider } from '@mui/material';
+import CssBaseline from '@mui/material/CssBaseline';
 
 const AppRouter = () => {
   return (
     <ThemeProvider theme={paleta_main}>
+      <CssBaseline />
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<HomePage />} />
