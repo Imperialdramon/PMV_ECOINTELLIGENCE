@@ -5,7 +5,15 @@ import Footer from '../components/footer'
 import '../stylesheets/page/page__container.scss'
 import Separador from '../components/separator'
 import { Container, Paper, Grid, Typography } from '@mui/material'
+import man from '../assets/bald_reciclyng.png'
+import map from '../assets/mapa_i.png'
+import inf from '../assets/informa.png'
 
+const containerStyles = {
+  display: 'flex',
+  justifyContent: 'center', // Centra horizontalmente
+  alignItems: 'center',     // Centra verticalmente
+}
 
 export const HomePage = () => {
   return (
@@ -13,13 +21,14 @@ export const HomePage = () => {
       <NavBar />
       <Bread_crumbs />
       <div className="content-wrap">
-        <Typography variant='h3' align='center' sx={{fontWeight:'bold'}}>
-          ¿Qué es EcoItelligence?
-        </Typography>
+
         <Separador altura="20px"/>
         <Container maxWidth={false} sx={{display:'flex', justifyContent:'center', width:"90%"}} >
           <Grid container alignItems="center" rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
             <Grid item xs ={8}>
+              <Typography variant='h3' align='center' sx={{fontWeight:'bold'}}>
+                ¿Qué es EcoItelligence?
+              </Typography>
               <Paper 
                 elevation={1}
                 sx={{
@@ -36,19 +45,23 @@ export const HomePage = () => {
               </Paper>
             </Grid>
             <Grid item xs ={4}>
-              <Typography variant="H6" align='center' sx={{fontWeight:'bold'}}>
-                A
-              </Typography>
+              <div style={containerStyles}>
+                <img
+                  src={man} // Reemplaza con la ruta de tu imagen
+                  width={"70%"} // Alto deseado en píxeles
+                />
+              </div>
             </Grid>
             <Grid xs={12}>
               <Separador altura="20px"/>
             </Grid>
             <Grid item xs ={4}>
-                
-                <Typography variant="h6" align='justify' sx={{fontWeight:'bold'}}>
-                  A
-                </Typography>
-              
+              <div style={containerStyles}>
+                <img
+                  src={map} // Reemplaza con la ruta de tu imagen
+                  width={"90%"} // Alto deseado en píxeles
+                />
+              </div>
             </Grid>
             <Grid item xs ={8}>
               <Typography variant='h5' align='center' sx={{fontWeight:'bold'}}>
@@ -92,9 +105,12 @@ export const HomePage = () => {
               </Paper>
             </Grid>
             <Grid item xs ={4}>
-              <Typography variant="H6" align='center' sx={{fontWeight:'bold'}}>
-                A
-              </Typography>
+              <div style={containerStyles}>
+                <img
+                  src={inf} // Reemplaza con la ruta de tu imagen
+                  width={"50%"} // Alto deseado en píxeles
+                />
+              </div>
             </Grid>
           </Grid>
         </Container>
