@@ -16,6 +16,10 @@ export const paleta_main = createTheme({
         },
         background:{
             default:'#D3EAC7'
+        },
+        preguntas:{
+          main:'#EBF9E4',
+          contrastText: '#7EA56A'
         }
     },
 });
