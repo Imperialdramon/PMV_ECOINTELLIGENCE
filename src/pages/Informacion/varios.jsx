@@ -102,12 +102,11 @@ const Varios = () => {
                         <Grid item xs={10}>
                             <Paper elevation={2} sx={{padding:"10px", margin:"5px", backgroundColor: paper_color, color:"primary.contrastText"}}>
                                 <Typography align='center' variant={titles} sx={{fontWeight:'bold'}}>
-                                    ¿Como se deben preparar los materiales para ser reciclados?
+                                    ¿Cómo se deben desechar adecuadamente los materiales?
                                 </Typography>
                                 <br/>
                                 <Typography align='justify' variant={bodys} style={estiloPersonalizado}>
-                                    Para reciclar papeles y cartones, es fundamental que estén limpios y secos, ya que la humedad y la contaminación de alimentos pueden dificultar el proceso de reciclaje.
-                                    También, es importante eliminar elementos no reciclables que tengan contacto con los papeles o cartones, como plástico y metal. Las cajas de cartón deben estar plegadas o aplastadas para ahorrar espacio en el contenedor de reciclaje y permitir el ingreso de más materiales.
+                                Los materiales en esta categoría deben ser desechados adecuadamente en los contenedores de color gris, debido a que es importante asegurarse de que estos materiales no se arrojen en la naturaleza ni en otros contenedores de reciclaje, ya que generalmente no son reciclables. Además la disposición adecuada ayuda a prevenir la contaminación ambiental y a mantener la limpieza de las comunidades.
                                 </Typography>
                             </Paper>
                         </Grid>
@@ -135,11 +134,11 @@ const Varios = () => {
                         <Grid item xs={10}>
                             <Paper elevation={2}sx={{padding:"10px", margin:"5px", backgroundColor: paper_color, color:"primary.contrastText"}}>
                                 <Typography align='center' variant={titles} sx={{fontWeight:'bold'}}>
-                                    ¿Por qué es importante reciclar este tipo de materiales?
+                                    ¿Por qué es importante gestionar adecuadamente los materiales en la categoría?
                                 </Typography>
                                 <br/>
                                 <Typography align='justify' variant={bodys} style={estiloPersonalizado}>
-                                    Reciclar papeles y cartones es esencial para conservar recursos forestales al reducir la tala de árboles, ahorrar energía al disminuir las emisiones de gases de efecto invernadero en la producción de papel, prolongar la vida útil de vertederos al reducir la cantidad de desechos, y preservar el agua al minimizar el consumo en el proceso de fabricación. Además, fomenta la generación de empleos en la industria del reciclaje y promueve un ciclo cerrado de productos de papel, contribuyendo a la sostenibilidad económica y ambiental.
+                                Gestionar adecuadamente los materiales en esta categoría es esencial debido a su impacto ambiental negativo. Estos materiales, en su mayoría, no son reciclables y a menudo están hechos de una combinación de materiales difíciles de separar. Si no se gestionan correctamente, pueden contaminar el medio ambiente y contribuir a la acumulación de residuos en vertederos. Desecharlos en contenedores de basura designados es crucial para prevenir la contaminación y promover prácticas de gestión de residuos más sostenibles, como la reducción del uso de productos desechables y la promoción de alternativas más amigables con el medio ambiente.
                                 </Typography>
                             </Paper>
                         </Grid>

@@ -172,9 +172,10 @@ export const Noticias = () => {
                         <Grid item xs={4}>
                             <Template
                                 image={new_06}
-                                alto="200px"
+                                alto="220px"
                                 titulo="Gobierno anuncia proyecto para evitar que residuos orgánicos terminen en los rellenos"
-                                texto="El proyecto busca instaurar obligaciones en la gestión de reciclaje para Gobiernos regionales y municipios, e impulsar la separación de desechos orgánicos en viviendas.\n Su implementación será de forma gradual, partiendo con restos de poda y residuos de ferias libres."
+                                texto="El proyecto busca instaurar obligaciones en la gestión de reciclaje para Gobiernos regionales y municipios, e impulsar la separación de desechos orgánicos en viviendas." 
+                                texto2="Su implementación será de forma gradual, partiendo con restos de poda y residuos de ferias libres."
                                 enlace="https://cooperativa.cl/noticias/pais/medioambiente/gobierno-anuncia-proyecto-para-evitar-que-residuos-organicos-terminen-en/2023-06-05/141838.html"
                                 noticia="Coperativa"
                             />    

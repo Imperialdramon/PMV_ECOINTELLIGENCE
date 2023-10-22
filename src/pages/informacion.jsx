@@ -30,9 +30,11 @@ export const Informacion = () => {
             <div className="content-wrap">
                 <Typography variant='h3' align='center' sx={{fontWeight:'bold'}}>Información sobre el Reciclaje</Typography>
                 <Separador altura="10px" />
-                <Typography variant='subtitle1' fontSize='25px' align='justify' maxWidth="90%" lineHeight={1.2}>
-                    En esta sección se encuentran los seis tipos de contenedores para el reciclaje, los cuales tienen un tipo de contenido específico y diferentes motivos por los cuales se recomiendan reciclar debido a su impacto en el medioambiente. 
-                </Typography>
+                <Container maxWidth="80%" sx={{display:'flex', justifycontent:'center', alignContent:"justify", alignItems:"center"} }>
+                    <Typography item variant='subtitle1' fontSize='25px'  lineHeight={1.2}>
+                        En esta sección se encuentran los seis tipos de contenedores para el reciclaje, los cuales tienen un tipo de contenido específico y diferentes motivos por los cuales se recomiendan reciclar debido a su impacto en el medioambiente. 
+                    </Typography>
+                </Container>
                 <Separador altura="20px" />
                 <Container maxWidth="false" sx={{display:'flex', justifycontent:'center'}}>
                     <Grid container alignItems="center" rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
