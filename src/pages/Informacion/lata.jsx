@@ -4,11 +4,11 @@ import { Bread_crumbs } from '../../components/breadcrumbs'
 import Footer from '../../components/footer'
 import '../../stylesheets/page/page__container.scss'
 import Separador from '../../components/separator'
-import { Typography } from '@mui/material'
 import { Container } from '@mui/system'
+import { Stack, Typography} from "@mui/material"
 import Paper from '@mui/material/Paper'
 import Grid from '@mui/material/Grid'
-import '../../stylesheets/listas.scss'
+import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord'
 import img_basurero from '../../assets/recycle_lata.png'
 
 const containerStyles = {
@@ -18,17 +18,30 @@ const containerStyles = {
     height: '10%',         // Establece una altura al 100% de la vista
 }
 
+const paper_color = "#ee4c4c80"
+const titles = "h4"
+const bodys = "body1"
+
+const estiloPersonalizado = {
+    fontSize: '20px',
+    lineHeight: '1.2', // Ajusta el valor según el espacio deseado entre líneas
+}
+
+const estiloPersonalizadoListas = {
+    fontSize: '18px',
+    lineHeight: '1.5', // Ajusta el valor según el espacio deseado entre líneas
+}
+
 function ListaDePalabras({ palabras }) {
     return (
-        <ul>
+        <Stack>
             {palabras.map((palabra, index) => (
-                <li key={index}>
-                    <Typography variant="body2" align="justify">
-                        {palabra}
-                    </Typography>
-                </li>
+                <Typography key={index} variant={bodys} style={estiloPersonalizadoListas} align="justify" color="primary.contrastText" marginLeft={10}>
+                    <FiberManualRecordIcon fontSize="body2" color="primary" />
+                    {palabra}
+                </Typography>
             ))}
-        </ul>
+        </Stack>
     )
 }
 
@@ -46,7 +59,7 @@ export const Lata = () => {
                 <Typography align='center' variant='h3'>
                     Latas
                 </Typography>
-                <Separador altura="20px" />
+                <Separador altura="10px" />
                 <Container maxWidth="false" sx={{display:'flex', justifycontent:'center', width: "95%"}}>
                     <Grid container alignItems="center" rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                         <Grid item xs={3}>
@@ -61,7 +74,7 @@ export const Lata = () => {
                         </Grid>
                         
                         <Grid item xs={9}>
-                            <Paper elevation={2} sx={{padding:"10px", margin:"5px"}}>
+                            <Paper elevation={2} sx={{padding:"10px", margin:"5px", backgroundColor: paper_color, color:"primary.contrastText"}}>
                                 <Typography align='center' variant='h5' sx={{fontWeight:'bold'}}>
                                     ¿Qué tipo de material se encuentra en esta categoría?
                                 </Typography>
@@ -85,7 +98,7 @@ export const Lata = () => {
                         </Grid>
 
                         <Grid item xs={9}>
-                            <Paper elevation={2}sx={{padding:"10px", margin:"5px"}}>
+                            <Paper elevation={2}sx={{padding:"10px", margin:"5px", backgroundColor: paper_color, color:"primary.contrastText"}}>
                                 <Typography align='center' variant='h5' sx={{fontWeight:'bold'}}>
                                     ¿Como se deben preparar los materiales para ser reciclados?
                                 </Typography>
@@ -104,7 +117,7 @@ export const Lata = () => {
                         </Grid>
 
                         <Grid item xs={9}>
-                            <Paper elevation={2}sx={{padding:"10px", margin:"5px"}}>
+                            <Paper elevation={2}sx={{padding:"10px", margin:"5px", backgroundColor: paper_color, color:"primary.contrastText"}}>
                                 <Typography align='center' variant='h5' sx={{fontWeight:'bold'}}>
                                     ¿Por qué es importante reciclar este tipo de materiales?
                                 </Typography>

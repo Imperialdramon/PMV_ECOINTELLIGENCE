@@ -4,11 +4,11 @@ import { Bread_crumbs } from '../../components/breadcrumbs'
 import Footer from '../../components/footer'
 import '../../stylesheets/page/page__container.scss'
 import Separador from '../../components/separator'
-import { Typography } from '@mui/material'
 import { Container } from '@mui/system'
+import { Stack, Typography} from "@mui/material"
 import Paper from '@mui/material/Paper'
 import Grid from '@mui/material/Grid'
-import '../../stylesheets/listas.scss'
+import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord'
 import img_basurero from '../../assets/recycle_organic.png'
 
 const containerStyles = {
@@ -18,17 +18,30 @@ const containerStyles = {
     height: '10%',         // Establece una altura al 100% de la vista
 }
 
+const paper_color = "#90EE90"
+const titles = "h4"
+const bodys = "body1"
+
+const estiloPersonalizado = {
+    fontSize: '20px',
+    lineHeight: '1.2', // Ajusta el valor según el espacio deseado entre líneas
+}
+
+const estiloPersonalizadoListas = {
+    fontSize: '18px',
+    lineHeight: '1.5', // Ajusta el valor según el espacio deseado entre líneas
+}
+
 function ListaDePalabras({ palabras }) {
     return (
-        <ul>
+        <Stack>
             {palabras.map((palabra, index) => (
-                <li key={index}>
-                    <Typography variant="body2" align="justify">
-                        {palabra}
-                    </Typography>
-                </li>
+                <Typography key={index} variant={bodys} style={estiloPersonalizadoListas} align="justify" color="primary.contrastText" marginLeft={10}>
+                    <FiberManualRecordIcon fontSize="body2" color="primary" />
+                    {palabra}
+                </Typography>
             ))}
-        </ul>
+        </Stack>
     )
 }
 
@@ -46,7 +59,7 @@ const Material_Organico = () => {
                 <Typography align='center' variant='h3'>
                     Materiales Orgánicos
                 </Typography>
-                <Separador altura="20px" />
+                <Separador altura="10px" />
                 <Container maxWidth="false" sx={{display:'flex', justifycontent:'center', width: "95%"}}>
                     <Grid container alignItems="center" rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                         <Grid item xs={3}>
@@ -61,12 +74,12 @@ const Material_Organico = () => {
                         </Grid>
                         
                         <Grid item xs={9}>
-                            <Paper elevation={2} sx={{padding:"10px", margin:"5px"}}>
-                                <Typography align='center' variant='h5' sx={{fontWeight:'bold'}}>
+                            <Paper elevation={2} sx={{padding:"10px", margin:"5px", backgroundColor: "rgba(236, 157, 84, 0.5)", color:"primary.contrastText"}}>
+                                <Typography align='center' variant={titles} sx={{fontWeight:'bold'}}>
                                     ¿Qué tipo de material se encuentra en esta categoría?
                                 </Typography>
                                 <br/>
-                                <Typography align='justify' variant='body1'>
+                                <Typography align='justify' variant={bodys}>
                                     En esta categoría están clasificados materiales principalmente de fibra de celulosa y utilizados debido a su versatilidad en una amplia gama de aplicaciones.
                                     Estas aplicaciones incluyen materiales de uso doméstico, como materiales para envío de productos, donde algunos de estos se encuentran listados en la siguiente lista:
                                 </Typography>
@@ -85,12 +98,12 @@ const Material_Organico = () => {
                         </Grid>
 
                         <Grid item xs={9}>
-                            <Paper elevation={2}sx={{padding:"10px", margin:"5px"}}>
-                                <Typography align='center' variant='h5' sx={{fontWeight:'bold'}}>
+                            <Paper elevation={2}sx={{padding:"10px", margin:"5px", backgroundColor: "rgba(236, 157, 84, 0.5)", color:"primary.contrastText"}}>
+                                <Typography align='center' variant={titles} sx={{fontWeight:'bold'}}>
                                     ¿Como se deben preparar los materiales para ser reciclados?
                                 </Typography>
                                 <br/>
-                                <Typography align='justify' variant='body1'>
+                                <Typography align='justify' variant={bodys}>
                                     Para reciclar papeles y cartones, es fundamental que estén limpios y secos, ya que la humedad y la contaminación de alimentos pueden dificultar el proceso de reciclaje.
                                     También, es importante eliminar elementos no reciclables que tengan contacto con los papeles o cartones, como plástico y metal. Las cajas de cartón deben estar plegadas o aplastadas para ahorrar espacio en el contenedor de reciclaje y permitir el ingreso de más materiales.
                                 </Typography>
@@ -104,12 +117,12 @@ const Material_Organico = () => {
                         </Grid>
 
                         <Grid item xs={9}>
-                            <Paper elevation={2}sx={{padding:"10px", margin:"5px"}}>
-                                <Typography align='center' variant='h5' sx={{fontWeight:'bold'}}>
+                            <Paper elevation={2}sx={{padding:"10px", margin:"5px", backgroundColor: "rgba(236, 157, 84, 0.5)", color:"primary.contrastText"}}>
+                                <Typography align='center' variant={titles} sx={{fontWeight:'bold'}}>
                                     ¿Por qué es importante reciclar este tipo de materiales?
                                 </Typography>
                                 <br/>
-                                <Typography align='justify' variant='body1'>
+                                <Typography align='justify' variant={bodys}>
                                     Reciclar papeles y cartones es esencial para conservar recursos forestales al reducir la tala de árboles, ahorrar energía al disminuir las emisiones de gases de efecto invernadero en la producción de papel, prolongar la vida útil de vertederos al reducir la cantidad de desechos, y preservar el agua al minimizar el consumo en el proceso de fabricación. Además, fomenta la generación de empleos en la industria del reciclaje y promueve un ciclo cerrado de productos de papel, contribuyendo a la sostenibilidad económica y ambiental.
                                 </Typography>
                             </Paper>

@@ -7,6 +7,19 @@ import Grid from '@mui/material/Grid'
 import Footer from '../components/footer'
 import '../stylesheets/page/page__container.scss'
 import Separador from '../components/separator'
+import img_basurero_paper from '../assets/recycle_paper.png'
+import img_basurero_organic from '../assets/recycle_organic.png'
+import img_basurero_plastic from '../assets/recycle_plastic.png'
+import img_basurero_lata from '../assets/recycle_lata.png'
+import img_basurero_others from '../assets/recycle_others.png'
+import img_basurero_glass from '../assets/recycle_glass.png'
+
+const containerStyles = {
+    display: 'flex',
+    justifyContent: 'center', // Centra horizontalmente
+    alignItems: 'center',     // Centra verticalmente
+    height: '10%',         // Establece una altura al 100% de la vista
+}
 
 export const Informacion = () => {
     return (
@@ -20,10 +33,16 @@ export const Informacion = () => {
                 <Container maxWidth="false" sx={{display:'flex', justifycontent:'center'}}>
                     <Grid container alignItems="center" rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                         <Grid item xs={4}>
+                            <div style={containerStyles}>
+                                <img
+                                    src={img_basurero_paper} // Reemplaza con la ruta de tu imagen
+                                    width="60%" // Ancho deseado en píxeles
+                                    height="10%" // Alto deseado en píxeles
+                                />
+                            </div>
                             <ImgMediaCard
                                 titulo="Papel y Cartón"
-                                color="rgb(51, 218, 255)"
-                                color_border="rgb(0, 0, 0)"
+                                color="rgba(91, 163, 229, 0.5)"
                                 enlace="/informacion/papel_y_carton"
                             />
                         </Grid>

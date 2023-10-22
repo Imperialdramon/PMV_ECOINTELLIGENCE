@@ -2,7 +2,7 @@ import React from "react"
 import Grid from '@mui/material/Grid'
 import Box from '@mui/material/Box'
 import { IconButton, Stack, Typography } from "@mui/material"
-import { Twitter, Instagram, LinkedIn } from "@mui/icons-material"
+import { Instagram, LinkedIn } from "@mui/icons-material"
 import Divider from "@mui/material/Divider"
 import Logo_2 from '../assets/Logo_2.png'
 
