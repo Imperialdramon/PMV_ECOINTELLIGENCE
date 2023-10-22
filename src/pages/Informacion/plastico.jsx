@@ -47,9 +47,9 @@ function ListaDePalabras({ palabras }) {
     )
 }
 
-const lista_1 = ['Papel de Periódico', 'Papel de Revista', 'Papel de Impresora y Fotocopiadora', 'Sobres de Papel'];
-const lista_2 = ['Cuadernos y Papel de Escritura', 'Folletos y Panfletos', 'Papel de Envoltura de Regalos', 'Cajas de Cartón Corrugado'];
-const lista_3 = ['Cajas de Cereales', 'Cartón de Huevos', 'Envases de Productos Electrónicos', 'Tubos de Cartón'];
+const lista_1 = ['Botellas de agua', 'Envases de leche', 'Envases de detergentes', 'Botellas de refrescos'];
+const lista_2 = ['Botellas de jugo', 'Envases de yogur', 'Envases de margarina', 'Envases de mantequilla'];
+const lista_3 = ['Envases de champú', 'Envases de acondicionador', 'Envases de productos de limpieza', 'Envases de aceite de cocina'];
 
 
 const Plastico = () => {
@@ -61,7 +61,7 @@ const Plastico = () => {
                 <Typography align='center' variant='h3' sx={{fontWeight:'bold'}}>
                     Plásticos
                 </Typography>
-                <Separador altura="10px" />
+                <Separador altura="20px" />
                 <Container maxWidth="false" sx={{display:'flex', justifycontent:'center', width: "95%"}}>
                     <Grid container alignItems="center" rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                         <Grid item xs={2}>
@@ -76,14 +76,14 @@ const Plastico = () => {
                         </Grid>
                         
                         <Grid item xs={10}>
-                            <Paper elevation={2} sx={{padding:"10px", margin:"5px", backgroundColor: paper_color, color:"primary.contrastText"}}>
+                            <Paper elevation={2} sx={{padding:"15px", margin:"5px", backgroundColor: paper_color, color:"primary.contrastText"}}>
                                 <Typography align='center' variant={titles} sx={{fontWeight:'bold'}}>
                                     ¿Qué tipo de material se encuentra en esta categoría?
                                 </Typography>
                                 <br/>
                                 <Typography align='justify' variant={bodys} style={estiloPersonalizado}>
-                                    En esta categoría están clasificados materiales principalmente de fibra de celulosa y utilizados debido a su versatilidad en una amplia gama de aplicaciones.
-                                    Estas aplicaciones incluyen materiales de uso doméstico, como materiales para envío de productos, donde algunos de estos se encuentran listados en la siguiente lista:
+                                    En esta categoría se encuentran una amplia variedad de productos fabricados con plástico, que pueden incluir botellas de agua y refrescos (generalmente marcadas con el código de reciclaje #1 PET), envases de leche y detergentes (código #2 HDPE), envases de yogur y margarina (código #5 PP), así como envases de productos de limpieza y productos de consumo diario hechos de plástico. Estos productos pueden ser de un solo uso o reutilizables y a menudo están marcados con un número de identificación para facilitar su clasificación y reciclaje.
+                                    Algunos otros ejemplos de este material se muestran en el siguiente listado:
                                 </Typography>
                                 <Grid container alignItems="center" rowSpacing={0.5} columnSpacing={{ xs: 0.5, sm: 1, md: 1 }}>
                                     <Grid item xs={4}>
@@ -100,14 +100,13 @@ const Plastico = () => {
                         </Grid>
 
                         <Grid item xs={10}>
-                            <Paper elevation={2} sx={{padding:"10px", margin:"5px", backgroundColor: paper_color, color:"primary.contrastText"}}>
+                            <Paper elevation={2} sx={{padding:"15px", margin:"5px", backgroundColor: paper_color, color:"primary.contrastText"}}>
                                 <Typography align='center' variant={titles} sx={{fontWeight:'bold'}}>
                                     ¿Como se deben preparar los materiales para ser reciclados?
                                 </Typography>
                                 <br/>
                                 <Typography align='justify' variant={bodys} style={estiloPersonalizado}>
-                                    Para reciclar papeles y cartones, es fundamental que estén limpios y secos, ya que la humedad y la contaminación de alimentos pueden dificultar el proceso de reciclaje.
-                                    También, es importante eliminar elementos no reciclables que tengan contacto con los papeles o cartones, como plástico y metal. Las cajas de cartón deben estar plegadas o aplastadas para ahorrar espacio en el contenedor de reciclaje y permitir el ingreso de más materiales.
+                                    Para reciclar este tipo de material de manera efectiva, es importante enjuagar y secar los envases de plástico para eliminar cualquier residuo. Los envases deben estar vacíos y limpios, sin restos de alimentos o líquidos. Además, es esencial verificar los códigos de reciclaje en la parte inferior de los envases para determinar su reciclabilidad en tu área, ya que no todos los plásticos se reciclan de la misma manera y esto es útil para la correcta recolección.
                                 </Typography>
                             </Paper>
                         </Grid>
@@ -133,13 +132,13 @@ const Plastico = () => {
                         </Grid>
 
                         <Grid item xs={10}>
-                            <Paper elevation={2}sx={{padding:"10px", margin:"5px", backgroundColor: paper_color, color:"primary.contrastText"}}>
+                            <Paper elevation={2}sx={{padding:"15px", margin:"5px", backgroundColor: paper_color, color:"primary.contrastText"}}>
                                 <Typography align='center' variant={titles} sx={{fontWeight:'bold'}}>
                                     ¿Por qué es importante reciclar este tipo de materiales?
                                 </Typography>
                                 <br/>
                                 <Typography align='justify' variant={bodys} style={estiloPersonalizado}>
-                                    Reciclar papeles y cartones es esencial para conservar recursos forestales al reducir la tala de árboles, ahorrar energía al disminuir las emisiones de gases de efecto invernadero en la producción de papel, prolongar la vida útil de vertederos al reducir la cantidad de desechos, y preservar el agua al minimizar el consumo en el proceso de fabricación. Además, fomenta la generación de empleos en la industria del reciclaje y promueve un ciclo cerrado de productos de papel, contribuyendo a la sostenibilidad económica y ambiental.
+                                    El reciclaje de plásticos es crucial debido a varios motivos. En primer lugar, reduce la demanda de petróleo crudo, que es una materia prima fundamental en la fabricación de plástico, lo que disminuye la explotación de recursos naturales no renovables. Además, el reciclaje de plásticos contribuye a la reducción de la contaminación ambiental, ya que evita que los plásticos terminen en vertederos o en el medio ambiente, donde pueden causar daños a la vida silvestre y degradarse lentamente. Además, la reutilización de plásticos reciclados ahorra energía en comparación con la producción de plástico virgen, lo que reduce las emisiones de gases de efecto invernadero. 
                                 </Typography>
                             </Paper>
                         </Grid>

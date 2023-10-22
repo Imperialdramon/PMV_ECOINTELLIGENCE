@@ -47,9 +47,8 @@ function ListaDePalabras({ palabras }) {
     )
 }
 
-const lista_1 = ['Papel de Periódico', 'Papel de Revista', 'Papel de Impresora y Fotocopiadora', 'Sobres de Papel'];
-const lista_2 = ['Cuadernos y Papel de Escritura', 'Folletos y Panfletos', 'Papel de Envoltura de Regalos', 'Cajas de Cartón Corrugado'];
-const lista_3 = ['Cajas de Cereales', 'Cartón de Huevos', 'Envases de Productos Electrónicos', 'Tubos de Cartón'];
+const lista_1 = ['Envases de Comida Rápida', 'Utensilios de Plástico Desechables', 'Pañales Desechables', 'Productos de Higiene Femenina'];
+const lista_2 = ['Chicles', 'Cigarrillos', 'Película de Plástico para Alimentos', 'Artículos de Papel de Aluminio Contaminados'];
 
 
 const Varios = () => {
@@ -61,7 +60,7 @@ const Varios = () => {
                 <Typography align='center' variant='h3' sx={{fontWeight:'bold'}}>
                     Varios
                 </Typography>
-                <Separador altura="10px" />
+                <Separador altura="20px" />
                 <Container maxWidth="false" sx={{display:'flex', justifycontent:'center', width: "95%"}}>
                     <Grid container alignItems="center" rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                         <Grid item xs={2}>
@@ -76,31 +75,28 @@ const Varios = () => {
                         </Grid>
                         
                         <Grid item xs={10}>
-                            <Paper elevation={2} sx={{padding:"10px", margin:"5px", backgroundColor: paper_color, color:"primary.contrastText"}}>
+                            <Paper elevation={2} sx={{padding:"15px", margin:"5px", backgroundColor: paper_color, color:"primary.contrastText"}}>
                                 <Typography align='center' variant={titles} sx={{fontWeight:'bold'}}>
                                     ¿Qué tipo de material se encuentra en esta categoría?
                                 </Typography>
                                 <br/>
                                 <Typography align='justify' variant={bodys} style={estiloPersonalizado}>
-                                    En esta categoría están clasificados materiales principalmente de fibra de celulosa y utilizados debido a su versatilidad en una amplia gama de aplicaciones.
-                                    Estas aplicaciones incluyen materiales de uso doméstico, como materiales para envío de productos, donde algunos de estos se encuentran listados en la siguiente lista:
+                                Esta categoría incluye productos desechables que no son reciclables, como ciertos envases de comida rápida, productos de un solo uso (como utensilios de plásticos) y materiales con múltiples componentes que son difíciles de separar.
+                                Por esto se busca utilizar el contenedor gris para permitir diferenciar los contenidos. Algunos otros ejemplos de este material se muestran en el siguiente listado:
                                 </Typography>
                                 <Grid container alignItems="center" rowSpacing={0.5} columnSpacing={{ xs: 0.5, sm: 1, md: 1 }}>
-                                    <Grid item xs={4}>
+                                    <Grid item xs={6}>
                                         <ListaDePalabras palabras={lista_1}/>
                                     </Grid>
-                                    <Grid item xs={4}>
+                                    <Grid item xs={6}>
                                         <ListaDePalabras palabras={lista_2}/>
-                                    </Grid>
-                                    <Grid item xs={4}>
-                                        <ListaDePalabras palabras={lista_3}/>
                                     </Grid>
                                 </Grid>
                             </Paper>
                         </Grid>
 
                         <Grid item xs={10}>
-                            <Paper elevation={2} sx={{padding:"10px", margin:"5px", backgroundColor: paper_color, color:"primary.contrastText"}}>
+                            <Paper elevation={2} sx={{padding:"15px", margin:"5px", backgroundColor: paper_color, color:"primary.contrastText"}}>
                                 <Typography align='center' variant={titles} sx={{fontWeight:'bold'}}>
                                     ¿Cómo se deben desechar adecuadamente los materiales?
                                 </Typography>
@@ -132,7 +128,7 @@ const Varios = () => {
                         </Grid>
 
                         <Grid item xs={10}>
-                            <Paper elevation={2}sx={{padding:"10px", margin:"5px", backgroundColor: paper_color, color:"primary.contrastText"}}>
+                            <Paper elevation={2}sx={{padding:"15px", margin:"5px", backgroundColor: paper_color, color:"primary.contrastText"}}>
                                 <Typography align='center' variant={titles} sx={{fontWeight:'bold'}}>
                                     ¿Por qué es importante gestionar adecuadamente los materiales en la categoría?
                                 </Typography>
