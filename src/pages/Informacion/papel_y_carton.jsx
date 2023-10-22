@@ -6,10 +6,11 @@ import '../../stylesheets/page/page__container.scss'
 import Separador from '../../components/separator'
 import { Typography } from '@mui/material'
 import { Container } from '@mui/system'
-
+import Paper from '@mui/material/Paper'
 import Grid from '@mui/material/Grid'
 import '../../stylesheets/listas.scss'
 import Imagen from "../../assets/papel_carton.jpg"
+
 
 const containerStyles = {
     display: 'flex',
@@ -23,7 +24,7 @@ function ListaDePalabras({ palabras }) {
         <ul>
             {palabras.map((palabra, index) => (
                 <li key={index}>
-                    <Typography variant="body1" color="primary" align="justify">
+                    <Typography variant="body1" align="justify">
                         {palabra}
                     </Typography>
                 </li>
@@ -47,7 +48,7 @@ export const Papel_Carton = () => {
                     Papel y Cartón
                 </Typography>
                 <Separador altura="20px" />
-                <Container maxWidth="false" sx={{display:'flex', justifycontent:'center'}}>
+                <Container maxWidth="false" sx={{display:'flex', justifycontent:'center', width: "90%"}}>
                     <Grid container alignItems="center" rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                         <Grid item xs={5}>
                             <div style={containerStyles}>
@@ -60,43 +61,48 @@ export const Papel_Carton = () => {
                         </Grid>
                         
                         <Grid item xs={7}>
-                            <Typography align='center' variant='h4'>
-                                ¿Qué tipo de material se encuentra en esta categoría?
-                            </Typography>
-                            <Typography align='justify' variant='h6'>
-                                En esta categoría están clasificados materiales principalmente de fibra de celulosa y utilizados debido a su versatilidad en una amplia gama de aplicaciones.
-                                Estas aplicaciones incluyen materiales de uso doméstico, como materiales para envío de productos, donde algunos de estos se encuentran listados en la siguiente lista:
-                            </Typography>
-                            
-                            <Grid container alignItems="center" rowSpacing={1} columnSpacing={{ xs: 0.5, sm: 2, md: 3 }}>
-                                <Grid item xs={4}>
-                                    <ListaDePalabras palabras={lista_1}/>
+                            <Paper elevation={0}sx={{padding:"10px", margin:"5px"}}>
+                                <Typography align='center' variant='h5'>
+                                    ¿Qué tipo de material se encuentra en esta categoría?
+                                </Typography>
+                                <Typography align='justify' variant='subtitle1'>
+                                    En esta categoría están clasificados materiales principalmente de fibra de celulosa y utilizados debido a su versatilidad en una amplia gama de aplicaciones.
+                                    Estas aplicaciones incluyen materiales de uso doméstico, como materiales para envío de productos, donde algunos de estos se encuentran listados en la siguiente lista:
+                                </Typography>
+                                <Grid container alignItems="center" rowSpacing={1} columnSpacing={{ xs: 0.5, sm: 2, md: 3 }}>
+                                    <Grid item xs={4}>
+                                        <ListaDePalabras palabras={lista_1}/>
+                                    </Grid>
+                                    <Grid item xs={4}>
+                                        <ListaDePalabras palabras={lista_2}/>
+                                    </Grid>
+                                    <Grid item xs={4}>
+                                        <ListaDePalabras palabras={lista_3}/>
+                                    </Grid>
                                 </Grid>
-                                <Grid item xs={4}>
-                                    <ListaDePalabras palabras={lista_2}/>
-                                </Grid>
-                                <Grid item xs={4}>
-                                    <ListaDePalabras palabras={lista_3}/>
-                                </Grid>
-                            </Grid>
+                            </Paper>
+                        </Grid>
+                        <Separador altura="20px" />
+                        <Grid item xs={6}>
+                            <Paper elevation={0}sx={{padding:"10px", margin:"5px"}}>
+                                <Typography align='center' variant='h5'>
+                                    ¿Como se deben preparar los materiales para ser reciclados?
+                                </Typography>
+                                <Typography align='justify' variant='subtitle1'>
+                                    a
+                                </Typography>
+                            </Paper>
                         </Grid>
 
                         <Grid item xs={6}>
-                            <Typography align='center' variant='h4'>
-                                ¿Como se deben preparar los materiales para ser reciclados?
-                            </Typography>
-                            <Typography align='justify' variant='body1'>
-                                a
-                            </Typography>
-                        </Grid>
-
-                        <Grid item xs={6}>
-                            <Typography align='center' variant='h4'>
-                                ¿Por qué es importante reciclar este tipo de materiales?
-                            </Typography>
-                            <Typography align='justify' variant='body1'>
-                                a
-                            </Typography>
+                            <Paper elevation={0}sx={{padding:"10px", margin:"5px"}}>
+                                <Typography align='center' variant='h5'>
+                                    ¿Por qué es importante reciclar este tipo de materiales?
+                                </Typography>
+                                <Typography align='justify' variant='subtitle1'>
+                                    a
+                                </Typography>
+                            </Paper>
                         </Grid>
                     </Grid>
                 </Container>
