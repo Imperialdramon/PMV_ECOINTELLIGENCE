@@ -31,7 +31,7 @@ const estiloPersonalizado = {
 }
 
 const estiloPersonalizadoListas = {
-    fontSize: '18px',
+    fontSize: '17px',
     lineHeight: '1.5', // Ajusta el valor según el espacio deseado entre líneas
 }
 
@@ -39,8 +39,8 @@ function ListaDePalabras({ palabras }) {
     return (
         <Stack>
             {palabras.map((palabra, index) => (
-                <Typography key={index} variant={bodys} style={estiloPersonalizadoListas} align="justify" color="primary.contrastText" marginLeft={10}>
-                    <FiberManualRecordIcon fontSize="body2" color="primary" />
+                <Typography key={index} variant={bodys} style={estiloPersonalizadoListas} align="justify" color="primary.contrastText" marginTop={1}>
+                    <FiberManualRecordIcon fontSize="body2" color="#5ba3e5" />
                     {palabra}
                 </Typography>
             ))}
@@ -61,21 +61,21 @@ export const Papel_Carton = () => {
                 <Typography align='center' variant='h3'>
                     Papel y Cartón
                 </Typography>
-                <Separador altura="10px" />
+                <Separador altura="20px" />
                 <Container maxWidth="false" sx={{display:'flex', justifycontent:'center', width: "95%"}}>
                     <Grid container alignItems="center" rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                        <Grid item xs={3}>
+                        <Grid item xs={2}>
                             <div style={containerStyles}>
                                 <img
                                     src={img_basurero} // Reemplaza con la ruta de tu imagen
-                                    width="60%" // Ancho deseado en píxeles
-                                    height="10%" // Alto deseado en píxeles
+                                    width="150%" // Ancho deseado en píxeles
+                                    height="150%" // Alto deseado en píxeles
                                 />
                             </div>
                         
                         </Grid>
                         
-                        <Grid item xs={9}>
+                        <Grid item xs={10}>
                             <Paper elevation={2} sx={{padding:"10px", margin:"5px", backgroundColor: paper_color, color:"primary.contrastText"}}>
                                 <Typography align='center' variant={titles} sx={{fontWeight:'bold'}}>
                                     ¿Qué tipo de material se encuentra en esta categoría?
@@ -85,7 +85,7 @@ export const Papel_Carton = () => {
                                     En esta categoría están clasificados materiales principalmente de fibra de celulosa y utilizados debido a su versatilidad en una amplia gama de aplicaciones.
                                     Estas aplicaciones incluyen materiales de uso doméstico, como materiales para envío de productos, donde algunos de estos se encuentran listados en la siguiente lista:
                                 </Typography>
-                                <Grid container alignItems="center" rowSpacing={1} columnSpacing={{ xs: 0.5, sm: 2, md: 3 }}>
+                                <Grid container alignItems="center" rowSpacing={0.5} columnSpacing={{ xs: 0.5, sm: 1, md: 1 }}>
                                     <Grid item xs={4}>
                                         <ListaDePalabras palabras={lista_1}/>
                                     </Grid>
@@ -99,7 +99,7 @@ export const Papel_Carton = () => {
                             </Paper>
                         </Grid>
 
-                        <Grid item xs={9}>
+                        <Grid item xs={10}>
                             <Paper elevation={2} sx={{padding:"10px", margin:"5px", backgroundColor: paper_color, color:"primary.contrastText"}}>
                                 <Typography align='center' variant={titles} sx={{fontWeight:'bold'}}>
                                     ¿Como se deben preparar los materiales para ser reciclados?
@@ -112,27 +112,27 @@ export const Papel_Carton = () => {
                             </Paper>
                         </Grid>
 
-                        <Grid item xs={3}>
+                        <Grid item xs={2}>
                             <div style={containerStyles}>
                                 <img
                                     src={box} // Reemplaza con la ruta de tu imagen
-                                    width="50%" // Ancho deseado en píxeles
-                                    height="10%" // Alto deseado en píxeles
+                                    width="100%" // Ancho deseado en píxeles
+                                    height="100%" // Alto deseado en píxeles
                                 />
                             </div>
                         </Grid>
 
-                        <Grid item xs={3}>
+                        <Grid item xs={2}>
                             <div style={containerStyles}>
                                 <img
                                     src={news} // Reemplaza con la ruta de tu imagen
-                                    width="50%" // Ancho deseado en píxeles
-                                    height="10%" // Alto deseado en píxeles
+                                    width="100%" // Ancho deseado en píxeles
+                                    height="100%" // Alto deseado en píxeles
                                 />
                             </div>
                         </Grid>
 
-                        <Grid item xs={9}>
+                        <Grid item xs={10}>
                             <Paper elevation={2}sx={{padding:"10px", margin:"5px", backgroundColor: paper_color, color:"primary.contrastText"}}>
                                 <Typography align='center' variant={titles} sx={{fontWeight:'bold'}}>
                                     ¿Por qué es importante reciclar este tipo de materiales?
