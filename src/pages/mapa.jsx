@@ -62,9 +62,9 @@ export const Mapa = () => {
                 Mapa Interactivo
             </Typography>
             <Separador altura="20px" />
-            <Container maxWidth={false} sx={{display:'flex', justifycontent:'center', width:"90%", height:"60%"}}>
-                <Grid container justifyContent="center" display='flex'>
-                    <Grid item xs={7} sx={{border:2}}>
+            <Container maxWidth={false} sx={{display:'flex', width:"95%"}}>
+                <Grid container sx={{height:"110%"}}>
+                    <Grid item xs={7} sx={{height:"110%", border:1}}>
                         <Wrapper
                             apiKey='AIzaSyBH7WLmJP1eX-pBZBILTvwXNBYayz2vjuA'
                             version='beta'
@@ -73,7 +73,7 @@ export const Mapa = () => {
                             <Map/>
                         </Wrapper>
                     </Grid>
-                    <Grid item xs={5} padding={5} sx={{background:'#ABEBC6',borderLeft:1}} textAlign={'center'} justifyContent={"center"} alignContent={"center"}>
+                    <Grid item xs={5} padding={5} sx={{background:'#ABEBC6'}} textAlign={'center'} justifyContent={"center"} alignContent={"center"}>
                         <Stack spacing={3}>
                             
                             <Typography variant='h4' sx={{fontWeight:'bold'}}>Colores de los marcadores</Typography>
@@ -155,7 +155,7 @@ function Indicadores({map}){
                 >
                     <Container maxWidth={false} sx={{display:'flex',justifyContent:'center'}}>
                         <Box
-                            sx={{maxWidth:'70%',display:'flex',justifyContent:'center'}}
+                            sx={{maxWidth:'80%',display:'flex',justifyContent:'center'}}
                         >
                             <BarChart data={databar}/>
                         </Box>
