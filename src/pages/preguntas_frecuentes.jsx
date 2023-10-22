@@ -19,7 +19,7 @@ export default function Preguntas_Frecuentes() {
             <NavBar />
             <Bread_crumbs />
             <div className="content-wrap">
-                <Typography align='center' variant='h3'>
+                <Typography variant='h3' align='center' sx={{fontWeight:'bold'}}>
                     Preguntas frecuentes
                 </Typography>
                 <Separador altura="20px" />

@@ -98,9 +98,9 @@ export const Noticias = () => {
             <NavBar />
             <Bread_crumbs />
             <div className='content-wrap'>
-                <h1 style={{ textAlign: 'center' }}>
+                <Typography variant='h3' align='center' sx={{fontWeight:'bold'}}>
                     Últimas Noticias
-                </h1>
+                </Typography>
                 <Separador altura="20px"/>
                 <Container maxWidth= "false" sx={{display:'flex', justifyContent:'center'}}>
                     <Grid container alignItems="center" rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
