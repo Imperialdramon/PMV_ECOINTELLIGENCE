@@ -10,8 +10,8 @@ import Paper from '@mui/material/Paper'
 import Grid from '@mui/material/Grid'
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord'
 import img_basurero from '../../assets/recycle/recycle_paper.png'
-import news from '../../assets/newspaper.png'
-import box from '../../assets/box.png'
+import news from '../../assets/info/newspaper.png'
+import box from '../../assets/info/box.png'
 
 
 const containerStyles = {

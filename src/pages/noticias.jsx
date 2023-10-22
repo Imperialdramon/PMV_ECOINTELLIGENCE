@@ -23,12 +23,12 @@ import DialogTitle from '@mui/material/DialogTitle'
 import Button from '@mui/material/Button'
 
 // photo's
-import new_01 from '../assets/news_01.jpg'
-import new_02 from '../assets/news_02.jpg'
-import new_03 from '../assets/news_03.jpg'
-import new_04 from '../assets/news_04.jpg'
-import new_05 from '../assets/news_05.jpg'
-import new_06 from '../assets/news_06.jpg'
+import new_01 from '../assets/news/news_01.jpg'
+import new_02 from '../assets/news/news_02.jpg'
+import new_03 from '../assets/news/news_03.jpg'
+import new_04 from '../assets/news/news_04.jpg'
+import new_05 from '../assets/news/news_05.jpg'
+import new_06 from '../assets/news/news_06.jpg'
 
 function Template({image, alto, texto, titulo, noticia, enlace}) {
     const [open, setOpen] = React.useState(false);

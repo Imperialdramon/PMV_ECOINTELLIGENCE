@@ -10,8 +10,8 @@ import Paper from '@mui/material/Paper'
 import Grid from '@mui/material/Grid'
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord'
 import img_basurero from '../../assets/recycle/recycle_organic.png'
-import apple from '../../assets/apple.png'
-import banana from '../../assets/banana.png'
+import apple from '../../assets/info/apple.png'
+import banana from '../../assets/info/banana.png'
 
 const containerStyles = {
     display: 'flex',
