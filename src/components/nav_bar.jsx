@@ -10,6 +10,7 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import LogoPag from '../assets/Logo.png';
+import Logo2 from '../assets/Logo3.png'
 
 
 
@@ -50,7 +51,7 @@ function NavBar() {
             href="/"
             sx={{
               mr: 2,
-              display: { xs: 'none', md: 'flex' },
+              display: { xs:'none', lg: 'flex' },
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
@@ -58,11 +59,11 @@ function NavBar() {
               textDecoration: 'none',
             }}
           >
-            <img src={LogoPag} height={100} width = {350} alt='logo pagina' /><br />
+            <img src={Logo2} height={"80vh"} width = {"300vh"} alt='logo pagina' /><br />
           </Typography>
 
           <Box 
-            sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
+            sx={{ flexGrow: 1, display: { xs: 'flex', lg: 'none' } }}
           >
             <IconButton
               size="large"
@@ -89,8 +90,9 @@ function NavBar() {
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: 'block', md: 'none' },
+                display: { xs: 'block', lg: 'none' },
               }}
+              PaperProps={{sx:{backgroundColor:'preguntas.main',color:'preguntas.contrastText'}}}
             >
               {pages.map((page) => (
                 <MenuItem key={page.name} onClick={handleCloseNavMenu}>
@@ -99,7 +101,7 @@ function NavBar() {
                     href={page.href}
                     color='inherit'
                   >
-                  {page.name}
+                  <Typography>{page.name}</Typography>
                   </Button>
 
                 </MenuItem>
@@ -107,13 +109,13 @@ function NavBar() {
             </Menu>
           </Box>
           <Typography
-            variant="h5"
+            variant="h6"
             noWrap
             component="a"
-            href="#app-bar-with-responsive-menu"
+            href="/"
             sx={{
               mr: 2,
-              display: { xs: 'flex', md: 'none' },
+              display: { xs: 'flex', lg: 'none' },
               flexGrow: 1,
               fontFamily: 'monospace',
               fontWeight: 700,
@@ -122,9 +124,9 @@ function NavBar() {
               textDecoration: 'none',
             }}
           >
-            
+            <img src={Logo2} height={"80vh"} width = {"300vh"} alt='logo pagina' /><br />
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', lg: 'flex' }}} justifyContent="right">
             {pages.map((page) => (
               <Button
                 key={page.name}
@@ -133,29 +135,9 @@ function NavBar() {
                 href={page.href}
                 color='inherit'
               >
-                {page.name}
+                <Typography fontWeight="bold">{page.name}</Typography>
               </Button>
             ))}
-          </Box>
-
-          <Box sx={{ flexGrow: 0 }}>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-            </Menu>
           </Box>
         </Toolbar>
       </Container>

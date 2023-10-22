@@ -20,6 +20,9 @@ export const paleta_main = createTheme({
         preguntas:{
           main:'#EBF9E4',
           contrastText: '#7EA56A'
+        },
+        menuPaper: {
+          backgroundColor: "#EBF9E4"
         }
     },
 });
