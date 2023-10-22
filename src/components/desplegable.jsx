@@ -12,10 +12,6 @@ export default function Desplegable({nombre,titulo,textos}) {
         <div style={{ display: 'flex', justifyContent: 'center', margin: '20px'}} >
             <Accordion
                     sx={{
-                        //bgcolor: 'background.paper',
-                        //boxShadow: 1,
-                        //borderRadius: 2,
-                        //p: 2,
                         minWidth: '50%',
                         maxWidth: '85%',
                         backgroundColor:"preguntas.main",
