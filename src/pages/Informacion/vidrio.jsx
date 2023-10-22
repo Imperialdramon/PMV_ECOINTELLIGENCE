@@ -58,7 +58,7 @@ const Vidrio = () => {
             <NavBar />
             <Bread_crumbs />
             <div className="content-wrap">
-                <Typography align='center' variant='h3'>
+                <Typography align='center' variant='h3' sx={{fontWeight:'bold'}}>
                     Vidrios
                 </Typography>
                 <Separador altura="10px" />

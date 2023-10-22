@@ -58,7 +58,7 @@ export const Papel_Carton = () => {
             <NavBar />
             <Bread_crumbs />
             <div className="content-wrap">
-                <Typography align='center' variant='h3'>
+                <Typography align='center' variant='h3' sx={{fontWeight:'bold'}}>
                     Papel y Cartón
                 </Typography>
                 <Separador altura="20px" />
