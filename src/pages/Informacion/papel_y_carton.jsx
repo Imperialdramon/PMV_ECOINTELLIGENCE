@@ -61,8 +61,8 @@ export const Papel_Carton = () => {
                         </Grid>
                         
                         <Grid item xs={9}>
-                            <Paper elevation={0}sx={{padding:"10px", margin:"5px"}}>
-                                <Typography align='center' variant='h5'>
+                            <Paper elevation={0} sx={{padding:"10px", margin:"5px"}}>
+                                <Typography align='center' variant='h5' sx={{fontWeight:'bold'}}>
                                     ¿Qué tipo de material se encuentra en esta categoría?
                                 </Typography>
                                 <br/>
@@ -86,7 +86,7 @@ export const Papel_Carton = () => {
                         <Separador altura="20px" />
                         <Grid item xs={6}>
                             <Paper elevation={0}sx={{padding:"10px", margin:"5px"}}>
-                                <Typography align='center' variant='h5'>
+                                <Typography align='center' variant='h5' sx={{fontWeight:'bold'}}>
                                     ¿Como se deben preparar los materiales para ser reciclados?
                                 </Typography>
                                 <Typography align='justify' variant='subtitle1'>
@@ -97,7 +97,7 @@ export const Papel_Carton = () => {
 
                         <Grid item xs={6}>
                             <Paper elevation={0}sx={{padding:"10px", margin:"5px"}}>
-                                <Typography align='center' variant='h5'>
+                                <Typography align='center' variant='h5' sx={{fontWeight:'bold'}}>
                                     ¿Por qué es importante reciclar este tipo de materiales?
                                 </Typography>
                                 <Typography align='justify' variant='subtitle1'>
