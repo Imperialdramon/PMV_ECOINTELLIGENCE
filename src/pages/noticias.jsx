@@ -45,26 +45,16 @@ function Template({image, alto, texto, titulo, noticia, enlace}) {
         setOpen(false);
     }
 
-    const resto = (100 - parseInt(alto)).toString() + "%"
-    const alto_str = alto + "%"
-
-    const imageStyle = {
-        position: 'relative',
-        top: 0,
-        height: {alto_str},
-    }
-
     return(
         <div>
-            <Card sx={{height: '40vmin'}}>
-                <CardActionArea onClick={handleClickOpen} sx={{height: '40vmin', position:"static"}}>
+            <Card sx={{maxWidth:"600px"}}>
+                <CardActionArea onClick={handleClickOpen} sx={{position:"static"}}>
                     <CardMedia
                         component="img"
-                        height={alto_str}
                         image={image}
-                        style={imageStyle}
+                        height= {alto}
                         />
-                    <CardContent sx={{flexGrow:1, height:{resto}, overflow:"hidden"}}>
+                    <CardContent sx={{flexGrow:1, overflow:"hidden"}}>
                         <Typography variant="h6" component="div" align='justify' sx={{fontWeight:'bold'}} lineHeight={1.2}>
                                 {titulo}
                         </Typography>
@@ -117,7 +107,7 @@ export const Noticias = () => {
                         <Grid item xs ={4}>
                             <Template
                                 image={new_01}
-                                alto="60"
+                                alto="40%"
                                 titulo="Comienza retiro de residuos reciclables desde 750 mil domicilios capitalinos"
                                 texto="La medida se enmarca en la Ley de Reciclaje y se traducirá, concretamente, en la circulación de camiones -parecidos a los de la basura- por la ciudad."
                                 enlace="https://cooperativa.cl/noticias/sociedad/medioambiente/reciclaje/comienza-retiro-de-residuos-reciclables-desde-750-mil-domicilios/2023-10-01/103123.html"
@@ -127,7 +117,7 @@ export const Noticias = () => {
                         <Grid item xs={4}>
                             <Template
                                 image={new_02}
-                                alto="60"
+                                alto="40%"
                                 titulo="Grupo Red protagoniza campaña de reciclaje del Gobierno de Chile"
                                 texto="Luego de haber recreado un clásico spot por la conducción responsable junto a Guido Vecchiola, el Gobierno de Chile escogió a otra figura popular para una campaña pública."
                                 enlace="https://cooperativa.cl/noticias/entretencion/musica/grupo-red-protagoniza-campana-de-reciclaje-del-gobierno-de-chile/2023-09-14/085625.html"
@@ -137,7 +127,7 @@ export const Noticias = () => {
                         <Grid item xs={4}>
                             <Template
                                 image={new_03}
-                                alto="60"
+                                alto="40%"
                                 titulo="Proyectos de sustentabilidad recibieron premio para su ejecución"
                                 texto="Innovaciones de Santiago, Antofagasta, Punta Arenas y Temuco tendrán aporte financiero."
                                 enlace="https://cooperativa.cl/noticias/sociedad/medioambiente/reciclaje/proyectos-de-sustentabilidad-recibieron-premio-para-su-ejecucion/2021-11-30/175134.html"
@@ -148,7 +138,7 @@ export const Noticias = () => {
                         <Grid item xs={4}>
                             <Template
                                 image={new_04}
-                                alto="60"
+                                alto="40%"
                                 titulo="Universidad de Concepción reciclará las mascarillas"
                                 texto="
                                 A fines del año pasado, Softys, empresa de productos de higiene y cuidado personal, puso en marcha en conjunto con la Unidad de Desarrollo Tecnológico (UDT) de la Universidad de Concepción, un programa piloto para reciclaje de mascarillas en Concepción.
@@ -161,7 +151,7 @@ export const Noticias = () => {
                         <Grid item xs={4}>
                             <Template
                                 image={new_05}
-                                alto="60"
+                                alto="40%"
                                 titulo="Premios Cero Basura reconoció proyectos de sustentabilidad"
                                 texto="El certamen, organizado por EcoLógica, premió a las compañías en cinco categorías: Consumo Masivo y Retail, Industrial, Innovación, Cambio Cultural e Impacto Social."
                                 enlace="https://www.df.cl/df-lab/sostenibilidad/premios-cero-basura-destaca-iniciativas-de-empresas-en-gestion-de-residuos"
@@ -172,7 +162,7 @@ export const Noticias = () => {
                         <Grid item xs={4}>
                             <Template
                                 image={new_06}
-                                alto="60"
+                                alto="40%"
                                 titulo="Gobierno anuncia proyecto para evitar que residuos orgánicos terminen en los rellenos"
                                 texto="El proyecto busca instaurar obligaciones en la gestión de reciclaje para Gobiernos regionales y municipios, e impulsar la separación de desechos orgánicos en viviendas." 
                                 enlace="https://cooperativa.cl/noticias/pais/medioambiente/gobierno-anuncia-proyecto-para-evitar-que-residuos-organicos-terminen-en/2023-06-05/141838.html"
