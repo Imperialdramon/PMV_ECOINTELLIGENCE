@@ -6,14 +6,16 @@ export const paleta_main = createTheme({
         mode: 'light',
         primary: {
           main: '#90DCB0',
+          dark: '#81C49D',
           contrastText: '#fff',
+          icon: '#fff'
         },
         secondary: {
-          main: '#45c4b0',
+          main: '#9CCB7F',
           contrastText: '#fff',
         },
-        fondo:{
-            main:'#D3EAC7'
+        background:{
+            default:'#D3EAC7'
         }
     },
 });
