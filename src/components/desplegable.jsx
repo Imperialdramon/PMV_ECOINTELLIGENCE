@@ -9,7 +9,7 @@ export default function Desplegable({nombre,titulo,texto}) {
     const id = {nombre} + "-header"
     const aria_controls = {nombre} + "-content"
     return (
-        <div style={{ display: 'flex', justifyContent: 'center', margin: '20px'}}>
+        <div style={{ display: 'flex', justifyContent: 'center', margin: '20px'}} >
             <Accordion
                     sx={{
                         //bgcolor: 'background.paper',
@@ -18,6 +18,8 @@ export default function Desplegable({nombre,titulo,texto}) {
                         //p: 2,
                         minWidth: '50%',
                         maxWidth: '70%',
+                        backgroundColor:"preguntas.main",
+                        color:"preguntas.contrastText"
                     }}
                 >
                 <AccordionSummary
