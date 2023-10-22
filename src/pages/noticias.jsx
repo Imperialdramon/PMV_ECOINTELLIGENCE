@@ -48,7 +48,7 @@ function Template({image, alto, texto, texto2, titulo, noticia, enlace}) {
     return(
         <div>
             <Card sx={{ maxWidth: 600, height: '47vh'}}>
-                <CardActionArea onClick={handleClickOpen} maxWidth={true}>
+                <CardActionArea onClick={handleClickOpen} maxWidth={false}>
                     <CardMedia
                         component="img"
                         height={alto}
@@ -116,7 +116,7 @@ export const Noticias = () => {
                         <Grid item xs ={4}>
                             <Template
                                 image={new_01}
-                                alto="20vh"
+                                alto="40%"
                                 titulo="Comienza retiro de residuos reciclables desde 750 mil domicilios capitalinos"
                                 texto="La medida se enmarca en la Ley de Reciclaje y se traducirá, concretamente, en la circulación de camiones -parecidos a los de la basura- por la ciudad."
                                 texto2="Cartón, latas y plásticos serán recolectados en 24 comunas de la Región Metropolitana."
