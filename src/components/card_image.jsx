@@ -20,18 +20,18 @@ function ImgMediaCard({ titulo, color, color_border, enlace, img }) {
     return (
     <Card sx={cardStyles}>
         <CardActionArea onClick={handleButtonClick}>
-            <Grid container >
-            <CardContent>
-                    <Typography gutterBottom variant="h5" component="div" align='center'>
-                        {titulo}
-                    </Typography>
-            </CardContent>
-            <CardMedia 
-                component="img" 
-                image={img} 
-                alt="containter"
-                sx={{ width: 100 }}
-                />
+            <Grid container justifyContent="center" alignItems="center">
+                <CardContent>
+                        <Typography gutterBottom variant="h5" component="div" align='center'>
+                            {titulo}
+                        </Typography>
+                </CardContent>
+                <CardMedia 
+                    component="img" 
+                    image={img} 
+                    alt="containter"
+                    sx={{ width: 100 }}
+                    />
             </Grid>
         </CardActionArea>
     </Card>
