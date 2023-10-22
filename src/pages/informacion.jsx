@@ -8,12 +8,12 @@ import Footer from '../components/footer'
 import '../stylesheets/page/page__container.scss'
 import {Typography} from "@mui/material"
 import Separador from '../components/separator'
-import img_basurero_paper from '../assets/recycle_paper.png'
-import img_basurero_organic from '../assets/recycle_organic.png'
-import img_basurero_plastic from '../assets/recycle_plastic.png'
-import img_basurero_lata from '../assets/recycle_lata.png'
-import img_basurero_others from '../assets/recycle_others.png'
-import img_basurero_glass from '../assets/recycle_glass.png'
+import img_basurero_paper from '../assets/recycle/recycle_paper.png'
+import img_basurero_organic from '../assets/recycle/recycle_organic.png'
+import img_basurero_plastic from '../assets/recycle/recycle_plastic.png'
+import img_basurero_lata from '../assets/recycle/recycle_lata.png'
+import img_basurero_others from '../assets/recycle/recycle_others.png'
+import img_basurero_glass from '../assets/recycle/recycle_glass.png'
 
 const containerStyles = {
     display: 'flex',

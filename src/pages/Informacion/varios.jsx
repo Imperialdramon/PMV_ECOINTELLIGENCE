@@ -9,7 +9,7 @@ import { Stack, Typography} from "@mui/material"
 import Paper from '@mui/material/Paper'
 import Grid from '@mui/material/Grid'
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord'
-import img_basurero from '../../assets/recycle_others.png'
+import img_basurero from '../../assets/recycle/recycle_others.png'
 import cigars from '../../assets/cigars.png'
 import diaper from '../../assets/diaper.png'
 
