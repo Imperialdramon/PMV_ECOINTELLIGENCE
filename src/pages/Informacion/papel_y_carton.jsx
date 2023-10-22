@@ -24,7 +24,7 @@ function ListaDePalabras({ palabras }) {
         <ul>
             {palabras.map((palabra, index) => (
                 <li key={index}>
-                    <Typography variant="body1" align="justify">
+                    <Typography variant="body2" align="justify">
                         {palabra}
                     </Typography>
                 </li>
@@ -50,7 +50,7 @@ export const Papel_Carton = () => {
                 <Separador altura="20px" />
                 <Container maxWidth="false" sx={{display:'flex', justifycontent:'center', width: "90%"}}>
                     <Grid container alignItems="center" rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                        <Grid item xs={5}>
+                        <Grid item xs={3}>
                             <div style={containerStyles}>
                                 <img
                                     src={Imagen} // Reemplaza con la ruta de tu imagen
@@ -60,12 +60,13 @@ export const Papel_Carton = () => {
                             </div>
                         </Grid>
                         
-                        <Grid item xs={7}>
+                        <Grid item xs={9}>
                             <Paper elevation={0}sx={{padding:"10px", margin:"5px"}}>
                                 <Typography align='center' variant='h5'>
                                     ¿Qué tipo de material se encuentra en esta categoría?
                                 </Typography>
-                                <Typography align='justify' variant='subtitle1'>
+                                <br/>
+                                <Typography align='justify' variant='body1'>
                                     En esta categoría están clasificados materiales principalmente de fibra de celulosa y utilizados debido a su versatilidad en una amplia gama de aplicaciones.
                                     Estas aplicaciones incluyen materiales de uso doméstico, como materiales para envío de productos, donde algunos de estos se encuentran listados en la siguiente lista:
                                 </Typography>
