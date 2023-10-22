@@ -47,10 +47,9 @@ function ListaDePalabras({ palabras }) {
     )
 }
 
-const lista_1 = ['Papel de Periódico', 'Papel de Revista', 'Papel de Impresora y Fotocopiadora', 'Sobres de Papel'];
-const lista_2 = ['Cuadernos y Papel de Escritura', 'Folletos y Panfletos', 'Papel de Envoltura de Regalos', 'Cajas de Cartón Corrugado'];
-const lista_3 = ['Cajas de Cereales', 'Cartón de Huevos', 'Envases de Productos Electrónicos', 'Tubos de Cartón'];
-
+const lista_1 = ['Restos de frutas y verduras', 'Cáscaras de huevo', 'Hojas secas y ramas pequeñas', 'Recortes de césped'];
+const lista_2 = ['Servilletas y pañuelos de papel usados', 'Pan y productos horneados no consumidos', 'Restos de comida cocida', 'Cáscaras de nueces y/o de almendras'];
+const lista_3 = ['Flores marchitas y plantas de interior', 'Bolsas de té y bolsitas de té', 'Paja y heno', 'Cáscaras de papas'];
 
 const Material_Organico = () => {
     return (
@@ -61,7 +60,7 @@ const Material_Organico = () => {
                 <Typography align='center' variant='h3' sx={{fontWeight:'bold'}}>
                     Materiales Orgánicos
                 </Typography>
-                <Separador altura="10px" />
+                <Separador altura="20px" />
                 <Container maxWidth="false" sx={{display:'flex', justifycontent:'center', width: "95%"}}>
                     <Grid container alignItems="center" rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                         <Grid item xs={2}>
@@ -76,14 +75,14 @@ const Material_Organico = () => {
                         </Grid>
                         
                         <Grid item xs={10}>
-                            <Paper elevation={2} sx={{padding:"10px", margin:"5px", backgroundColor: paper_color, color:"primary.contrastText"}}>
+                            <Paper elevation={2} sx={{padding:"15px", margin:"5px", backgroundColor: paper_color, color:"primary.contrastText"}}>
                                 <Typography align='center' variant={titles} sx={{fontWeight:'bold'}}>
                                     ¿Qué tipo de material se encuentra en esta categoría?
                                 </Typography>
                                 <br/>
                                 <Typography align='justify' variant={bodys} style={estiloPersonalizado}>
-                                    En esta categoría están clasificados materiales principalmente de fibra de celulosa y utilizados debido a su versatilidad en una amplia gama de aplicaciones.
-                                    Estas aplicaciones incluyen materiales de uso doméstico, como materiales para envío de productos, donde algunos de estos se encuentran listados en la siguiente lista:
+                                    En la categoría de Materiales Orgánicos se encuentran los desechos biodegradables de origen natural, como restos de alimentos (cáscaras, sobras, etc.), recortes de césped, hojas, ramas y otros materiales que pueden descomponerse de manera natural. Estos materiales son ricos en carbono y nitrógeno, lo que los hace ideales para el compostaje, un proceso en el cual se descomponen para convertirse en abono orgánico.
+                                    Algunos otros ejemplos de este material se muestran en el siguiente listado:
                                 </Typography>
                                 <Grid container alignItems="center" rowSpacing={0.5} columnSpacing={{ xs: 0.5, sm: 1, md: 1 }}>
                                     <Grid item xs={4}>
@@ -100,14 +99,13 @@ const Material_Organico = () => {
                         </Grid>
 
                         <Grid item xs={10}>
-                            <Paper elevation={2} sx={{padding:"10px", margin:"5px", backgroundColor: paper_color, color:"primary.contrastText"}}>
+                            <Paper elevation={2} sx={{padding:"15px", margin:"5px", backgroundColor: paper_color, color:"primary.contrastText"}}>
                                 <Typography align='center' variant={titles} sx={{fontWeight:'bold'}}>
                                     ¿Como se deben preparar los materiales para ser reciclados?
                                 </Typography>
                                 <br/>
                                 <Typography align='justify' variant={bodys} style={estiloPersonalizado}>
-                                    Para reciclar papeles y cartones, es fundamental que estén limpios y secos, ya que la humedad y la contaminación de alimentos pueden dificultar el proceso de reciclaje.
-                                    También, es importante eliminar elementos no reciclables que tengan contacto con los papeles o cartones, como plástico y metal. Las cajas de cartón deben estar plegadas o aplastadas para ahorrar espacio en el contenedor de reciclaje y permitir el ingreso de más materiales.
+                                    La preparación de materiales orgánicos para su reciclaje implica recolectarlos por separado en un contenedor en este caso anaranjado. Es importante asegurarse de que estos materiales estén limpios y libres de contaminantes, como plástico o metal. Para acelerar el proceso de compostaje, se recomienda picar o triturar los desechos orgánicos y asegurarse de que haya una adecuada proporción de carbono (materiales marrones, como hojas secas) y nitrógeno (materiales verdes, como restos de alimentos) en el montón. Mantener una adecuada humedad y aireación también es esencial para un compostaje efectivo.
                                 </Typography>
                             </Paper>
                         </Grid>
@@ -133,13 +131,13 @@ const Material_Organico = () => {
                         </Grid>
 
                         <Grid item xs={10}>
-                            <Paper elevation={2}sx={{padding:"10px", margin:"5px", backgroundColor: paper_color, color:"primary.contrastText"}}>
+                            <Paper elevation={2}sx={{padding:"15px", margin:"5px", backgroundColor: paper_color, color:"primary.contrastText"}}>
                                 <Typography align='center' variant={titles} sx={{fontWeight:'bold'}}>
                                     ¿Por qué es importante reciclar este tipo de materiales?
                                 </Typography>
                                 <br/>
                                 <Typography align='justify' variant={bodys} style={estiloPersonalizado}>
-                                    Reciclar papeles y cartones es esencial para conservar recursos forestales al reducir la tala de árboles, ahorrar energía al disminuir las emisiones de gases de efecto invernadero en la producción de papel, prolongar la vida útil de vertederos al reducir la cantidad de desechos, y preservar el agua al minimizar el consumo en el proceso de fabricación. Además, fomenta la generación de empleos en la industria del reciclaje y promueve un ciclo cerrado de productos de papel, contribuyendo a la sostenibilidad económica y ambiental.
+                                    Reciclar materiales orgánicos a través del compostaje es esencial por varias razones. En primer lugar, reduce significativamente la cantidad de residuos que se envían a vertederos, lo que prolonga la vida útil de estos sitios y disminuye la generación de lixiviados tóxicos. Además, el compostaje produce abono orgánico de alta calidad que puede utilizarse para enriquecer el suelo de jardines, huertos y cultivos, mejorando su estructura y fertilidad. Asimismo, el proceso de compostaje evita la producción de metano, un potente gas de efecto invernadero, que se genera cuando los materiales orgánicos se descomponen en vertederos. Esto contribuye a la lucha contra el cambio climático y la conservación del medio ambiente.
                                 </Typography>
                             </Paper>
                         </Grid>

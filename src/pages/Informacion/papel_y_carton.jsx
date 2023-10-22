@@ -76,14 +76,14 @@ export const Papel_Carton = () => {
                         </Grid>
                         
                         <Grid item xs={10}>
-                            <Paper elevation={2} sx={{padding:"10px", margin:"5px", backgroundColor: paper_color, color:"primary.contrastText"}}>
+                            <Paper elevation={2} sx={{padding:"15px", margin:"5px", backgroundColor: paper_color, color:"primary.contrastText"}}>
                                 <Typography align='center' variant={titles} sx={{fontWeight:'bold'}}>
                                     ¿Qué tipo de material se encuentra en esta categoría?
                                 </Typography>
                                 <br/>
                                 <Typography align='justify' variant={bodys} style={estiloPersonalizado}>
                                     En esta categoría están clasificados materiales principalmente de fibra de celulosa y utilizados debido a su versatilidad en una amplia gama de aplicaciones.
-                                    Estas aplicaciones incluyen materiales de uso doméstico, como materiales para envío de productos, donde algunos de estos se encuentran listados en la siguiente lista:
+                                    Estas aplicaciones incluyen materiales de uso doméstico, como materiales para envío de productos. Algunos otros ejemplos de este material se muestran en el siguiente listado:
                                 </Typography>
                                 <Grid container alignItems="center" rowSpacing={0.5} columnSpacing={{ xs: 0.5, sm: 1, md: 1 }}>
                                     <Grid item xs={4}>
@@ -100,7 +100,7 @@ export const Papel_Carton = () => {
                         </Grid>
 
                         <Grid item xs={10}>
-                            <Paper elevation={2} sx={{padding:"10px", margin:"5px", backgroundColor: paper_color, color:"primary.contrastText"}}>
+                            <Paper elevation={2} sx={{padding:"15px", margin:"5px", backgroundColor: paper_color, color:"primary.contrastText"}}>
                                 <Typography align='center' variant={titles} sx={{fontWeight:'bold'}}>
                                     ¿Como se deben preparar los materiales para ser reciclados?
                                 </Typography>
@@ -133,7 +133,7 @@ export const Papel_Carton = () => {
                         </Grid>
 
                         <Grid item xs={10}>
-                            <Paper elevation={2}sx={{padding:"10px", margin:"5px", backgroundColor: paper_color, color:"primary.contrastText"}}>
+                            <Paper elevation={2}sx={{padding:"15px", margin:"5px", backgroundColor: paper_color, color:"primary.contrastText"}}>
                                 <Typography align='center' variant={titles} sx={{fontWeight:'bold'}}>
                                     ¿Por qué es importante reciclar este tipo de materiales?
                                 </Typography>

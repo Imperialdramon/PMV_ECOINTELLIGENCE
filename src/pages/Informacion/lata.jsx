@@ -47,9 +47,9 @@ function ListaDePalabras({ palabras }) {
     )
 }
 
-const lista_1 = ['Papel de Periódico', 'Papel de Revista', 'Papel de Impresora y Fotocopiadora', 'Sobres de Papel'];
-const lista_2 = ['Cuadernos y Papel de Escritura', 'Folletos y Panfletos', 'Papel de Envoltura de Regalos', 'Cajas de Cartón Corrugado'];
-const lista_3 = ['Cajas de Cereales', 'Cartón de Huevos', 'Envases de Productos Electrónicos', 'Tubos de Cartón'];
+const lista_1 = ['Latas de Bebidas', 'Latas de Conservas']
+const lista_2 = ['Latas de Atún y/o Pescado', 'Latas de Alimentos para Mascotas']
+const lista_3 = ['Latas de Energizantes', 'Latas de Aceite y Aerosoles']
 
 
 export const Lata = () => {
@@ -61,7 +61,7 @@ export const Lata = () => {
                 <Typography align='center' variant='h3' sx={{fontWeight:'bold'}}>
                     Latas
                 </Typography>
-                <Separador altura="10px" />
+                <Separador altura="20px" />
                 <Container maxWidth="false" sx={{display:'flex', justifycontent:'center', width: "95%"}}>
                     <Grid container alignItems="center" rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                         <Grid item xs={2}>
@@ -76,14 +76,14 @@ export const Lata = () => {
                         </Grid>
                         
                         <Grid item xs={10}>
-                            <Paper elevation={2} sx={{padding:"10px", margin:"5px", backgroundColor: paper_color, color:"primary.contrastText"}}>
+                            <Paper elevation={2} sx={{padding:"15px", margin:"5px", backgroundColor: paper_color, color:"primary.contrastText"}}>
                                 <Typography align='center' variant={titles} sx={{fontWeight:'bold'}}>
                                     ¿Qué tipo de material se encuentra en esta categoría?
                                 </Typography>
                                 <br/>
                                 <Typography align='justify' variant={bodys} style={estiloPersonalizado}>
-                                    En esta categoría están clasificados materiales principalmente de fibra de celulosa y utilizados debido a su versatilidad en una amplia gama de aplicaciones.
-                                    Estas aplicaciones incluyen materiales de uso doméstico, como materiales para envío de productos, donde algunos de estos se encuentran listados en la siguiente lista:
+                                    En esta categoría están clasificados materiales principalmente de envases de aluminio o acero utilizados comúnmente en la industria alimentaria y de bebidas. Estos materiales son altamente reciclables debido a su durabilidad y capacidad para conservar los productos durante mucho tiempo. Las latas de aluminio son ligeras y resistentes a la corrosión, lo que las hace ideales para envasar bebidas, como refrescos y cerveza. Por otro lado, las latas de acero se utilizan para productos enlatados, como sopas, frutas y vegetales. Ambos tipos de latas son valiosos en el proceso de reciclaje debido a su capacidad de ser fundidos y reutilizados en la fabricación de nuevas latas y otros productos.
+                                    Algunos ejemplos de estos son:
                                 </Typography>
                                 <Grid container alignItems="center" rowSpacing={0.5} columnSpacing={{ xs: 0.5, sm: 1, md: 1 }}>
                                     <Grid item xs={4}>
@@ -100,14 +100,13 @@ export const Lata = () => {
                         </Grid>
 
                         <Grid item xs={10}>
-                            <Paper elevation={2} sx={{padding:"10px", margin:"5px", backgroundColor: paper_color, color:"primary.contrastText"}}>
+                            <Paper elevation={2} sx={{padding:"15px", margin:"5px", backgroundColor: paper_color, color:"primary.contrastText"}}>
                                 <Typography align='center' variant={titles} sx={{fontWeight:'bold'}}>
                                     ¿Como se deben preparar los materiales para ser reciclados?
                                 </Typography>
                                 <br/>
                                 <Typography align='justify' variant={bodys} style={estiloPersonalizado}>
-                                    Para reciclar papeles y cartones, es fundamental que estén limpios y secos, ya que la humedad y la contaminación de alimentos pueden dificultar el proceso de reciclaje.
-                                    También, es importante eliminar elementos no reciclables que tengan contacto con los papeles o cartones, como plástico y metal. Las cajas de cartón deben estar plegadas o aplastadas para ahorrar espacio en el contenedor de reciclaje y permitir el ingreso de más materiales.
+                                    Para reciclar latas de aluminio o acero de manera efectiva, es importante seguir algunos pasos clave. En primer lugar, es necesario enjuagar las latas para eliminar cualquier residuo o residuo pegajoso, como restos de bebida o alimentos, ya que el proceso de reciclaje es más eficiente cuando las latas están limpias y secas. Es mejor aplanar las latas si es posible, ya que esto reduce el volumen y facilita el transporte y la gestión de los materiales reciclables. Además, no es necesario quitar las etiquetas de papel, ya que se eliminan durante el proceso de reciclaje y es importante separar las latas de otros materiales no reciclables para depositarlas en el contenedor de reciclaje designado, que en este caso sería de varios.
                                 </Typography>
                             </Paper>
                         </Grid>
@@ -133,13 +132,13 @@ export const Lata = () => {
                         </Grid>
 
                         <Grid item xs={10}>
-                            <Paper elevation={2}sx={{padding:"10px", margin:"5px", backgroundColor: paper_color, color:"primary.contrastText"}}>
+                            <Paper elevation={2}sx={{padding:"15px", margin:"5px", backgroundColor: paper_color, color:"primary.contrastText"}}>
                                 <Typography align='center' variant={titles} sx={{fontWeight:'bold'}}>
                                     ¿Por qué es importante reciclar este tipo de materiales?
                                 </Typography>
                                 <br/>
                                 <Typography align='justify' variant={bodys} style={estiloPersonalizado}>
-                                    Reciclar papeles y cartones es esencial para conservar recursos forestales al reducir la tala de árboles, ahorrar energía al disminuir las emisiones de gases de efecto invernadero en la producción de papel, prolongar la vida útil de vertederos al reducir la cantidad de desechos, y preservar el agua al minimizar el consumo en el proceso de fabricación. Además, fomenta la generación de empleos en la industria del reciclaje y promueve un ciclo cerrado de productos de papel, contribuyendo a la sostenibilidad económica y ambiental.
+                                    El reciclaje de latas, ya sean de aluminio o acero, desempeña un papel significativo en la sostenibilidad ambiental y la conservación de recursos, ya que reduce la necesidad de extraer nuevos recursos naturales, como bauxita para el aluminio o mineral de hierro para el acero. Esto ayuda a preservar estos recursos limitados y disminuye la degradación ambiental asociada con la minería, como también reduce el uso de energía en la producción de aluminio, reduciendo la huella de carbono. Además, ayuda a reducir la emisión de otros contaminantes en el aire y/o agua relacionados al tratamiento de metales.
                                 </Typography>
                             </Paper>
                         </Grid>

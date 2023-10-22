@@ -47,9 +47,9 @@ function ListaDePalabras({ palabras }) {
     )
 }
 
-const lista_1 = ['Papel de Periódico', 'Papel de Revista', 'Papel de Impresora y Fotocopiadora', 'Sobres de Papel'];
-const lista_2 = ['Cuadernos y Papel de Escritura', 'Folletos y Panfletos', 'Papel de Envoltura de Regalos', 'Cajas de Cartón Corrugado'];
-const lista_3 = ['Cajas de Cereales', 'Cartón de Huevos', 'Envases de Productos Electrónicos', 'Tubos de Cartón'];
+const lista_1 = ['Botellas de Vidrio', 'Frascos de Vidrio', 'Vasos y Copas de Vidrio']
+const lista_2 = ['Envases de Vidrio para Cosméticos', 'Ventanas y Espejos', 'Bombillas y Tubos de Luz']
+const lista_3 = ['Vidrio de Laboratorio', 'Fibras de Vidrio', 'Objetos de Vidrio Antiguo o de Colección']
 
 
 const Vidrio = () => {
@@ -61,7 +61,7 @@ const Vidrio = () => {
                 <Typography align='center' variant='h3' sx={{fontWeight:'bold'}}>
                     Vidrios
                 </Typography>
-                <Separador altura="10px" />
+                <Separador altura="20px" />
                 <Container maxWidth="false" sx={{display:'flex', justifycontent:'center', width: "95%"}}>
                     <Grid container alignItems="center" rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                         <Grid item xs={2}>
@@ -76,14 +76,13 @@ const Vidrio = () => {
                         </Grid>
                         
                         <Grid item xs={10}>
-                            <Paper elevation={2} sx={{padding:"10px", margin:"5px", backgroundColor: paper_color, color:"primary.contrastText"}}>
+                            <Paper elevation={2} sx={{padding:"15px", margin:"5px", backgroundColor: paper_color, color:"primary.contrastText"}}>
                                 <Typography align='center' variant={titles} sx={{fontWeight:'bold'}}>
                                     ¿Qué tipo de material se encuentra en esta categoría?
                                 </Typography>
                                 <br/>
                                 <Typography align='justify' variant={bodys} style={estiloPersonalizado}>
-                                    En esta categoría están clasificados materiales principalmente de fibra de celulosa y utilizados debido a su versatilidad en una amplia gama de aplicaciones.
-                                    Estas aplicaciones incluyen materiales de uso doméstico, como materiales para envío de productos, donde algunos de estos se encuentran listados en la siguiente lista:
+                                    En esta categoría están clasificados materiales principalmente compuestos completamente de vidrio, como botellas, envases u otros productos. Algunos otros ejemplos de este material se muestran en el siguiente listado:
                                 </Typography>
                                 <Grid container alignItems="center" rowSpacing={0.5} columnSpacing={{ xs: 0.5, sm: 1, md: 1 }}>
                                     <Grid item xs={4}>
@@ -100,14 +99,14 @@ const Vidrio = () => {
                         </Grid>
 
                         <Grid item xs={10}>
-                            <Paper elevation={2} sx={{padding:"10px", margin:"5px", backgroundColor: paper_color, color:"primary.contrastText"}}>
+                            <Paper elevation={2} sx={{padding:"15px", margin:"5px", backgroundColor: paper_color, color:"primary.contrastText"}}>
                                 <Typography align='center' variant={titles} sx={{fontWeight:'bold'}}>
                                     ¿Como se deben preparar los materiales para ser reciclados?
                                 </Typography>
                                 <br/>
                                 <Typography align='justify' variant={bodys} style={estiloPersonalizado}>
-                                    Para reciclar papeles y cartones, es fundamental que estén limpios y secos, ya que la humedad y la contaminación de alimentos pueden dificultar el proceso de reciclaje.
-                                    También, es importante eliminar elementos no reciclables que tengan contacto con los papeles o cartones, como plástico y metal. Las cajas de cartón deben estar plegadas o aplastadas para ahorrar espacio en el contenedor de reciclaje y permitir el ingreso de más materiales.
+                                    Antes de reciclar vidrio, es importante que los envases estén limpios y secos. Esto significa que debes enjuagarlos para eliminar cualquier residuo de comida o bebida. La presencia de residuos puede contaminar el proceso de reciclaje.
+                                    Además, se deben quitar las tapas metálicas o plásticas de los envases de vidrio antes de reciclarlos, ya que las tapas se reciclan por separado y no es necesario quitar las etiquetas, ya que se eliminan durante el proceso de reciclaje.
                                 </Typography>
                             </Paper>
                         </Grid>
@@ -133,13 +132,13 @@ const Vidrio = () => {
                         </Grid>
 
                         <Grid item xs={10}>
-                            <Paper elevation={2}sx={{padding:"10px", margin:"5px", backgroundColor: paper_color, color:"primary.contrastText"}}>
+                            <Paper elevation={2}sx={{padding:"15px", margin:"5px", backgroundColor: paper_color, color:"primary.contrastText"}}>
                                 <Typography align='center' variant={titles} sx={{fontWeight:'bold'}}>
                                     ¿Por qué es importante reciclar este tipo de materiales?
                                 </Typography>
                                 <br/>
                                 <Typography align='justify' variant={bodys} style={estiloPersonalizado}>
-                                    Reciclar papeles y cartones es esencial para conservar recursos forestales al reducir la tala de árboles, ahorrar energía al disminuir las emisiones de gases de efecto invernadero en la producción de papel, prolongar la vida útil de vertederos al reducir la cantidad de desechos, y preservar el agua al minimizar el consumo en el proceso de fabricación. Además, fomenta la generación de empleos en la industria del reciclaje y promueve un ciclo cerrado de productos de papel, contribuyendo a la sostenibilidad económica y ambiental.
+                                    El reciclaje de vidrio es de suma importancia debido a sus beneficios ambientales y económicos. Permite la conservación de recursos naturales al reducir la extracción de materias primas, ahorra una cantidad significativa de energía al requerir temperaturas más bajas para fundir el vidrio reciclado, disminuye la huella de carbono al evitar la producción de vidrio nuevo y contribuye a la reducción de residuos sólidos en vertederos, prolongando su vida útil. Además, al minimizar la contaminación del aire y el agua asociada con la fabricación de vidrio, el reciclaje de vidrio apoya la sostenibilidad ambiental y promueve prácticas responsables de gestión de residuos.
                                 </Typography>
                             </Paper>
                         </Grid>
