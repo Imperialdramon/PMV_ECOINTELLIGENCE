@@ -47,7 +47,7 @@ function Template({image, alto, texto, texto2, titulo, noticia, enlace}) {
 
     return(
         <div>
-            <Card sx={{ maxWidth: 600, height: '420px'}}>
+            <Card sx={{ maxWidth: 600, height: '47vh'}}>
                 <CardActionArea onClick={handleClickOpen} sx={{height: '100%'}}>
                     <CardMedia
                         component="img"
