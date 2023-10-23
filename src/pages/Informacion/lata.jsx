@@ -20,7 +20,7 @@ const containerStyles = {
     height: '10%',         // Establece una altura al 100% de la vista
 }
 
-const paper_color = "#FF5858"
+const paper_color = "preguntas.main"
 const titles = "h4"
 const bodys = "body1"
 
@@ -38,8 +38,8 @@ function ListaDePalabras({ palabras }) {
     return (
         <Stack>
             {palabras.map((palabra, index) => (
-                <Typography key={index} variant={bodys} style={estiloPersonalizadoListas} align="justify" color="primary.contrastText" marginTop={1}>
-                    <FiberManualRecordIcon fontSize="body2" color="#5ba3e5" />
+                <Typography key={index} variant={bodys} style={estiloPersonalizadoListas} align="justify" color="preguntas.contrastText" marginTop={1}>
+                    <FiberManualRecordIcon fontSize="body2"/>
                     {palabra}
                 </Typography>
             ))}
@@ -76,7 +76,7 @@ export const Lata = () => {
                         </Grid>
                         
                         <Grid item xs={10}>
-                            <Paper elevation={2} sx={{padding:"15px", margin:"5px", backgroundColor: paper_color, color:"primary.contrastText"}}>
+                            <Paper elevation={2} sx={{padding:"15px", margin:"5px", backgroundColor: paper_color, color:"preguntas.contrastText"}}>
                                 <Typography align='center' variant={titles} sx={{fontWeight:'bold'}}>
                                     ¿Qué tipo de material se encuentra en esta categoría?
                                 </Typography>
@@ -100,7 +100,7 @@ export const Lata = () => {
                         </Grid>
 
                         <Grid item xs={10}>
-                            <Paper elevation={2} sx={{padding:"15px", margin:"5px", backgroundColor: paper_color, color:"primary.contrastText"}}>
+                            <Paper elevation={2} sx={{padding:"15px", margin:"5px", backgroundColor: paper_color, color:"preguntas.contrastText"}}>
                                 <Typography align='center' variant={titles} sx={{fontWeight:'bold'}}>
                                     ¿Como se deben preparar los materiales para ser reciclados?
                                 </Typography>
@@ -132,7 +132,7 @@ export const Lata = () => {
                         </Grid>
 
                         <Grid item xs={10}>
-                            <Paper elevation={2}sx={{padding:"15px", margin:"5px", backgroundColor: paper_color, color:"primary.contrastText"}}>
+                            <Paper elevation={2}sx={{padding:"15px", margin:"5px", backgroundColor: paper_color, color:"preguntas.contrastText"}}>
                                 <Typography align='center' variant={titles} sx={{fontWeight:'bold'}}>
                                     ¿Por qué es importante reciclar este tipo de materiales?
                                 </Typography>

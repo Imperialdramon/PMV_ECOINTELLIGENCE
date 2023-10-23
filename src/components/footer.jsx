@@ -2,12 +2,12 @@ import React from "react"
 import Grid from '@mui/material/Grid'
 import Box from '@mui/material/Box'
 import { IconButton, Stack, Typography } from "@mui/material"
-import { Instagram, LinkedIn } from "@mui/icons-material"
+import { Instagram } from "@mui/icons-material"
 import Divider from "@mui/material/Divider"
 import Logo_2 from '../assets/Logo_2.png'
 import FmdGoodIcon from '@mui/icons-material/FmdGood'
 import EmailIcon from '@mui/icons-material/Email'
-
+import discord from '../assets/discord.png'
 /*
 // Dialogo
 import Dialog from '@mui/material/Dialog'
@@ -62,6 +62,18 @@ function handleButtonClick({pagina, enlace}) {
 }
 */
 
+const RedirectDiscord = () => {
+    window.location.href = "https://discord.gg/Ee37MCYS"
+}
+
+const RedirectX = () => {
+    window.location.href = "https://twitter.com/Ec0Intelligence"
+}
+
+const RedirectInstagram = () => {
+    window.location.href = "https://www.instagram.com/ecointelligence.neds/"
+}
+
 function Footer() {
     return (
         <>
@@ -99,10 +111,9 @@ function Footer() {
                 <Grid xs={3} container direction="column" justifyContent="center" alignItems={"center"}>
                     <Typography variant="h5" align='center' sx={{fontWeight:'bold'}}>Compartir</Typography>
                     <Stack direction="row" divider={<Divider orientation="vertical" flexItem />}>
-                        <IconButton item ><svg xmlns="http://www.w3.org/2000/svg" height="2rem" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" fill="#FFFFFF"/></svg></IconButton>
-                        <IconButton item ><Instagram fontSize="large" sx={{color:"primary.icon"}}/></IconButton>
-                        <IconButton item ><LinkedIn fontSize="large" sx={{color:"primary.icon"}}/></IconButton>
-                        
+                        <IconButton item onClick={RedirectX}><svg xmlns="http://www.w3.org/2000/svg" height="2rem" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" fill="#FFFFFF"/></svg></IconButton>
+                        <IconButton item onClick={RedirectInstagram}><Instagram fontSize="large" sx={{color:"primary.icon"}}/></IconButton>
+                        <IconButton item onClick={RedirectDiscord}> <img src={discord} width="35px" height="35px"/></IconButton>
                     </Stack>
                 </Grid>
             </Grid>
