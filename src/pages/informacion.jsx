@@ -57,7 +57,7 @@ export const Informacion = () => {
                         <Grid item xs={4}>
                             <ImgMediaCard
                                 titulo="Lata"
-                                color="rgb(248, 60, 60)"
+                                color="#D32F2F"
                                 enlace='/informacion/lata'
                                 img={img_basurero_lata}
                             />
@@ -65,7 +65,7 @@ export const Informacion = () => {
                         <Grid item xs={4}>
                             <ImgMediaCard
                                 titulo="Plástico"
-                                color="rgb(246, 255, 53)" 
+                                color="#FFFF00" 
                                 enlace='/informacion/plastico'
                                 img={img_basurero_plastic}
                             />
@@ -81,7 +81,7 @@ export const Informacion = () => {
                         <Grid item xs={4}>
                             <ImgMediaCard
                                 titulo="Varios"
-                                color="rgb(182, 182, 182)"
+                                color="#607D8B"
                                 enlace='/informacion/varios'
                                 img={img_basurero_others}
                             />
