@@ -6,7 +6,7 @@ import { Container } from '@mui/system'
 import Grid from '@mui/material/Grid'
 import Footer from '../components/footer'
 import '../stylesheets/page/page__container.scss'
-import {Typography} from "@mui/material"
+import {Typography, Paper} from "@mui/material"
 import Separador from '../components/separator'
 import img_basurero_paper from '../assets/recycle/recycle_paper.png'
 import img_basurero_organic from '../assets/recycle/recycle_organic.png'
@@ -29,11 +29,13 @@ export const Informacion = () => {
             <Bread_crumbs />
             <div className="content-wrap">
                 <Typography variant='h3' align='center' sx={{fontWeight:'bold'}}>Información sobre el Reciclaje</Typography>
-                <Separador altura="10px" />
+                <Separador altura="20px" />
                 <Container maxWidth="80%" sx={{display:'flex', justifycontent:'center', alignContent:"justify", alignItems:"center"} }>
-                    <Typography item variant='subtitle1' fontSize='25px'  lineHeight={1.2}>
-                        En esta sección se encuentran los seis tipos de contenedores para el reciclaje, los cuales tienen un tipo de contenido específico y diferentes motivos por los cuales se recomiendan reciclar debido a su impacto en el medioambiente. 
-                    </Typography>
+                    <Paper elevation={2} sx={{padding:"15px", margin:"5px", backgroundColor: "preguntas.main", color:"preguntas.contrastText"}}>
+                        <Typography item variant='subtitle1' fontSize='25px'  lineHeight={1.2}>
+                            En esta sección se encuentran los seis tipos de contenedores para el reciclaje, los cuales tienen un tipo de contenido específico y diferentes motivos por los cuales se recomiendan reciclar debido a su impacto en el medioambiente. 
+                        </Typography>
+                    </Paper>
                 </Container>
                 <Separador altura="20px" />
                 <Container maxWidth="false" sx={{display:'flex', justifycontent:'center'}}>
