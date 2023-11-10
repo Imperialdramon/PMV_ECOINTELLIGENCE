@@ -12,6 +12,7 @@ import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord'
 import img_basurero from '../../assets/recycle/recycle_glass.png'
 import window from '../../assets/info/window.png'
 import bottle from '../../assets/info/glass_bottle.png'
+import broken from '../../assets/info/broken_glass.png'
 
 const containerStyles = {
     display: 'flex',
@@ -124,12 +125,25 @@ const Vidrio = () => {
                         <Grid item xs={2}>
                             <div style={containerStyles}>
                                 <img
-                                    src={bottle} // Reemplaza con la ruta de tu imagen
+                                    src={broken} // Reemplaza con la ruta de tu imagen
                                     width="100%" // Ancho deseado en píxeles
                                     height="100%" // Alto deseado en píxeles
                                 />
                             </div>
                         </Grid>
+
+                        <Grid item xs={10}>
+                            <Paper elevation={2}sx={{padding:"15px", margin:"5px", backgroundColor: paper_color, color:"preguntas.contrastText"}}>
+                                <Typography align='center' variant={titles} sx={{fontWeight:'bold'}}>
+                                    ¿Por qué no se deben depositar vidrios rotos en los contenedores de vidrios?
+                                </Typography>
+                                <br/>
+                                <Typography align='justify' variant={bodys} style={estiloPersonalizado}>
+                                No se deben depositar vidrios rotos en los contenedores de vidrio porque pueden causar lesiones a quienes manipulan los residuos y aumentan el riesgo de contaminación. Además, el vidrio roto puede dificultar el proceso de reciclaje al contaminar otros materiales y afectar la calidad del vidrio reciclado.
+                                </Typography>
+                            </Paper>
+                        </Grid>
+
 
                         <Grid item xs={10}>
                             <Paper elevation={2}sx={{padding:"15px", margin:"5px", backgroundColor: paper_color, color:"preguntas.contrastText"}}>
@@ -141,6 +155,16 @@ const Vidrio = () => {
                                     El reciclaje de vidrio es de suma importancia debido a sus beneficios ambientales y económicos. Permite la conservación de recursos naturales al reducir la extracción de materias primas, ahorra una cantidad significativa de energía al requerir temperaturas más bajas para fundir el vidrio reciclado, disminuye la huella de carbono al evitar la producción de vidrio nuevo y contribuye a la reducción de residuos sólidos en vertederos, prolongando su vida útil. Además, al minimizar la contaminación del aire y el agua asociada con la fabricación de vidrio, el reciclaje de vidrio apoya la sostenibilidad ambiental y promueve prácticas responsables de gestión de residuos.
                                 </Typography>
                             </Paper>
+                        </Grid>
+
+                        <Grid item xs={2}>
+                            <div style={containerStyles}>
+                                <img
+                                    src={bottle} // Reemplaza con la ruta de tu imagen
+                                    width="100%" // Ancho deseado en píxeles
+                                    height="100%" // Alto deseado en píxeles
+                                />
+                            </div>
                         </Grid>
                     </Grid>
                 </Container>

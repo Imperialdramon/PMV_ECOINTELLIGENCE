@@ -28,7 +28,7 @@ export const Informacion = () => {
             <NavBar />
             <Bread_crumbs />
             <div className="content-wrap">
-                <Typography variant='h3' align='center' sx={{fontWeight:'bold'}}>Información sobre el Reciclaje</Typography>
+                <Typography variant='h3' align='center' sx={{fontWeight:'bold'}}>Educación Ambiental</Typography>
                 <Separador altura="20px" />
                 <Container maxWidth="80%" sx={{display:'flex', justifycontent:'center', alignContent:"justify", alignItems:"center"} }>
                     <Paper elevation={2} sx={{padding:"15px", margin:"5px", backgroundColor: "preguntas.main", color:"preguntas.contrastText"}}>

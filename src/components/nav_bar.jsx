@@ -9,7 +9,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import LogoPag from '../assets/Logo.png';
 import Logo2 from '../assets/Logo3.png'
 
 
@@ -19,8 +18,9 @@ function NavBar() {
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   {/* Paginas para el navbar, van con el nombre y el link, en name y href respectivamente */}
   const pages = [
-    /*{"name":"Sobre Nosotros","href":"/sobre_nosotros"},*/ // No es necesario tener esto para la entrega
-    {"name":"Información sobre el Reciclaje","href":"/informacion"}, 
+    {"name":"Inicio","href":"/"},
+    {"name":"Sobre Nosotros","href":"/sobre_nosotros"},
+    {"name":"Educación Ambiental","href":"/informacion"}, 
     {"name":"Mapa Interactivo","href":"/mapa"},
     {"name":"Noticias","href":"/noticias"},
     {"name":"Preguntas Frecuentes","href":"/preguntas_frecuentes"},

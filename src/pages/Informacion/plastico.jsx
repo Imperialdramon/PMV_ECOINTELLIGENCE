@@ -12,6 +12,7 @@ import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord'
 import img_basurero from '../../assets/recycle/recycle_plastic.png'
 import duck from '../../assets/info/duck.png'
 import bottle from '../../assets/info/soap-bottles.png'
+import car from '../../assets/info/car.png'
 
 const containerStyles = {
     display: 'flex',
@@ -124,11 +125,23 @@ const Plastico = () => {
                         <Grid item xs={2}>
                             <div style={containerStyles}>
                                 <img
-                                    src={bottle} // Reemplaza con la ruta de tu imagen
+                                    src={car} // Reemplaza con la ruta de tu imagen
                                     width="100%" // Ancho deseado en píxeles
                                     height="100%" // Alto deseado en píxeles
                                 />
                             </div>
+                        </Grid>
+
+                        <Grid item xs={10}>
+                            <Paper elevation={2}sx={{padding:"15px", margin:"5px", backgroundColor: paper_color, color:"preguntas.contrastText"}}>
+                                <Typography align='center' variant={titles} sx={{fontWeight:'bold'}}>
+                                    ¿Por qué todos los plásticos no pueden ser reciclados?
+                                </Typography>
+                                <br/>
+                                <Typography align='justify' variant={bodys} style={estiloPersonalizado}>
+                                    No todos los plásticos pueden ser reciclados debido a las diferencias en composición química y propiedades físicas entre los distintos tipos de plásticos. La falta de uniformidad dificulta el proceso de reciclaje, ya que cada tipo de plástico requiere condiciones específicas para su tratamiento. Algunos plásticos son más difíciles de reciclar económicamente o generan subproductos no deseados durante el proceso.
+                                </Typography>
+                            </Paper>
                         </Grid>
 
                         <Grid item xs={10}>
@@ -141,6 +154,16 @@ const Plastico = () => {
                                     El reciclaje de plásticos es crucial debido a varios motivos. En primer lugar, reduce la demanda de petróleo crudo, que es una materia prima fundamental en la fabricación de plástico, lo que disminuye la explotación de recursos naturales no renovables. Además, el reciclaje de plásticos contribuye a la reducción de la contaminación ambiental, ya que evita que los plásticos terminen en vertederos o en el medio ambiente, donde pueden causar daños a la vida silvestre y degradarse lentamente. Además, la reutilización de plásticos reciclados ahorra energía en comparación con la producción de plástico virgen, lo que reduce las emisiones de gases de efecto invernadero. 
                                 </Typography>
                             </Paper>
+                        </Grid>
+
+                        <Grid item xs={2}>
+                            <div style={containerStyles}>
+                                <img
+                                    src={bottle} // Reemplaza con la ruta de tu imagen
+                                    width="100%" // Ancho deseado en píxeles
+                                    height="100%" // Alto deseado en píxeles
+                                />
+                            </div>
                         </Grid>
                     </Grid>
                 </Container>
