@@ -62,7 +62,7 @@ export default function Preguntas_Frecuentes() {
                 />
                 <Desplegable
                     nombre="Desp_7"
-                    titulo="¿Cómo se pueden reducir los consumos de productos plásticos o que alternativas existen?"
+                    titulo="¿Cómo reducir el consumos de productos plásticos? ¿Qué alternativas existen?"
                     textos={["Para reducir el consumo de productos plásticos, puedes optar por productos reutilizables, como botellas de agua de acero inoxidable en lugar de botellas de plástico desechables, o llevar tus propias bolsas de tela al hacer compras. Además, puedes elegir productos con envases de vidrio, papel o cartón en lugar de plástico siempre que sea posible. La conciencia y elecciones conscientes son clave."]}
                 />
                 <Desplegable
