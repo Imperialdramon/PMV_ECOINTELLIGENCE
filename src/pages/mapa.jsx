@@ -2,7 +2,7 @@ import React from 'react'
 import { useEffect,useState,useRef } from 'react';
 import NavBar from '../components/nav_bar'
 import { Bread_crumbs } from '../components/breadcrumbs';
-import { Container, Drawer, Box, Grid, Stack, Typography, Button, Divider, Paper} from '@mui/material';
+import { Container, Drawer, Box, Stack, Typography, Button, Divider, Paper} from '@mui/material';
 import BarChart from '../components/BarChart';
 import { createRoot } from 'react-dom/client';
 import Reciclaje from '../assets/reciclaje.png';
@@ -136,16 +136,16 @@ function Leyenda(){
                     onClose={toggleAyuda}
                     PaperProps={{sx:{backgroundColor:"preguntas.main",color:"preguntas.contrastText"}}}
                 >
-                <Container sx={{width:"75vh",paddingTop:"2rem"}}>
+                <Container sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', width:"75vh",paddingTop:"2rem"}}>
                     <Stack spacing={2}>
                         <Typography variant='h4' sx={{fontWeight:'bold'}}>¿Como se utiliza el Mapa Interactivo?</Typography>
-                        <Typography lineHeight={1.2} align='justify' variant='subtitle1'>Se puede mover por el mapa mediante el desplazamiento, alejar o acercar</Typography>
+                        <Typography lineHeight={1.2} align='justify' variant='subtitle1'>Para desplazarte por el mapa, puedes utilizar el ratón, clickeando para desplazar en cierta dirección. Además, puedes usar la rueda de desplazamiento para acercar o alejar la vista del mapa.</Typography>
                         <Divider></Divider>
-                        <Typography lineHeight={1.2} align='justify' variant='subtitle1'>Hacer click en alguno de los marcadores en el mapa para obtener la información detallada de los contenedores</Typography>
+                        <Typography lineHeight={1.2} align='justify' variant='subtitle1'>Si quieres obtener más información de alguno de los marcadores en el mapa, puedes clickear en este, lo que te mostrará una vista detallada de los contenedores en función de la cantidad de residuos presentes.</Typography>
                         <Divider></Divider>
-                        <Typography lineHeight={1.2} align='justify' variant='subtitle1'>Pasar por encima el mouse para observar detalladamente los porcentajes de cada contenedor en la barra correspondiente</Typography>
+                        <Typography lineHeight={1.2} align='justify' variant='subtitle1'>Si quieres conocer detalladamente el porcentaje de residuos en cierto punto del mapa, debes posicionar el ratón sobre la barra correspondiente, lo que te indicará la cantidad de forma numérica.</Typography>
                         <Divider></Divider>
-                        <Typography lineHeight={1.2} align='justify' variant='subtitle1'>Hacer click afuera para salir del desplegable de información</Typography>
+                        <Typography lineHeight={1.2} align='justify' variant='subtitle1'>Para salir de la vista de esta información, da click en la sección izquierda donde se encuentra el mapa.</Typography>
                     </Stack>
                 </Container>
             </Drawer>
