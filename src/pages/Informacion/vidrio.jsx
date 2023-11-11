@@ -86,11 +86,10 @@ const Vidrio = () => {
                                     En esta categoría están clasificados materiales principalmente compuestos completamente de vidrio, como botellas, envases u otros productos. Algunos otros ejemplos de este material se muestran en el siguiente listado:
                                 </Typography>
                                 <Grid container alignItems="center" rowSpacing={0.5} columnSpacing={{ xs: 0.5, sm: 1, md: 1 }}>
-                                    <Grid item xs={1}/>
-                                    <Grid item xs={3}>
+                                    <Grid item xs={4}>
                                         <ListaDePalabras palabras={lista_1}/>
                                     </Grid>
-                                    <Grid item xs={3}>
+                                    <Grid item xs={4}>
                                         <ListaDePalabras palabras={lista_2}/>
                                     </Grid>
                                     <Grid item xs={4}>

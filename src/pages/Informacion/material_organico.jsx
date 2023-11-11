@@ -63,7 +63,7 @@ const Material_Organico = () => {
                 <Separador altura="20px" />
                 <Container maxWidth="false" sx={{display:'flex', justifycontent:'center', width: "95%"}}>
                     <Grid container alignItems="center" rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                        <Grid item xs={2}>
+                        <Grid item xs={3}>
                             <div style={containerStyles}>
                                 <img
                                     src={img_basurero} // Reemplaza con la ruta de tu imagen
@@ -74,7 +74,7 @@ const Material_Organico = () => {
                         
                         </Grid>
                         
-                        <Grid item xs={10}>
+                        <Grid item xs={9}>
                             <Paper elevation={2} sx={{padding:"20px", margin:"5px", backgroundColor: paper_color, color:"preguntas.contrastText"}}>
                                 <Typography align='center' variant={titles} sx={{fontWeight:'bold'}}>
                                     ¿Qué tipo de material se encuentra en esta categoría?
@@ -137,7 +137,7 @@ const Material_Organico = () => {
                                 </Typography>
                                 <br/>
                                 <Typography align='justify' variant={bodys} style={estiloPersonalizado}>
-                                    Reciclar materiales orgánicos a través del compostaje es esencial por varias razones. En primer lugar, reduce significativamente la cantidad de residuos que se envían a vertederos, lo que prolonga la vida útil de estos sitios y disminuye la generación de lixiviados tóxicos. Además, el compostaje produce abono orgánico de alta calidad que puede utilizarse para enriquecer el suelo de jardines, huertos y cultivos, mejorando su estructura y fertilidad. Asimismo, el proceso de compostaje evita la producción de metano, un potente gas de efecto invernadero, que se genera cuando los materiales orgánicos se descomponen en vertederos. Esto contribuye a la lucha contra el cambio climático y la conservación del medio ambiente.
+                                    Reciclar materiales orgánicos a través del compostaje es esencial porque reduce significativamente la cantidad de residuos que se envían a vertederos y el compostaje produce abono orgánico de alta calidad que puede utilizarse para enriquecer el suelo de jardines, huertos y cultivos, mejorando su estructura y fertilidad. Asimismo, el proceso de compostaje evita la producción de metano, un potente gas de efecto invernadero, que se genera cuando los materiales orgánicos se descomponen en vertederos, lo que contribuye a la lucha contra el cambio climático y la conservación del medio ambiente.
                                 </Typography>
                             </Paper>
                         </Grid>

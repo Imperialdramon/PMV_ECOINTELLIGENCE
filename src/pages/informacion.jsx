@@ -32,7 +32,7 @@ export const Informacion = () => {
                 <Separador altura="20px" />
                 <Container maxWidth="80%" sx={{display:'flex', justifycontent:'center', alignContent:"justify", alignItems:"center"} }>
                     <Paper elevation={2} sx={{padding:"15px", margin:"5px", backgroundColor: "preguntas.main", color:"preguntas.contrastText"}}>
-                        <Typography item variant='subtitle1' fontSize='25px'  lineHeight={1.2}>
+                        <Typography item variant='subtitle1' fontSize='25px' padding="20px" lineHeight={1.2}>
                             En esta sección se encuentran los seis tipos de contenedores para el reciclaje, los cuales tienen un tipo de contenido específico y diferentes motivos por los cuales se recomiendan reciclar debido a su impacto en el medioambiente. 
                         </Typography>
                     </Paper>

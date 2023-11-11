@@ -64,7 +64,7 @@ export const Papel_Carton = () => {
                 <Separador altura="20px" />
                 <Container maxWidth="false" sx={{display:'flex', justifycontent:'center', width: "95%"}}>
                     <Grid container alignItems="center" rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                        <Grid item xs={2}>
+                        <Grid item xs={3}>
                             <div style={containerStyles}>
                                 <img
                                     src={img_basurero} // Reemplaza con la ruta de tu imagen
@@ -75,7 +75,7 @@ export const Papel_Carton = () => {
                         
                         </Grid>
                         
-                        <Grid item xs={10}>
+                        <Grid item xs={9}>
                             <Paper elevation={2} sx={{padding:"20px", margin:"5px", backgroundColor: paper_color, color:"preguntas.contrastText"}}>
                                 <Typography align='center' variant={titles} sx={{fontWeight:'bold'}}>
                                     ¿Qué tipo de material se encuentra en esta categoría?

@@ -65,7 +65,7 @@ const Plastico = () => {
                 <Separador altura="20px" />
                 <Container maxWidth="false" sx={{display:'flex', justifycontent:'center', width: "95%"}}>
                     <Grid container alignItems="center" rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                        <Grid item xs={2}>
+                        <Grid item xs={3}>
                             <div style={containerStyles}>
                                 <img
                                     src={img_basurero} // Reemplaza con la ruta de tu imagen
@@ -76,14 +76,14 @@ const Plastico = () => {
                         
                         </Grid>
                         
-                        <Grid item xs={10}>
+                        <Grid item xs={9}>
                             <Paper elevation={2} sx={{padding:"20px", margin:"5px", backgroundColor: paper_color, color:"preguntas.contrastText"}}>
                                 <Typography align='center' variant={titles} sx={{fontWeight:'bold'}}>
                                     ¿Qué tipo de material se encuentra en esta categoría?
                                 </Typography>
                                 <br/>
                                 <Typography align='justify' variant={bodys} style={estiloPersonalizado}>
-                                    En esta categoría se encuentran una amplia variedad de productos fabricados con plástico, que pueden incluir botellas de agua y refrescos (generalmente marcadas con el código de reciclaje #1 PET), envases de leche y detergentes (código #2 HDPE), envases de yogur y margarina (código #5 PP), así como envases de productos de limpieza y productos de consumo diario hechos de plástico. Estos productos pueden ser de un solo uso o reutilizables y a menudo están marcados con un número de identificación para facilitar su clasificación y reciclaje.
+                                    En esta categoría se encuentran una amplia variedad de productos fabricados con plástico, que pueden incluir botellas de agua y refrescos, envases de leche y detergentes, envases de yogur y margarina, así como envases de productos de limpieza y productos de consumo diario hechos de plástico. Estos productos pueden ser de un solo uso o reutilizables y a menudo están marcados con un número de identificación para facilitar su clasificación y reciclaje.
                                     Algunos otros ejemplos de este material se muestran en el siguiente listado:
                                 </Typography>
                                 <Grid container alignItems="center" rowSpacing={0.5} columnSpacing={{ xs: 0.5, sm: 1, md: 1 }}>

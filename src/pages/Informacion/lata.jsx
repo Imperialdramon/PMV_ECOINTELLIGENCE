@@ -64,7 +64,7 @@ export const Lata = () => {
                 <Separador altura="20px" />
                 <Container maxWidth="false" sx={{display:'flex', justifycontent:'center', width: "95%"}}>
                     <Grid container alignItems="center" rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                        <Grid item xs={2}>
+                        <Grid item xs={3}>
                             <div style={containerStyles}>
                                 <img
                                     src={img_basurero} // Reemplaza con la ruta de tu imagen
@@ -75,7 +75,7 @@ export const Lata = () => {
                         
                         </Grid>
                         
-                        <Grid item xs={10}>
+                        <Grid item xs={9}>
                             <Paper elevation={2} sx={{padding:"20px", margin:"5px", backgroundColor: paper_color, color:"preguntas.contrastText"}}>
                                 <Typography align='center' variant={titles} sx={{fontWeight:'bold'}}>
                                     ¿Qué tipo de material se encuentra en esta categoría?
@@ -106,7 +106,7 @@ export const Lata = () => {
                                 </Typography>
                                 <br/>
                                 <Typography align='justify' variant={bodys} style={estiloPersonalizado}>
-                                    Para reciclar latas de aluminio o acero de manera efectiva, es importante seguir algunos pasos clave. En primer lugar, es necesario enjuagar las latas para eliminar cualquier residuo o residuo pegajoso, como restos de bebida o alimentos, ya que el proceso de reciclaje es más eficiente cuando las latas están limpias y secas. Es mejor aplanar las latas si es posible, ya que esto reduce el volumen y facilita el transporte y la gestión de los materiales reciclables. Además, no es necesario quitar las etiquetas de papel, ya que se eliminan durante el proceso de reciclaje y es importante separar las latas de otros materiales no reciclables para depositarlas en el contenedor de reciclaje designado, que en este caso sería de varios.
+                                    Para reciclar latas de aluminio o acero de manera efectiva, es importante enjuagar las latas para eliminar cualquier residuo o residuo pegajoso, como restos de bebida o alimentos, ya que el proceso de reciclaje es más eficiente cuando las latas están limpias y secas. Además, es mejor aplanar las latas si es posible, ya que esto reduce el volumen y facilita el transporte y la gestión de los materiales reciclables. No es necesario quitar las etiquetas de papel, ya que se eliminan durante el proceso de reciclaje.
                                 </Typography>
                             </Paper>
                         </Grid>
