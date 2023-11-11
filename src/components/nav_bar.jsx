@@ -19,7 +19,6 @@ function NavBar() {
   {/* Paginas para el navbar, van con el nombre y el link, en name y href respectivamente */}
   const pages = [
     {"name":"Inicio","href":"/"},
-    {"name":"Sobre Nosotros","href":"/sobre_nosotros"},
     {"name":"Educación Ambiental","href":"/informacion"}, 
     {"name":"Mapa Interactivo","href":"/mapa"},
     {"name":"Noticias","href":"/noticias"},
