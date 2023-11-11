@@ -30,7 +30,7 @@ import new_04 from '../assets/news/news_04.jpg'
 import new_05 from '../assets/news/news_05.jpg'
 import new_06 from '../assets/news/news_06.jpg'
 
-function Template({image, alto, texto, titulo, noticia, enlace}) {
+function Template({image, alto, texto, titulo, noticia, fecha, enlace}) {
     const [open, setOpen] = React.useState(false);
 
     const handleButtonClick = () => {
@@ -62,6 +62,23 @@ function Template({image, alto, texto, titulo, noticia, enlace}) {
                         <Typography variant="body2" color="text.secondary" align='justify'>
                             {texto}
                         </Typography>
+                        <br/>
+                        <Grid container alignItems="center" rowSpacing={1}>
+                            <Grid item xs={5}>
+                                <div style={{ textAlign: 'left' }}>
+                                    <Typography variant="caption" color="text.secondary" align='justify'>
+                                        Publicado: {fecha}
+                                    </Typography>
+                                </div>
+                            </Grid>
+                            <Grid item xs={7}>
+                                <div style={{ textAlign: 'right' }}>
+                                    <Typography variant="caption" color="text.secondary" align='justify'>
+                                        Autor: {noticia}
+                                    </Typography>
+                                </div>
+                            </Grid>
+                        </Grid>
                     </CardContent>
                 </CardActionArea>
             </Card>
@@ -112,6 +129,7 @@ export const Noticias = () => {
                                 texto="La medida se enmarca en la Ley de Reciclaje y se traducirá, concretamente, en la circulación de camiones -parecidos a los de la basura- por la ciudad."
                                 enlace="https://cooperativa.cl/noticias/sociedad/medioambiente/reciclaje/comienza-retiro-de-residuos-reciclables-desde-750-mil-domicilios/2023-10-01/103123.html"
                                 noticia="Coperativa"
+                                fecha="01/10/2023"
                             />
                         </Grid>
                         <Grid item xs={4}>
@@ -122,17 +140,32 @@ export const Noticias = () => {
                                 texto="Luego de haber recreado un clásico spot por la conducción responsable junto a Guido Vecchiola, el Gobierno de Chile escogió a otra figura popular para una campaña pública."
                                 enlace="https://cooperativa.cl/noticias/entretencion/musica/grupo-red-protagoniza-campana-de-reciclaje-del-gobierno-de-chile/2023-09-14/085625.html"
                                 noticia="Coperativa"
+                                fecha="14/09/2023"
                             />
                         </Grid>
+
                         <Grid item xs={4}>
                             <Template
-                                image={new_03}
+                                image={new_06}
                                 alto="40%"
-                                titulo="Proyectos de sustentabilidad recibieron premio para su ejecución"
-                                texto="Innovaciones de Santiago, Antofagasta, Punta Arenas y Temuco tendrán aporte financiero."
-                                enlace="https://cooperativa.cl/noticias/sociedad/medioambiente/reciclaje/proyectos-de-sustentabilidad-recibieron-premio-para-su-ejecucion/2021-11-30/175134.html"
+                                titulo="Gobierno anuncia proyecto para evitar que residuos orgánicos terminen en los rellenos"
+                                texto="El proyecto busca instaurar obligaciones en la gestión de reciclaje para Gobiernos regionales y municipios, e impulsar la separación de desechos orgánicos en viviendas." 
+                                enlace="https://cooperativa.cl/noticias/pais/medioambiente/gobierno-anuncia-proyecto-para-evitar-que-residuos-organicos-terminen-en/2023-06-05/141838.html"
                                 noticia="Coperativa"
-                            />
+                                fecha="05/06/2023"
+                            />    
+                        </Grid>
+
+                        <Grid item xs={4}>
+                            <Template
+                                image={new_05}
+                                alto="40%"
+                                titulo="Premios Cero Basura reconoció proyectos de sustentabilidad"
+                                texto="El certamen, organizado por EcoLógica, premió a las compañías en cinco categorías: Consumo Masivo y Retail, Industrial, Innovación, Cambio Cultural e Impacto Social."
+                                enlace="https://www.df.cl/df-lab/sostenibilidad/premios-cero-basura-destaca-iniciativas-de-empresas-en-gestion-de-residuos"
+                                noticia="Diario Financiero"
+                                fecha="12/01/2023"
+                            />  
                         </Grid>
 
                         <Grid item xs={4}>
@@ -145,29 +178,20 @@ export const Noticias = () => {
                                 "
                                 enlace="https://www.udt.cl/universidad-de-concepcion-y-empresas-buscaran-reciclar-cuatro-toneladas-de-mascarillas/"
                                 noticia="Universidad de Concepción"
+                                fecha="21/03/2022"
                             />      
                         </Grid>
 
                         <Grid item xs={4}>
                             <Template
-                                image={new_05}
+                                image={new_03}
                                 alto="40%"
-                                titulo="Premios Cero Basura reconoció proyectos de sustentabilidad"
-                                texto="El certamen, organizado por EcoLógica, premió a las compañías en cinco categorías: Consumo Masivo y Retail, Industrial, Innovación, Cambio Cultural e Impacto Social."
-                                enlace="https://www.df.cl/df-lab/sostenibilidad/premios-cero-basura-destaca-iniciativas-de-empresas-en-gestion-de-residuos"
-                                noticia="Diario Financiero"
-                            />  
-                        </Grid>
-
-                        <Grid item xs={4}>
-                            <Template
-                                image={new_06}
-                                alto="40%"
-                                titulo="Gobierno anuncia proyecto para evitar que residuos orgánicos terminen en los rellenos"
-                                texto="El proyecto busca instaurar obligaciones en la gestión de reciclaje para Gobiernos regionales y municipios, e impulsar la separación de desechos orgánicos en viviendas." 
-                                enlace="https://cooperativa.cl/noticias/pais/medioambiente/gobierno-anuncia-proyecto-para-evitar-que-residuos-organicos-terminen-en/2023-06-05/141838.html"
+                                titulo="Proyectos de sustentabilidad recibieron premio para su ejecución"
+                                texto="Innovaciones de Santiago, Antofagasta, Punta Arenas y Temuco tendrán aporte financiero."
+                                enlace="https://cooperativa.cl/noticias/sociedad/medioambiente/reciclaje/proyectos-de-sustentabilidad-recibieron-premio-para-su-ejecucion/2021-11-30/175134.html"
                                 noticia="Coperativa"
-                            />    
+                                fecha="30/11/2021"
+                            />
                         </Grid>
                     </Grid>
                 </Container>
