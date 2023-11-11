@@ -40,7 +40,7 @@ export const HomePage = () => {
                 }}
               >
                 <Typography variant="h6" align='justify' sx={{fontWeight:'bold'}} padding="1%">
-                  EcoIntelligence es una plataforma en línea dedicada a fomentar la conciencia ambiental y la sostenibilidad a través de la educación, la información y la facilitación del reciclaje. Nuestra misión es proporcionar a las personas las herramientas y recursos necesarios para tomar decisiones más eco-amigables en su vida cotidiana. Ofrecemos un mapa interactivo para localizar contenedores de reciclaje, información sobre qué materiales son reciclables y en qué tipo de contenedor deben ser depositados, además de una variedad de recursos educativos sobre el reciclaje y la sostenibilidad. EcoIntelligence es un punto de partida para aquellos que desean contribuir al cuidado del medio ambiente y unirse a una comunidad comprometida con un mundo más sostenible.
+                  EcoIntelligence es una plataforma aplicación web dedicada a fomentar la conciencia ambiental y la sostenibilidad a través de la educación, la información y la agilización del proceso de reciclaje. Nuestra misión es proporcionar a las personas las herramientas y recursos necesarios para tomar decisiones más eco-amigables en su vida cotidiana. EcoIntelligence es un punto de partida para aquellos que desean contribuir al cuidado del medio ambiente y unirse a una comunidad comprometida con un mundo más sostenible.
                 </Typography>
               </Paper>
             </Grid>
