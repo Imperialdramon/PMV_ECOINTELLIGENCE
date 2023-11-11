@@ -77,7 +77,7 @@ const Plastico = () => {
                         </Grid>
                         
                         <Grid item xs={10}>
-                            <Paper elevation={2} sx={{padding:"15px", margin:"5px", backgroundColor: paper_color, color:"preguntas.contrastText"}}>
+                            <Paper elevation={2} sx={{padding:"20px", margin:"5px", backgroundColor: paper_color, color:"preguntas.contrastText"}}>
                                 <Typography align='center' variant={titles} sx={{fontWeight:'bold'}}>
                                     ¿Qué tipo de material se encuentra en esta categoría?
                                 </Typography>
@@ -101,7 +101,7 @@ const Plastico = () => {
                         </Grid>
 
                         <Grid item xs={10}>
-                            <Paper elevation={2} sx={{padding:"15px", margin:"5px", backgroundColor: paper_color, color:"preguntas.contrastText"}}>
+                            <Paper elevation={2} sx={{padding:"20px", margin:"5px", backgroundColor: paper_color, color:"preguntas.contrastText"}}>
                                 <Typography align='center' variant={titles} sx={{fontWeight:'bold'}}>
                                     ¿Como se deben preparar los materiales para ser reciclados?
                                 </Typography>
@@ -133,7 +133,7 @@ const Plastico = () => {
                         </Grid>
 
                         <Grid item xs={10}>
-                            <Paper elevation={2}sx={{padding:"15px", margin:"5px", backgroundColor: paper_color, color:"preguntas.contrastText"}}>
+                            <Paper elevation={2}sx={{padding:"20px", margin:"5px", backgroundColor: paper_color, color:"preguntas.contrastText"}}>
                                 <Typography align='center' variant={titles} sx={{fontWeight:'bold'}}>
                                     ¿Por qué todos los plásticos no pueden ser reciclados?
                                 </Typography>
@@ -145,7 +145,7 @@ const Plastico = () => {
                         </Grid>
 
                         <Grid item xs={10}>
-                            <Paper elevation={2}sx={{padding:"15px", margin:"5px", backgroundColor: paper_color, color:"preguntas.contrastText"}}>
+                            <Paper elevation={2}sx={{padding:"20px", margin:"5px", backgroundColor: paper_color, color:"preguntas.contrastText"}}>
                                 <Typography align='center' variant={titles} sx={{fontWeight:'bold'}}>
                                     ¿Por qué es importante reciclar este tipo de materiales?
                                 </Typography>

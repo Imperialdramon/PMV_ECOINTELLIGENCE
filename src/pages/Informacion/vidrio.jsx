@@ -65,19 +65,19 @@ const Vidrio = () => {
                 <Separador altura="20px" />
                 <Container maxWidth="false" sx={{display:'flex', justifycontent:'center', width: "95%"}}>
                     <Grid container alignItems="center" rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                        <Grid item xs={2}>
+                        <Grid item xs={3}>
                             <div style={containerStyles}>
                                 <img
                                     src={img_basurero} // Reemplaza con la ruta de tu imagen
-                                    width="150%" // Ancho deseado en píxeles
-                                    height="150%" // Alto deseado en píxeles
+                                    width="100%" // Ancho deseado en píxeles
+                                    height="100%" // Alto deseado en píxeles
                                 />
                             </div>
                         
                         </Grid>
                         
-                        <Grid item xs={10}>
-                            <Paper elevation={2} sx={{padding:"15px", margin:"5px", backgroundColor: paper_color, color:"preguntas.contrastText"}}>
+                        <Grid item xs={9}>
+                            <Paper elevation={2} sx={{padding:"20px", margin:"5px", backgroundColor: paper_color, color:"preguntas.contrastText"}}>
                                 <Typography align='center' variant={titles} sx={{fontWeight:'bold'}}>
                                     ¿Qué tipo de material se encuentra en esta categoría?
                                 </Typography>
@@ -86,10 +86,11 @@ const Vidrio = () => {
                                     En esta categoría están clasificados materiales principalmente compuestos completamente de vidrio, como botellas, envases u otros productos. Algunos otros ejemplos de este material se muestran en el siguiente listado:
                                 </Typography>
                                 <Grid container alignItems="center" rowSpacing={0.5} columnSpacing={{ xs: 0.5, sm: 1, md: 1 }}>
-                                    <Grid item xs={4}>
+                                    <Grid item xs={1}/>
+                                    <Grid item xs={3}>
                                         <ListaDePalabras palabras={lista_1}/>
                                     </Grid>
-                                    <Grid item xs={4}>
+                                    <Grid item xs={3}>
                                         <ListaDePalabras palabras={lista_2}/>
                                     </Grid>
                                     <Grid item xs={4}>
@@ -100,14 +101,14 @@ const Vidrio = () => {
                         </Grid>
 
                         <Grid item xs={10}>
-                            <Paper elevation={2} sx={{padding:"15px", margin:"5px", backgroundColor: paper_color, color:"preguntas.contrastText"}}>
+                            <Paper elevation={2} sx={{padding:"20px", margin:"5px", backgroundColor: paper_color, color:"preguntas.contrastText"}}>
                                 <Typography align='center' variant={titles} sx={{fontWeight:'bold'}}>
                                     ¿Como se deben preparar los materiales para ser reciclados?
                                 </Typography>
                                 <br/>
                                 <Typography align='justify' variant={bodys} style={estiloPersonalizado}>
-                                    Antes de reciclar vidrio, es importante que los envases estén limpios y secos. Esto significa que debes enjuagarlos para eliminar cualquier residuo de comida o bebida. La presencia de residuos puede contaminar el proceso de reciclaje.
-                                    Además, se deben quitar las tapas metálicas o plásticas de los envases de vidrio antes de reciclarlos, ya que las tapas se reciclan por separado y no es necesario quitar las etiquetas, ya que se eliminan durante el proceso de reciclaje.
+                                    Para reciclar vidrio es importante que los envases estén limpios y secos, por lo que debes enjuagarlos para eliminar cualquier residuo de comida o bebida.
+                                    Además, se deben retirar las tapas metálicas o plásticas de los envases de vidrio, ya que estas se reciclan por separado. No es necesario quitar las etiquetas, ya que se eliminan durante el proceso de reciclaje.
                                 </Typography>
                             </Paper>
                         </Grid>
@@ -133,26 +134,27 @@ const Vidrio = () => {
                         </Grid>
 
                         <Grid item xs={10}>
-                            <Paper elevation={2}sx={{padding:"15px", margin:"5px", backgroundColor: paper_color, color:"preguntas.contrastText"}}>
+                            <Paper elevation={2}sx={{padding:"20px", margin:"5px", backgroundColor: paper_color, color:"preguntas.contrastText"}}>
                                 <Typography align='center' variant={titles} sx={{fontWeight:'bold'}}>
                                     ¿Por qué no se deben depositar vidrios rotos en los contenedores de vidrios?
                                 </Typography>
                                 <br/>
                                 <Typography align='justify' variant={bodys} style={estiloPersonalizado}>
-                                No se deben depositar vidrios rotos en los contenedores de vidrio porque pueden causar lesiones a quienes manipulan los residuos y aumentan el riesgo de contaminación. Además, el vidrio roto puede dificultar el proceso de reciclaje al contaminar otros materiales y afectar la calidad del vidrio reciclado.
+                                Porque pueden causar lesiones a quienes manipulan los residuos y aumentan el riesgo de contaminación. Además, el vidrio roto puede dificultar el proceso de reciclaje al contaminar otros materiales y afectar la calidad del vidrio reciclado.
                                 </Typography>
                             </Paper>
                         </Grid>
 
 
                         <Grid item xs={10}>
-                            <Paper elevation={2}sx={{padding:"15px", margin:"5px", backgroundColor: paper_color, color:"preguntas.contrastText"}}>
+                            <Paper elevation={2}sx={{padding:"20px", margin:"5px", backgroundColor: paper_color, color:"preguntas.contrastText"}}>
                                 <Typography align='center' variant={titles} sx={{fontWeight:'bold'}}>
                                     ¿Por qué es importante reciclar este tipo de materiales?
                                 </Typography>
                                 <br/>
                                 <Typography align='justify' variant={bodys} style={estiloPersonalizado}>
-                                    El reciclaje de vidrio es de suma importancia debido a sus beneficios ambientales y económicos. Permite la conservación de recursos naturales al reducir la extracción de materias primas, ahorra una cantidad significativa de energía al requerir temperaturas más bajas para fundir el vidrio reciclado, disminuye la huella de carbono al evitar la producción de vidrio nuevo y contribuye a la reducción de residuos sólidos en vertederos, prolongando su vida útil. Además, al minimizar la contaminación del aire y el agua asociada con la fabricación de vidrio, el reciclaje de vidrio apoya la sostenibilidad ambiental y promueve prácticas responsables de gestión de residuos.
+                                    El reciclaje de vidrio es de suma importancia debido a sus beneficios ambientales y económicos, ya que permite la conservación de recursos naturales al reducir la extracción de materias primas y ahorrar energía en comparación a la producción de vidrio, lo que a su vez disminuye la huella de carbono y contribuye a la reducción de residuos sólidos en vertederos.
+                                    En definitiva, reciclar vidrio permite minimizar la contaminación del aire y el agua, lo que apoya la sostenibilidad ambiental y promueve prácticas responsables de gestión de residuos.
                                 </Typography>
                             </Paper>
                         </Grid>
