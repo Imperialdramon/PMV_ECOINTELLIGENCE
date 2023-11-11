@@ -2,7 +2,7 @@ import React from 'react'
 import { useEffect,useState,useRef } from 'react';
 import NavBar from '../components/nav_bar'
 import { Bread_crumbs } from '../components/breadcrumbs';
-import { Container, Drawer, Box, Grid, Stack, Typography, Button, Divider} from '@mui/material';
+import { Container, Drawer, Box, Grid, Stack, Typography, Button, Divider, Paper} from '@mui/material';
 import BarChart from '../components/BarChart';
 import { createRoot } from 'react-dom/client';
 import Reciclaje from '../assets/reciclaje.png';
@@ -68,56 +68,13 @@ export const Mapa = () => {
             </Typography>
             <Separador altura="20px" />
             <Container maxWidth={false} sx={{display:'flex'}}>
-                <Stack width="100%" alignItems="flex-start" spacing={2}>
-                    <Button
-                        variant='contained'
-                        color='secondary'
-                        onClick={toggleAyuda}
-                        startIcon={<Info />}
-                    > <Typography fontWeight="bold"> Información del Mapa</Typography>
-                    </Button>
-                    <Wrapper
-                        apiKey='AIzaSyBH7WLmJP1eX-pBZBILTvwXNBYayz2vjuA'
-                        version='beta'
-                        libraries={["marker"]}
-                        >
-                        <Map />
-                    </Wrapper>
-                </Stack>
-                <Drawer
-                    anchor='right'
-                    open={ayuda}
-                    onClose={toggleAyuda}
-                    PaperProps={{sx:{backgroundColor:"preguntas.main",color:"preguntas.contrastText"}}}
-                >
-                    <Container sx={{width:"75vh",paddingTop:"2rem"}}>
-                        <Stack spacing={1}>
-                            <Typography variant="h4" sx={{fontWeight:'bold'}}>Colores de los marcadores</Typography>
-                            <Stack direction='row' justifyContent='justify' alignItems="center" spacing={2}>
-                                <div className={'marker red'}><img src={Reciclaje} alt="marker"/></div>
-                                <Typography variant='subtitle1'>Indica que todos los contenedores están llenos</Typography>
-                            </Stack>
-                            <Stack direction='row' justifyContent='justify' alignItems="center" spacing={2}>
-                                <div className={'marker orange'}><img src={Reciclaje} alt="marker"/></div>
-                                <Typography variant='subtitle1'>Indica que uno o más contenedores están llenos</Typography>
-                            </Stack>
-                            <Stack direction='row' justifyContent='justify' alignItems="center" spacing={2}>
-                                <div className={'marker green'}><img src={Reciclaje} alt="marker"/></div>
-                                <Typography variant='subtitle1'>Indica que ningún contenedor está lleno</Typography>
-                            </Stack>
-                            <Stack spacing={2}>
-                                <Typography variant='h4' sx={{fontWeight:'bold'}}>¿Como se utiliza el Mapa Interactivo?</Typography>
-                                <Typography lineHeight={1.2} align='justify' variant='subtitle1'>Se puede mover por el mapa mediante el desplazamiento, alejar o acercar</Typography>
-                                <Divider></Divider>
-                                <Typography lineHeight={1.2} align='justify' variant='subtitle1'>Hacer click en alguno de los marcadores en el mapa para obtener la información detallada de los contenedores</Typography>
-                                <Divider></Divider>
-                                <Typography lineHeight={1.2} align='justify' variant='subtitle1'>Pasar por encima el mouse para observar detalladamente los porcentajes de cada contenedor en la barra correspondiente</Typography>
-                                <Divider></Divider>
-                                <Typography lineHeight={1.2} align='justify' variant='subtitle1'>Hacer click afuera para salir del desplegable de información</Typography>
-                            </Stack>
-                        </Stack>
-                    </Container>
-                </Drawer>
+                <Wrapper
+                    apiKey='AIzaSyBH7WLmJP1eX-pBZBILTvwXNBYayz2vjuA'
+                    version='beta'
+                    libraries={["marker"]}
+                    >
+                    <Map />
+                </Wrapper>
             </Container>
             <Separador altura="20px" />
             <Footer/>
@@ -139,6 +96,63 @@ function Map(){
     )
 }
 
+function Leyenda(){
+    const [ayuda,setAyuda] = useState(false);
+    const toggleAyuda = ()=>{
+        setAyuda(!ayuda);
+    }
+    return (
+        <>
+            <Paper className='leyenda' sx={{backgroundColor:"preguntas.main",color:"preguntas.contrastText"}}>
+                <Box textAlign="center"><Typography variant='h5'>Indicadores</Typography></Box>
+                <Stack spacing={2}>
+                    <Stack direction='row' justifyContent='justify' alignItems="center" spacing={2}>
+                        <div className={'marker red'}><div className='center'><img src={Reciclaje} alt="marker"/></div></div>
+                        <Typography>Indica que todos los contenedores están llenos</Typography>
+                    </Stack>
+                    <Stack direction='row' justifyContent='justify' alignItems="center" spacing={2}>
+                        <div className={'marker orange'}><div className='center'><img src={Reciclaje} alt="marker"/></div></div>
+                        <Typography>Indica que uno o más contenedores están llenos</Typography>
+                    </Stack>
+                    <Stack direction='row' justifyContent='justify' alignItems="center" spacing={2}>
+                        <div className={'marker green'}><div className='center'><img src={Reciclaje} alt="marker"/></div></div>
+                        <Typography>Indica que ningún contenedor está lleno</Typography>
+                    </Stack>
+                </Stack>
+                <Box sx={{width:"100%",marginTop:"10px",justifyContent:"right"}}>
+                    <Button 
+                        variant='contained' 
+                        color='secondary'
+                        startIcon={<Info />}
+                        onClick={toggleAyuda}
+                    >
+                        Más información del mapa
+                    </Button>
+                </Box>
+            </Paper>
+            <Drawer
+                    anchor='right'
+                    open={ayuda}
+                    onClose={toggleAyuda}
+                    PaperProps={{sx:{backgroundColor:"preguntas.main",color:"preguntas.contrastText"}}}
+                >
+                <Container sx={{width:"75vh",paddingTop:"2rem"}}>
+                    <Stack spacing={2}>
+                        <Typography variant='h4' sx={{fontWeight:'bold'}}>¿Como se utiliza el Mapa Interactivo?</Typography>
+                        <Typography lineHeight={1.2} align='justify' variant='subtitle1'>Se puede mover por el mapa mediante el desplazamiento, alejar o acercar</Typography>
+                        <Divider></Divider>
+                        <Typography lineHeight={1.2} align='justify' variant='subtitle1'>Hacer click en alguno de los marcadores en el mapa para obtener la información detallada de los contenedores</Typography>
+                        <Divider></Divider>
+                        <Typography lineHeight={1.2} align='justify' variant='subtitle1'>Pasar por encima el mouse para observar detalladamente los porcentajes de cada contenedor en la barra correspondiente</Typography>
+                        <Divider></Divider>
+                        <Typography lineHeight={1.2} align='justify' variant='subtitle1'>Hacer click afuera para salir del desplegable de información</Typography>
+                    </Stack>
+                </Container>
+            </Drawer>
+        </>
+    )
+}
+
 function Indicadores({map}){
     const [openDrawer,setOpenDrawer] = useState(false)
     const [data,setData] = useState(markersData)
@@ -148,6 +162,7 @@ function Indicadores({map}){
     }
     return (
         <>
+            <Leyenda />
             {Object.entries(data).map(([key,marker])=>(
                 <Marker
                     key={key}
