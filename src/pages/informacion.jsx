@@ -6,7 +6,7 @@ import { Container } from '@mui/system'
 import Grid from '@mui/material/Grid'
 import Footer from '../components/footer'
 import '../stylesheets/page/page__container.scss'
-import {Typography, Paper} from "@mui/material"
+import {Typography, Paper, Button} from "@mui/material"
 import Separador from '../components/separator'
 import img_basurero_paper from '../assets/recycle/recycle_paper.png'
 import img_basurero_organic from '../assets/recycle/recycle_organic.png'
@@ -39,54 +39,36 @@ export const Informacion = () => {
                 </Container>
                 <Separador altura="20px" />
                 <Container maxWidth="false" sx={{display:'flex', justifycontent:'center'}}>
-                    <Grid container alignItems="stretch" direction="row" rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                        <Grid item xs={4}>
-                            <ImgMediaCard
-                                titulo="Papel y Cartón"
-                                color="rgba(91, 163, 229, 0.5)"
-                                enlace="/informacion/papel_y_carton"
-                                img={img_basurero_paper}
-                            />
+                    <Grid container alignItems="stretch" direction="row" rowSpacing={2} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+                        <Grid item lg={4} xs={6}>
+                            <Button variant='contained' color='papel' fullWidth sx={{height:"10vh",fontWeight:"bold"}} size="large" href='/informacion/papel_y_carton'>
+                                Cartones y Papeles
+                            </Button>
                         </Grid>
-                        <Grid item xs={4}>
-                            <ImgMediaCard
-                                titulo="Vidrio"
-                                color="rgb(88, 255, 51)"
-                                enlace='/informacion/vidrio'
-                                img={img_basurero_glass}
-                            />
+                        <Grid item lg={4} xs={6}>
+                            <Button variant='contained' color='vidrio' fullWidth sx={{height:"10vh",fontWeight:"bold"}} size="large" href='/informacion/vidrio'>
+                                Vidrios
+                            </Button>
                         </Grid>
-                        <Grid item xs={4}>
-                            <ImgMediaCard
-                                titulo="Lata"
-                                color="#D32F2F"
-                                enlace='/informacion/lata'
-                                img={img_basurero_lata}
-                            />
+                        <Grid item lg={4} xs={6}>
+                            <Button variant='contained' color='lata' fullWidth sx={{height:"10vh",fontWeight:"bold"}} size="large" href='/informacion/lata'>
+                                Latas
+                            </Button>
                         </Grid>
-                        <Grid item xs={4}>
-                            <ImgMediaCard
-                                titulo="Plástico"
-                                color="#FFFF00" 
-                                enlace='/informacion/plastico'
-                                img={img_basurero_plastic}
-                            />
+                        <Grid item lg={4} xs={6}>
+                            <Button variant='contained' color='plastico' fullWidth sx={{height:"10vh",fontWeight:"bold"}} size="large" href='/informacion/plastico'>
+                                Plásticos
+                            </Button>
                         </Grid>
-                        <Grid item xs={4}>
-                            <ImgMediaCard
-                                titulo="Material Orgánico"
-                                color="rgb(255, 182, 0)"
-                                enlace='/informacion/material_organico'
-                                img={img_basurero_organic}
-                            />
+                        <Grid item lg={4} xs={6}>
+                            <Button variant='contained' color='mo' fullWidth sx={{height:"10vh",fontWeight:"bold"}} size="large" href='/informacion/material_organico'>
+                                Materiales Orgánicos
+                            </Button>
                         </Grid>
-                        <Grid item xs={4}>
-                            <ImgMediaCard
-                                titulo="Varios"
-                                color="#607D8B"
-                                enlace='/informacion/varios'
-                                img={img_basurero_others}
-                            />
+                        <Grid item lg={4} xs={6}>
+                            <Button variant='contained' color='varios' fullWidth sx={{height:"10vh",fontWeight:"bold"}} size="large" href='/informacion/varios'>
+                                Varios
+                            </Button>
                         </Grid>
                     </Grid>
                 </Container>

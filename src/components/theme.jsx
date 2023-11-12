@@ -21,6 +21,24 @@ export const paleta_main = createTheme({
           main:'#EBF9E4',
           contrastText: '#7EA56A'
         },
+        papel:{
+          main:'#5BA3E5',
+        },
+        vidrio:{
+          main:'#67E153',
+        },
+        lata:{
+          main:'#EE4C4C',
+        },
+        plastico:{
+          main:'#E5E05B',
+        },
+        mo:{
+          main:'#EC9D54',
+        },
+        varios:{
+          main:'#B1B1B1',
+        }
     },
 });
 
