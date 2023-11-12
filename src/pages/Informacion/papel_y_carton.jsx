@@ -59,7 +59,7 @@ export const Papel_Carton = () => {
             <Bread_crumbs />
             <div className="content-wrap">
                 <Typography align='center' variant='h3' sx={{fontWeight:'bold'}}>
-                    Papel y Cartón
+                    Cartones y Papeles
                 </Typography>
                 <Separador altura="20px" />
                 <Container maxWidth="false" sx={{display:'flex', justifycontent:'center', width: "95%"}}>
