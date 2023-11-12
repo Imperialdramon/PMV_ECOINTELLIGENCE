@@ -69,8 +69,8 @@ const Vidrio = () => {
                             <div style={containerStyles}>
                                 <img
                                     src={img_basurero} // Reemplaza con la ruta de tu imagen
-                                    width="100%" // Ancho deseado en píxeles
-                                    height="100%" // Alto deseado en píxeles
+                                    width="150%" // Ancho deseado en píxeles
+                                    height="150%" // Alto deseado en píxeles
                                 />
                             </div>
                         
