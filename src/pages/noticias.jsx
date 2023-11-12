@@ -120,8 +120,8 @@ export const Noticias = () => {
                 </Typography>
                 <Separador altura="20px"/>
                 <Container maxWidth= "false" sx={{display:'flex', justifyContent:'center'}}>
-                    <Grid container alignItems="center" rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                        <Grid item xs ={4}>
+                    <Grid container alignItems="strech" rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+                        <Grid item lg={4} xs={6}>
                             <Template
                                 image={new_01}
                                 alto="40%"
@@ -132,7 +132,7 @@ export const Noticias = () => {
                                 fecha="01/10/2023"
                             />
                         </Grid>
-                        <Grid item xs={4}>
+                        <Grid item lg={4} xs={6}>
                             <Template
                                 image={new_02}
                                 alto="40%"
@@ -144,7 +144,7 @@ export const Noticias = () => {
                             />
                         </Grid>
 
-                        <Grid item xs={4}>
+                        <Grid item lg={4} xs={6}>
                             <Template
                                 image={new_06}
                                 alto="40%"
@@ -156,7 +156,7 @@ export const Noticias = () => {
                             />    
                         </Grid>
 
-                        <Grid item xs={4}>
+                        <Grid item lg={4} xs={6}>
                             <Template
                                 image={new_05}
                                 alto="40%"
@@ -168,7 +168,7 @@ export const Noticias = () => {
                             />  
                         </Grid>
 
-                        <Grid item xs={4}>
+                        <Grid item lg={4} xs={6}>
                             <Template
                                 image={new_04}
                                 alto="40%"
@@ -182,7 +182,7 @@ export const Noticias = () => {
                             />      
                         </Grid>
 
-                        <Grid item xs={4}>
+                        <Grid item lg={4} xs={6}>
                             <Template
                                 image={new_03}
                                 alto="40%"
